@@ -8,3 +8,7 @@ use App\Http\Controllers\FunctionsController;
 // });
 
 Route::get('/', [FunctionsController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
