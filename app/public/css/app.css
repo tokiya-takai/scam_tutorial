@@ -1,15 +1,102 @@
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
 @media (min-width: 992px) {
-  body {
-    background-color: blue;
+  #landing-main .landing {
+    position: relative;
+  }
+  #landing-main .landing .landing-header {
+    width: 100vw;
+    height: 90px;
+    padding: 27px 32px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+  }
+  #landing-main .landing .landing-header .header-logo img {
+    height: 36px;
+  }
+  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
+    display: none;
+  }
+  #landing-main .landing .landing-header .header-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-item {
+    line-height: 30px;
+    padding: 0 15px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-login {
+    margin: 0 8px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-register {
+    background-color: #f95959;
+    color: white;
+    border-radius: 3px;
   }
 }
-@media (max-width: 991px) {
-  body {
-    background-color: red;
+@media (min-width: 555px) {
+  #landing-main .landing .landing-header {
+    height: 90px;
+    padding: 27px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #landing-main .landing .landing-header .header-logo img {
+    height: 36px;
+  }
+  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
+    display: none;
+  }
+  #landing-main .landing .landing-header .header-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-item {
+    line-height: 30px;
+    padding: 0 15px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-login {
+    margin: 0 8px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-register {
+    background-color: #f95959;
+    color: white;
+    border-radius: 3px;
   }
 }
 @media (max-width: 554px) {
-  body {
-    background-color: green;
+  #landing-main .landing .landing-header {
+    height: 90px;
+    padding: 27px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #landing-main .landing .landing-header .header-logo img {
+    height: 36px;
+  }
+  #landing-main .landing .landing-header .landing-header-full-logo {
+    display: none;
+  }
+  #landing-main .landing .landing-header .header-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-item {
+    line-height: 30px;
+    padding: 0 15px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-login {
+    margin: 0 8px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-register {
+    background-color: #f95959;
+    color: white;
+    border-radius: 3px;
   }
 }

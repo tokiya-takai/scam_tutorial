@@ -13,11 +13,16 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Styles -->
+    <link href="css/destyle.css" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <h1>HOME PAGE</h1>
+    <div id="landing-main">
+        <div class="landing">
+            @yield('header')
+        </div>
     </div>
 </body>
 </html>
