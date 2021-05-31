@@ -20,11 +20,7 @@
 </head>
 <body>
     <div id="landing-main">
-        <div class="landing">
-            @include('landing._header')
-            @include('landing._copy')
-            @include('landing._intro')
-        </div>
+        @yield('content')
     </div>
 </body>
 </html>

@@ -8,6 +8,6 @@ class FunctionsController extends Controller
 {
     public function index()
     {
-        return view('layouts.app');
+        return view('landing.landing');
     }
 }
