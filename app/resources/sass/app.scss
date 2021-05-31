@@ -1,7 +1,9 @@
-$theme_color: #f95959;
+$theme_color1: #f95959;
+$theme_color2: #fb8a8a;
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 @import "./header.scss";
+@import "./copy.scss";

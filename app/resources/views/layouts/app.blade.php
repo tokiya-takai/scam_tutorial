@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>SCAM TUTORIAL</title>
+    <title>i-Lite</title>
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -21,7 +21,8 @@
 <body>
     <div id="landing-main">
         <div class="landing">
-            @yield('header')
+            @include('landing._header')
+            @include('landing._copy')
         </div>
     </div>
 </body>

@@ -100,3 +100,90 @@ body {
     border-radius: 3px;
   }
 }
+@media (min-width: 992px) {
+  #landing-jumbotron {
+    padding: 130px 0 0;
+    text-align: center;
+  }
+  #landing-jumbotron .landing-catch-copy {
+    font-size: 35px;
+  }
+  #landing-jumbotron .landing-users {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-users img {
+    width: 30px;
+    height: 30px;
+  }
+  #landing-jumbotron .landing-hero-image {
+    height: 580px;
+    background-color: #fb8a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-hero-image img {
+    height: 500px;
+  }
+}
+@media (min-width: 555px) {
+  #landing-jumbotron {
+    padding: 130px 0 0;
+    text-align: center;
+  }
+  #landing-jumbotron .landing-catch-copy {
+    font-size: 1.7rem;
+  }
+  #landing-jumbotron .landing-users {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-users img {
+    width: 30px;
+    height: 30px;
+  }
+  #landing-jumbotron .landing-hero-image {
+    height: 500px;
+    background-color: #fb8a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-hero-image img {
+    height: 460px;
+  }
+}
+@media (max-width: 554px) {
+  #landing-jumbotron {
+    padding: 130px 0 0;
+    text-align: center;
+  }
+  #landing-jumbotron .landing-catch-copy {
+    font-size: 1.5rem;
+  }
+  #landing-jumbotron .landing-users {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-users img {
+    width: 30px;
+    height: 30px;
+  }
+  #landing-jumbotron .landing-hero-image {
+    height: 300px;
+    background-color: #fb8a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-hero-image img {
+    height: 260px;
+  }
+}

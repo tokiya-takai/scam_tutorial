@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('header')
   <header class="landing-header">
     <a href="/" class="header-logo">
       <img class="landing-header-full-logo" src="/images/full-logo.png" alt="logo">
@@ -23,4 +20,3 @@
       @endguest
     </nav>
   </header>
-@endsection
