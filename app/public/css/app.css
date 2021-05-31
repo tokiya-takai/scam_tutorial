@@ -252,8 +252,104 @@ body {
   }
 }
 @media (max-width: 554px) {
-  #landing-intro .landing-intro-info h3 span {
-    color: red;
+  #landing-intro {
+    padding: 50px;
+  }
+  #landing-intro .landing-intro-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #landing-intro .landing-intro-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+  }
+  #landing-intro .landing-intro-info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  #landing-intro .landing-intro-info-image {
+    max-width: 250px;
+    width: 30%;
+  }
+  #landing-intro .landing-intro-info-image img {
+    width: 100%;
+  }
+  #landing-intro .landing-intro-info-content {
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+  }
+  #landing-intro .landing-intro-info-content h3 {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+  #landing-intro .landing-intro-info-content span {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 30px 0;
+  }
+}
+@media (min-width: 555px) and (max-width: 991px) {
+  #landing-intro {
+    padding: 50px;
+  }
+  #landing-intro .landing-intro-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #landing-intro .landing-intro-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+  }
+  #landing-intro .landing-intro-info {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+  }
+  #landing-intro .landing-intro-info-image {
+    max-width: 275px;
+    width: 100%;
+    padding: 25px 150px 0 30px;
+  }
+  #landing-intro .landing-intro-info-image img {
+    width: 25vw;
+  }
+  #landing-intro .landing-intro-info-content {
+    max-width: 275px;
+    width: 100%;
+    padding: 30px 0 0 35px;
+    text-align: center;
+  }
+  #landing-intro .landing-intro-info-content h3 {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+  }
+  #landing-intro .landing-intro-info-content span {
+    display: inline-block;
+    font-size: 0.5rem;
+    margin: 30px 0;
   }
 }
 @media (min-width: 992px) {
