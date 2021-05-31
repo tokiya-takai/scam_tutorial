@@ -13,6 +13,7 @@
       <div class="landing-intro-initial-1">
         <a class="phishing" href="/">
           <img src="/images/phishing.png" alt="Phishing">
+          <span>Lesson 1</span>
           <h4>フィッシング詐欺</h4>
         </a>
       </div>
