@@ -10,6 +10,7 @@ body {
     width: 100vw;
     height: 90px;
     padding: 27px 32px;
+    background-color: white;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -39,9 +40,15 @@ body {
   }
 }
 @media (min-width: 555px) {
+  #landing-main .landing {
+    position: relative;
+  }
   #landing-main .landing .landing-header {
+    width: 100vw;
     height: 90px;
     padding: 27px 32px;
+    background-color: white;
+    position: fixed;
     display: flex;
     justify-content: space-between;
   }
@@ -70,9 +77,15 @@ body {
   }
 }
 @media (max-width: 554px) {
+  #landing-main .landing {
+    position: relative;
+  }
   #landing-main .landing .landing-header {
+    width: 100vw;
     height: 90px;
     padding: 27px 32px;
+    background-color: white;
+    position: fixed;
     display: flex;
     justify-content: space-between;
   }

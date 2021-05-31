@@ -7,6 +7,7 @@
         width: 100vw;
         height: 90px;
         padding: 27px 32px;
+        background-color: white;
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -44,9 +45,13 @@
 {
   #landing-main {
     .landing {
+      position: relative;
       .landing-header {
+        width: 100vw;
         height: 90px;
         padding: 27px 32px;
+        background-color: white;
+        position: fixed;
         display: flex;
         justify-content: space-between;
         .header-logo {
@@ -84,9 +89,13 @@
 {
   #landing-main {
     .landing {
+      position: relative;
       .landing-header {
+        width: 100vw;
         height: 90px;
         padding: 27px 32px;
+        background-color: white;
+        position: fixed;
         display: flex;
         justify-content: space-between;
         .header-logo {
