@@ -5,9 +5,13 @@ body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+// header
 @import "./header.scss";
 
 // LP
 @import "./landing/copy.scss";
 @import "./landing/intro.scss";
 @import "./landing/message.scss";
+
+// footer
+@import "./footer.scss";

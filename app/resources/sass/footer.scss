@@ -1,21 +1,20 @@
-@media (max-width: 554px)
-{
-
-}
-
-@media (min-width: 555px) and (max-width: 991px)
-{
-
-}
-
-@media (min-width: 992px)
-{
-  // #footer {
-  //   .footer {
-  //     &-container {
-  //       width: 80vw;
-  //       margin: 0 auto;
-  //     }
-  //   }
-  // }
+#footer {
+  height: 300px;
+  .footer {
+    &-container {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding-top: 220px;
+      img {
+        display: inline-block;
+        height: 40px;
+      }
+      span {
+        display: inline-block;
+        line-height: 40px;
+      }
+    }
+  }
 }

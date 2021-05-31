@@ -552,3 +552,21 @@ body {
     font-size: 1.2rem;
   }
 }
+#footer {
+  height: 300px;
+}
+#footer .footer-container {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 220px;
+}
+#footer .footer-container img {
+  display: inline-block;
+  height: 40px;
+}
+#footer .footer-container span {
+  display: inline-block;
+  line-height: 40px;
+}
