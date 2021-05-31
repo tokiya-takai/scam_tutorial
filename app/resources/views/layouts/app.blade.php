@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/lesson1.js') }}" defer></script>
 
     <!-- Styles -->
     <link href="css/destyle.css" rel="stylesheet">
@@ -19,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="landing-main">
+    <div id="main">
         @include('layouts._header')
         @yield('content')
         @include('layouts._footer')
