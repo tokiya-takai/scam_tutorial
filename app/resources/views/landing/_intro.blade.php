@@ -10,7 +10,15 @@
           <span>会員登録は不要です。</span>
         </div>
       </div>
-      <div class="landing-intro-inisial"></div>
+      <div class="landing-intro-initial-1">
+        <a class="phishing" href="/">
+          <img src="/images/phishing.png" alt="Phishing">
+          <h4>フィッシング詐欺</h4>
+        </a>
+      </div>
+      <div class="landing-intro-initial-2">
+        <div class="coming-soon">Coming Soon</div>
+      </div>
     </div>
   </div>
 </div>

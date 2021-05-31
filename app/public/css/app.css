@@ -294,12 +294,50 @@ body {
   }
   #landing-intro .landing-intro-info-content h3 {
     font-size: 1rem;
+    font-weight: bold;
     line-height: 1.5em;
   }
   #landing-intro .landing-intro-info-content span {
     display: inline-block;
     font-size: 0.8rem;
     margin: 30px 0;
+  }
+  #landing-intro .landing-intro-initial-1 {
+    grid-column: 1/-1;
+    max-width: 500px;
+    width: 100%;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 60px;
+    border-radius: 10px;
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing img {
+    width: 60%;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing h4 {
+    font-size: 1.3rem;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-2 {
+    grid-column: 1/-1;
+    max-width: 500px;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 275px;
   }
 }
 @media (min-width: 555px) and (max-width: 991px) {
@@ -344,12 +382,46 @@ body {
   }
   #landing-intro .landing-intro-info-content h3 {
     font-size: 0.8rem;
+    font-weight: bold;
     line-height: 1.5em;
   }
   #landing-intro .landing-intro-info-content span {
     display: inline-block;
     font-size: 0.5rem;
     margin: 30px 0;
+  }
+  #landing-intro .landing-intro-initial-1 {
+    max-width: 500px;
+    width: 100%;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 60px;
+    border-radius: 10px;
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing img {
+    width: 60%;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing h4 {
+    font-size: 2rem;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-2 {
+    max-width: 500px;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 992px) {
@@ -391,11 +463,45 @@ body {
   }
   #landing-intro .landing-intro-info-content h3 {
     font-size: 2rem;
+    font-weight: bold;
     line-height: 1.5em;
   }
   #landing-intro .landing-intro-info-content span {
     display: inline-block;
     font-size: 1rem;
     margin: 30px 0;
+  }
+  #landing-intro .landing-intro-initial-1 {
+    max-width: 500px;
+    width: 100%;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 60px;
+    border-radius: 10px;
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing img {
+    width: 60%;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing h4 {
+    font-size: 2rem;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-2 {
+    max-width: 500px;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
