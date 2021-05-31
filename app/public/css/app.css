@@ -2,80 +2,6 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-@media (min-width: 992px) {
-  #landing-main .landing {
-    position: relative;
-  }
-  #landing-main .landing .landing-header {
-    width: 100vw;
-    height: 90px;
-    padding: 27px 32px;
-    background-color: white;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-  }
-  #landing-main .landing .landing-header .header-logo img {
-    height: 36px;
-  }
-  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
-    display: none;
-  }
-  #landing-main .landing .landing-header .header-nav {
-    display: flex;
-    align-items: center;
-    font-size: 0.75rem;
-  }
-  #landing-main .landing .landing-header .header-nav .nav-item {
-    line-height: 30px;
-    padding: 0 15px;
-  }
-  #landing-main .landing .landing-header .header-nav .nav-login {
-    margin: 0 8px;
-  }
-  #landing-main .landing .landing-header .header-nav .nav-register {
-    background-color: #f95959;
-    color: white;
-    border-radius: 3px;
-  }
-}
-@media (min-width: 555px) {
-  #landing-main .landing {
-    position: relative;
-  }
-  #landing-main .landing .landing-header {
-    width: 100vw;
-    height: 90px;
-    padding: 27px 32px;
-    background-color: white;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-  }
-  #landing-main .landing .landing-header .header-logo img {
-    height: 36px;
-  }
-  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
-    display: none;
-  }
-  #landing-main .landing .landing-header .header-nav {
-    display: flex;
-    align-items: center;
-    font-size: 0.75rem;
-  }
-  #landing-main .landing .landing-header .header-nav .nav-item {
-    line-height: 30px;
-    padding: 0 15px;
-  }
-  #landing-main .landing .landing-header .header-nav .nav-login {
-    margin: 0 8px;
-  }
-  #landing-main .landing .landing-header .header-nav .nav-register {
-    background-color: #f95959;
-    color: white;
-    border-radius: 3px;
-  }
-}
 @media (max-width: 554px) {
   #landing-main .landing {
     position: relative;
@@ -113,13 +39,88 @@ body {
     border-radius: 3px;
   }
 }
+@media (min-width: 555px) and (max-width: 991px) {
+  #landing-main .landing {
+    position: relative;
+  }
+  #landing-main .landing .landing-header {
+    width: 100vw;
+    height: 90px;
+    padding: 27px 32px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+  }
+  #landing-main .landing .landing-header .header-logo img {
+    height: 36px;
+  }
+  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
+    display: none;
+  }
+  #landing-main .landing .landing-header .header-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-item {
+    line-height: 30px;
+    padding: 0 15px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-login {
+    margin: 0 8px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-register {
+    background-color: #f95959;
+    color: white;
+    border-radius: 3px;
+  }
+}
 @media (min-width: 992px) {
+  #landing-main .landing {
+    position: relative;
+  }
+  #landing-main .landing .landing-header {
+    width: 100vw;
+    height: 90px;
+    padding: 27px 32px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+  }
+  #landing-main .landing .landing-header .header-logo img {
+    height: 36px;
+  }
+  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
+    display: none;
+  }
+  #landing-main .landing .landing-header .header-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-item {
+    line-height: 30px;
+    padding: 0 15px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-login {
+    margin: 0 8px;
+  }
+  #landing-main .landing .landing-header .header-nav .nav-register {
+    background-color: #f95959;
+    color: white;
+    border-radius: 3px;
+  }
+}
+@media (max-width: 554px) {
   #landing-jumbotron {
     padding: 130px 0 0;
     text-align: center;
   }
   #landing-jumbotron .landing-catch-copy {
-    font-size: 35px;
+    font-size: 1.3rem;
+    line-height: 1.8em;
   }
   #landing-jumbotron .landing-users {
     height: 50px;
@@ -130,6 +131,111 @@ body {
   #landing-jumbotron .landing-users img {
     width: 30px;
     height: 30px;
+  }
+  #landing-jumbotron .landing-start-btn {
+    display: inline-block;
+    width: 200px;
+    line-height: 48px;
+    margin: 20px auto 50px;
+    border-radius: 5px;
+    background-color: #f95959;
+    transition: background-color 0.3s ease-in-out 0s;
+    color: white;
+  }
+  #landing-jumbotron .landing-start-btn:hover {
+    background-color: #fb8a8a;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  #landing-jumbotron .landing-hero-image {
+    height: 300px;
+    background-color: #fb8a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-hero-image img {
+    width: 85vw;
+  }
+}
+@media (min-width: 555px) and (max-width: 991px) {
+  #landing-jumbotron {
+    padding: 130px 0 0;
+    text-align: center;
+  }
+  #landing-jumbotron .landing-catch-copy {
+    font-size: 1.7rem;
+    line-height: 1.8em;
+  }
+  #landing-jumbotron .landing-users {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-users img {
+    width: 30px;
+    height: 30px;
+  }
+  #landing-jumbotron .landing-start-btn {
+    display: inline-block;
+    width: 200px;
+    line-height: 48px;
+    margin: 20px auto 50px;
+    border-radius: 5px;
+    background-color: #f95959;
+    transition: background-color 0.3s ease-in-out 0s;
+    color: white;
+  }
+  #landing-jumbotron .landing-start-btn:hover {
+    background-color: #fb8a8a;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  #landing-jumbotron .landing-hero-image {
+    height: 500px;
+    background-color: #fb8a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-hero-image img {
+    width: 85vw;
+  }
+}
+@media (min-width: 992px) {
+  #landing-jumbotron {
+    padding: 130px 0 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+  }
+  #landing-jumbotron .landing-catch-copy {
+    font-size: 35px;
+    line-height: 1.8em;
+  }
+  #landing-jumbotron .landing-users {
+    height: 50px;
+    margin: 10px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #landing-jumbotron .landing-users img {
+    width: 30px;
+    height: 30px;
+  }
+  #landing-jumbotron .landing-start-btn {
+    display: inline-block;
+    width: 200px;
+    line-height: 48px;
+    margin: 20px auto 50px;
+    border-radius: 5px;
+    background-color: #f95959;
+    transition: background-color 0.3s ease-in-out 0s;
+    color: white;
+  }
+  #landing-jumbotron .landing-start-btn:hover {
+    background-color: #fb8a8a;
+    transition: all 0.3s ease-in-out 0s;
   }
   #landing-jumbotron .landing-hero-image {
     height: 580px;
@@ -140,63 +246,5 @@ body {
   }
   #landing-jumbotron .landing-hero-image img {
     height: 500px;
-  }
-}
-@media (min-width: 555px) {
-  #landing-jumbotron {
-    padding: 130px 0 0;
-    text-align: center;
-  }
-  #landing-jumbotron .landing-catch-copy {
-    font-size: 1.7rem;
-  }
-  #landing-jumbotron .landing-users {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #landing-jumbotron .landing-users img {
-    width: 30px;
-    height: 30px;
-  }
-  #landing-jumbotron .landing-hero-image {
-    height: 500px;
-    background-color: #fb8a8a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #landing-jumbotron .landing-hero-image img {
-    height: 460px;
-  }
-}
-@media (max-width: 554px) {
-  #landing-jumbotron {
-    padding: 130px 0 0;
-    text-align: center;
-  }
-  #landing-jumbotron .landing-catch-copy {
-    font-size: 1.5rem;
-  }
-  #landing-jumbotron .landing-users {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #landing-jumbotron .landing-users img {
-    width: 30px;
-    height: 30px;
-  }
-  #landing-jumbotron .landing-hero-image {
-    height: 300px;
-    background-color: #fb8a8a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #landing-jumbotron .landing-hero-image img {
-    height: 260px;
   }
 }
