@@ -7,8 +7,8 @@ use App\Http\Controllers\FunctionsController;
 //     return view('welcome');
 // });
 
-Route::get('/', [FunctionsController::class, 'index']);
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [FunctionsController::class, 'index']);
