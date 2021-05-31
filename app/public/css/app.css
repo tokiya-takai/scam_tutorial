@@ -257,7 +257,49 @@ body {
   }
 }
 @media (min-width: 992px) {
-  #landing-intro .landing-intro-info h3 span {
-    color: red;
+  #landing-intro {
+    padding: 50px;
+  }
+  #landing-intro .landing-intro-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #landing-intro .landing-intro-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: 100%;
+  }
+  #landing-intro .landing-intro-info {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+  }
+  #landing-intro .landing-intro-info-image {
+    max-width: 500px;
+    width: 100%;
+    padding: 25px 150px 0 80px;
+  }
+  #landing-intro .landing-intro-info-content {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px 0 0 85px;
+    text-align: center;
+  }
+  #landing-intro .landing-intro-info-content h3 {
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
+  #landing-intro .landing-intro-info-content span {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 30px 0;
   }
 }

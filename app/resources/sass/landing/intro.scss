@@ -17,10 +17,48 @@
 @media (min-width: 992px)
 {
   #landing-intro {
+    padding: 50px;
     .landing-intro {
+      &-plan {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      &-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        width: 100%;
+      }
       &-info {
-        h3 span {
-          color: red;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        border-radius: 10px;
+        &-image {
+          max-width: 500px;
+          width: 100%;
+          padding: 25px 150px 0 80px;
+        }
+        &-content {
+          max-width: 500px;
+          width: 100%;
+          padding: 30px 0 0 85px;
+          text-align: center;
+          h3 {
+            font-size: 2rem;
+            line-height: 1.5em;
+          }
+          span {
+            display: inline-block;
+            font-size: 1rem;
+            margin: 30px 0;
+          }
         }
       }
     }
