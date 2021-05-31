@@ -6,4 +6,7 @@ body {
 }
 
 @import "./header.scss";
-@import "./copy.scss";
+
+// LP
+@import "./landing/copy.scss";
+@import "./landing/intro.scss";

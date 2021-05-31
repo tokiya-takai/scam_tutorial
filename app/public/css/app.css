@@ -6,7 +6,7 @@ body {
   #landing-main .landing {
     position: relative;
   }
-  #landing-main .landing .landing-header {
+  #landing-main .landing-header {
     width: 100vw;
     height: 90px;
     padding: 27px 32px;
@@ -15,25 +15,25 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  #landing-main .landing .landing-header .header-logo img {
+  #landing-main .landing-header .header-logo img {
     height: 36px;
   }
-  #landing-main .landing .landing-header .landing-header-full-logo {
+  #landing-main .landing-header-full-logo {
     display: none;
   }
-  #landing-main .landing .landing-header .header-nav {
+  #landing-main .landing-header .header-nav {
     display: flex;
     align-items: center;
     font-size: 0.75rem;
   }
-  #landing-main .landing .landing-header .header-nav .nav-item {
+  #landing-main .landing-header .header-nav .nav-item {
     line-height: 30px;
     padding: 0 15px;
   }
-  #landing-main .landing .landing-header .header-nav .nav-login {
+  #landing-main .landing-header .header-nav .nav-login {
     margin: 0 8px;
   }
-  #landing-main .landing .landing-header .header-nav .nav-register {
+  #landing-main .landing-header .header-nav .nav-register {
     background-color: #f95959;
     color: white;
     border-radius: 3px;
@@ -43,7 +43,7 @@ body {
   #landing-main .landing {
     position: relative;
   }
-  #landing-main .landing .landing-header {
+  #landing-main .landing-header {
     width: 100vw;
     height: 90px;
     padding: 27px 32px;
@@ -52,25 +52,25 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  #landing-main .landing .landing-header .header-logo img {
+  #landing-main .landing-header .header-logo img {
     height: 36px;
   }
-  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
+  #landing-main .landing-header-small-logo {
     display: none;
   }
-  #landing-main .landing .landing-header .header-nav {
+  #landing-main .landing-header .header-nav {
     display: flex;
     align-items: center;
     font-size: 0.75rem;
   }
-  #landing-main .landing .landing-header .header-nav .nav-item {
+  #landing-main .landing-header .header-nav .nav-item {
     line-height: 30px;
     padding: 0 15px;
   }
-  #landing-main .landing .landing-header .header-nav .nav-login {
+  #landing-main .landing-header .header-nav .nav-login {
     margin: 0 8px;
   }
-  #landing-main .landing .landing-header .header-nav .nav-register {
+  #landing-main .landing-header .header-nav .nav-register {
     background-color: #f95959;
     color: white;
     border-radius: 3px;
@@ -92,7 +92,7 @@ body {
   #landing-main .landing .landing-header .header-logo img {
     height: 36px;
   }
-  #landing-main .landing .landing-header .header-logo .landing-header-small-logo {
+  #landing-main .landing .landing-header-small-logo {
     display: none;
   }
   #landing-main .landing .landing-header .header-nav {
@@ -121,6 +121,7 @@ body {
   #landing-jumbotron .landing-catch-copy {
     font-size: 1.3rem;
     line-height: 1.8em;
+    padding: 0 30px;
   }
   #landing-jumbotron .landing-users {
     height: 50px;
@@ -165,6 +166,7 @@ body {
   #landing-jumbotron .landing-catch-copy {
     font-size: 1.7rem;
     line-height: 1.8em;
+    padding: 0 30px;
   }
   #landing-jumbotron .landing-users {
     height: 50px;
@@ -211,6 +213,7 @@ body {
   #landing-jumbotron .landing-catch-copy {
     font-size: 35px;
     line-height: 1.8em;
+    padding: 0 30px;
   }
   #landing-jumbotron .landing-users {
     height: 50px;
@@ -246,5 +249,15 @@ body {
   }
   #landing-jumbotron .landing-hero-image img {
     height: 500px;
+  }
+}
+@media (max-width: 554px) {
+  #landing-intro .landing-intro-info h3 span {
+    color: red;
+  }
+}
+@media (min-width: 992px) {
+  #landing-intro .landing-intro-info h3 span {
+    color: red;
   }
 }

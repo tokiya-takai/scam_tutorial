@@ -1,0 +1,28 @@
+@media (max-width: 554px)
+{
+  #landing-intro {
+    .landing-intro {
+      &-info {
+        h3 span {
+          color: red;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 555px) and (max-width: 991px)
+{
+
+}
+@media (min-width: 992px)
+{
+  #landing-intro {
+    .landing-intro {
+      &-info {
+        h3 span {
+          color: red;
+        }
+      }
+    }
+  }
+}

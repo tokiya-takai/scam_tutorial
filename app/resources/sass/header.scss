@@ -3,7 +3,7 @@
   #landing-main {
     .landing {
       position: relative;
-      .landing-header {
+      &-header {
         width: 100vw;
         height: 90px;
         padding: 27px 32px;
@@ -16,7 +16,7 @@
             height: 36px;
           }
         }
-        .landing-header-full-logo {
+        &-full-logo {
           display: none;
         }
         .header-nav {
@@ -46,7 +46,7 @@
   #landing-main {
     .landing {
       position: relative;
-      .landing-header {
+      &-header {
         width: 100vw;
         height: 90px;
         padding: 27px 32px;
@@ -58,9 +58,9 @@
           img {
             height: 36px;
           }
-          .landing-header-small-logo {
-            display: none;
-          }
+        }
+        &-small-logo {
+          display: none;
         }
         .header-nav {
           display: flex;
@@ -102,9 +102,9 @@
           img {
             height: 36px;
           }
-          .landing-header-small-logo {
-            display: none;
-          }
+        }
+        &-small-logo {
+          display: none;
         }
         .header-nav {
           display: flex;

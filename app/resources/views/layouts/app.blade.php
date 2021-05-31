@@ -23,6 +23,7 @@
         <div class="landing">
             @include('landing._header')
             @include('landing._copy')
+            @include('landing._intro')
         </div>
     </div>
 </body>
