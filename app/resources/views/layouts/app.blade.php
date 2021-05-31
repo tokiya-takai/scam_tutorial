@@ -10,9 +10,8 @@
     <title>i-Lite</title>
 
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ mix('js/lesson1.js') }}" defer></script>
-
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    
     <!-- Styles -->
     <link href="css/destyle.css" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -25,5 +24,7 @@
         @yield('content')
         
     </div>
+    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/lesson1.js') }}" defer></script>
 </body>
 </html>
