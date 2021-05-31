@@ -8,6 +8,6 @@ class FunctionsController extends Controller
 {
     public function index()
     {
-        var_dump('success');
+        return view('landing.landing');
     }
 }
