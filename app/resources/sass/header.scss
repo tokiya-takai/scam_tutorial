@@ -1,16 +1,8 @@
-#landing-main {
-  .landing {
-    &-header {
-      z-index: 1;
-    }
-  }
-}
-
 @media (max-width: 554px)
 {
   #landing-main {
+    position: relative;
     .landing {
-      position: relative;
       &-header {
         width: 100vw;
         height: 90px;
@@ -19,6 +11,7 @@
         position: fixed;
         display: flex;
         justify-content: space-between;
+        z-index: 1;
         .header-logo {
           img {
             height: 36px;
@@ -52,8 +45,8 @@
 @media (min-width: 555px) and (max-width: 991px)
 {
   #landing-main {
+    position: relative;
     .landing {
-      position: relative;
       &-header {
         width: 100vw;
         height: 90px;
@@ -62,6 +55,7 @@
         position: fixed;
         display: flex;
         justify-content: space-between;
+        z-index: 1;
         .header-logo {
           img {
             height: 36px;
@@ -92,13 +86,12 @@
   }
 }
 
-
 @media (min-width: 992px)
 {
   #landing-main {
+    position: relative;
     .landing {
-      position: relative;
-      .landing-header {
+      &-header {
         width: 100vw;
         height: 90px;
         padding: 27px 32px;
@@ -106,6 +99,7 @@
         position: fixed;
         display: flex;
         justify-content: space-between;
+        z-index: 1;
         .header-logo {
           img {
             height: 36px;

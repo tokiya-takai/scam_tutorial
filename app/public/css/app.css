@@ -2,12 +2,8 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-#landing-main .landing-header {
-  z-index: 1;
-}
-
 @media (max-width: 554px) {
-  #landing-main .landing {
+  #landing-main {
     position: relative;
   }
   #landing-main .landing-header {
@@ -18,6 +14,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
   }
   #landing-main .landing-header .header-logo img {
     height: 36px;
@@ -44,7 +41,7 @@ body {
   }
 }
 @media (min-width: 555px) and (max-width: 991px) {
-  #landing-main .landing {
+  #landing-main {
     position: relative;
   }
   #landing-main .landing-header {
@@ -55,6 +52,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
   }
   #landing-main .landing-header .header-logo img {
     height: 36px;
@@ -81,10 +79,10 @@ body {
   }
 }
 @media (min-width: 992px) {
-  #landing-main .landing {
+  #landing-main {
     position: relative;
   }
-  #landing-main .landing .landing-header {
+  #landing-main .landing-header {
     width: 100vw;
     height: 90px;
     padding: 27px 32px;
@@ -92,26 +90,27 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
   }
-  #landing-main .landing .landing-header .header-logo img {
+  #landing-main .landing-header .header-logo img {
     height: 36px;
   }
-  #landing-main .landing .landing-header-small-logo {
+  #landing-main .landing-header-small-logo {
     display: none;
   }
-  #landing-main .landing .landing-header .header-nav {
+  #landing-main .landing-header .header-nav {
     display: flex;
     align-items: center;
     font-size: 0.75rem;
   }
-  #landing-main .landing .landing-header .header-nav .nav-item {
+  #landing-main .landing-header .header-nav .nav-item {
     line-height: 30px;
     padding: 0 15px;
   }
-  #landing-main .landing .landing-header .header-nav .nav-login {
+  #landing-main .landing-header .header-nav .nav-login {
     margin: 0 8px;
   }
-  #landing-main .landing .landing-header .header-nav .nav-register {
+  #landing-main .landing-header .header-nav .nav-register {
     background-color: #f95959;
     color: white;
     border-radius: 3px;
