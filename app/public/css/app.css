@@ -589,8 +589,23 @@ body {
 }
 
 #lesson1 {
-  height: 100vh;
   position: relative;
+}
+#lesson1 .lesson-header {
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+}
+#lesson1 .lesson-header img {
+  height: 59px;
+  margin-left: 10px;
+}
+#lesson1 .lesson-header h2 {
+  padding-left: 30px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 #lesson1 .lesson1-alert-background {
   position: absolute;
@@ -626,4 +641,32 @@ body {
   text-align: center;
   background-color: #f95959;
   border-radius: 3px;
+}
+#lesson1 .lesson1-tutorial {
+  height: 100vh;
+}
+#lesson1 .lesson1-tutorial-container {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px - 60px);
+  margin: 10px;
+  background: linear-gradient(0.25turn, #ffcbcb, #ffe6e6, #ffcbcb);
+}
+#lesson1 .lesson1-tutorial-container .lesson-tutorial-area {
+  width: 70%;
+  height: calc(100% - 80px);
+  margin: 0 auto;
+}
+#lesson1 .lesson1-tutorial-container .page-btn {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+#lesson1 .lesson1-tutorial-container .page-btn button {
+  margin: 0 25px;
+}
+#lesson1 .lesson1-tutorial-container .page-btn img {
+  height: 20px;
 }

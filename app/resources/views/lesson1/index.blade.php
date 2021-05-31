@@ -9,5 +9,6 @@
         <button class="lesson1-alert-btn">OK</button>
       </div>
     </div>
+    <lesson1-tutorial-component></lesson1-tutorial-component>
   </div>
 @endsection

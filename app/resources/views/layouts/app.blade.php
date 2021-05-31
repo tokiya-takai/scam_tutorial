@@ -21,9 +21,9 @@
 </head>
 <body>
     <div id="main">
-        @include('layouts._header')
+        
         @yield('content')
-        @include('layouts._footer')
+        
     </div>
 </body>
 </html>
