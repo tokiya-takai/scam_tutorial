@@ -2,6 +2,10 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+#landing-main .landing-header {
+  z-index: 1;
+}
+
 @media (max-width: 554px) {
   #landing-main .landing {
     position: relative;

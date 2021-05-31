@@ -20,7 +20,9 @@
 </head>
 <body>
     <div id="landing-main">
+        @include('layouts._header')
         @yield('content')
+        @include('layouts._footer')
     </div>
 </body>
 </html>
