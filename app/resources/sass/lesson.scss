@@ -1,0 +1,150 @@
+// モバイルでアクセスした場合はアラートを表示し、JSでトップページへ遷移させる。
+.lesson {
+  &-alert-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(100,100,100, 0.8);
+    z-index: 2;
+    // Java Script (flex -> none)-----
+    display: none;
+    // -------------------------------
+    justify-content: center;
+    align-items: center;
+  }
+  &-alert-container {
+    width: 500px;
+    height: 300px;
+    @media (max-width: 554px) {
+      height: 350px;
+    }
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    img {
+      width: 150px;
+    }
+    span {
+      display: inline-block;
+      margin: 25px 0;
+    }
+  }
+  &-alert-btn {
+    width: 80px;
+    height: 38px;
+    color: white;
+    text-align: center;
+    background-color: $theme_color1;
+    border-radius: 3px;
+  }
+}
+
+// Lesson ヘッダー
+.lesson-header {
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  &-logo {
+    height: 59px;
+    margin-left: 10px;
+  }
+
+  h2 {
+    padding-left: 30px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+.lesson-tutorial-area {
+  width: 70%;
+  height: calc(100% - 95px);
+  margin: 0 auto;
+}
+.page-btn {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+  .slide-btn-end {
+    opacity: 0.5;
+    margin: 0 25px;
+  }
+  button {
+    margin: 0 25px;
+  }
+  img {
+    height: 20px;
+  }
+}
+
+// 吹き出し
+.not-page1 {
+  display: none;
+}
+.balloon-container {
+  position: absolute;
+  top: -100px;
+  left: calc(100% - 310px);
+}
+.balloon1 {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 25px 15px;
+  min-width: 300px;
+  max-width: 100%;
+  color: #555;
+  font-size: 13px;
+  text-align: center;
+  background: #e0edff;
+  border-radius: 50%;
+}
+.balloon1:before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 70%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+.balloon1 p {
+  margin: 0;
+  padding: 0;
+}
+.slide-btn:hover {
+  opacity: 0.8;
+}
+
+// スライド進捗インジケータ
+.lesson-tutorial-indicator {
+  &-container {
+    height: 15px;
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-backgournd {
+    width: 98%;
+    height: 9px;
+    border-radius: 3px;
+    background-color: rgb(165, 165, 165);
+    position: relative;
+  }
+  &-indicator {
+    position: absolute;
+    display: inline-block;
+    height: 9px;
+    background-color: rgb(111, 211, 111);
+    transition: width 1s;
+  }
+}

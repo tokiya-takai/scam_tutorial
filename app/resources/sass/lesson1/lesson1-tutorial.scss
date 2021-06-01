@@ -1,0 +1,87 @@
+#lesson1 {
+  position: relative;
+  .lesson1 {
+    &-tutorial {
+      height: 100vh;
+      &-title {
+        padding: 30px 3%;
+        font-size: 2rem;
+      }
+      &-content {
+        height: calc(100% - 96px);
+        // Lesson 1_1
+        span {
+          display: inline-block;
+          padding: 0 3%;
+          font-size: 1.2rem;
+          line-height: 1.8em;
+        }
+        .phishing-hero-container {
+          width: 100%;
+          height: 100%;
+          padding: 0 3%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .phishing-hero {
+            height: 70%;
+            margin: 0 auto;
+          }
+        }
+        // Lesson 1_2
+        .list-phishing-technique {
+          padding: 5% 3%;
+          .phishing-technique {
+            padding: 15px 10%;
+            font-size: 1.3rem;
+          }
+        }
+      }
+      &-container {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px - 60px);
+        margin: 10px;
+        background: linear-gradient(0.25turn, rgb(255, 203, 203), rgb(255, 230, 230), rgb(255, 203, 203));
+      }
+    }
+  }
+  .lesson-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5em;
+      }
+      p {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        padding: 15px 0;
+      }
+      .to-exercise-btn {
+        position: absolute;
+        left: 50px;
+        button {
+          width: 280px;
+          height: 60px;
+          margin: 10px;
+          padding-bottom: 5px;
+          border-radius: 10px;
+          box-shadow: 0 -5px 0px 0 #974444 inset;
+          color: white;
+          font-size: 1.2rem;
+          background-color: $theme_color1;
+          &:active {
+            box-shadow: 0 0 0 0;
+            padding-bottom: 0;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

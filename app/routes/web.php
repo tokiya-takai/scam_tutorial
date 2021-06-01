@@ -16,3 +16,4 @@ Route::get('/', [LandingController::class, 'index']);
 
 // Lesson1
 Route::get('/lesson1',[Lesson1Controller::class, 'index'])->name('lesson1');
+Route::get('/lesson1/exercise',[Lesson1Controller::class, 'show']);

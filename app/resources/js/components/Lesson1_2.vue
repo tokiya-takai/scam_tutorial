@@ -6,7 +6,7 @@
       animate__fadeInLeft: !isActiveIntermediate,
       animate__fadeOutLeft: isActiveIntermediate,
     }">
-    <h1>フィッシング詐欺の手口</h1>
+    <h1 class="lesson1-tutorial-title">フィッシング詐欺の手口</h1>
     <div class="lesson1-tutorial-content">
       <span>フィッシング詐欺の手口は、年々多様化しています。<br>
       以前は、違和感のある日本語や怪しい文面からある程度判断できていましたが、現在では本物とほとんど見分けが付きません。
@@ -26,16 +26,7 @@ export default {
     isActiveNext: Boolean,
     isActiveBack: Boolean,
     isActiveIntermediate: Boolean,
+    exerciseURL: String,
   }
 }
 </script>
-
-<style>
-.list-phishing-technique {
-  padding: 5% 3%;
-}
-.phishing-technique {
-  padding: 15px 10%;
-  font-size: 1.3rem;
-}
-</style>

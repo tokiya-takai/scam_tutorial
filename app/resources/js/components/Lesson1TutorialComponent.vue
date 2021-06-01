@@ -6,6 +6,7 @@
         :isActiveNext="isActiveNext"
         :isActiveBack="isActiveBack"
         :isActiveIntermediate="isActiveIntermediate"
+        :exerciseURL="exerciseURL"
       ></component>
       <div class="page-btn">
         <div class="balloon-container animate__animated animate__pulse animate__infinite" v-bind:class="{'not-page1' : isNotInitial}">
@@ -18,9 +19,9 @@
         <div v-if="currentView == 'LessonEnd'" class="slide-btn-end"><img src="/images/next.png"></div>
         <button v-else class="slide-btn" @click="setAnimateNext()"><img src="/images/next.png"></button>
       </div>
-      <div class="lesson1-tutorial-indicator-container">
-        <div class="lesson1-tutorial-indicator-container-backgournd">
-          <span class="lesson1-tutorial-indicator" :style="'width:' + width + '%;'"></span>
+      <div class="lesson-tutorial-indicator-container">
+        <div class="lesson-tutorial-indicator-backgournd">
+          <span class="lesson-tutorial-indicator-indicator" :style="'width:' + width + '%;'"></span>
         </div>
       </div>
     </div>
@@ -42,6 +43,7 @@ export default {
   },
   data() {
     return {
+      exerciseURL: "/lesson1/exercise",
       currentView: 'Lesson1_1',
       lesson: "Lesson1 フィッシング詐欺",
       display: 'display: block;',
@@ -88,7 +90,7 @@ export default {
       switch (this.currentView) {
         case 'Lesson1_1':
           this.currentView = 'Lesson1_2';
-          this.width = 60;
+          this.width = 50;
           break;
         case 'Lesson1_2':
           this.currentView = "LessonEnd";
@@ -101,7 +103,7 @@ export default {
       switch (this.currentView) {
         case 'LessonEnd':
           this.currentView = "Lesson1_2";
-          this.width = 60;
+          this.width = 50;
           break;
         case 'Lesson1_2':
           this.currentView = 'Lesson1_1';
@@ -114,50 +116,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.not-page1 {
-  display: none;
-}
-.balloon-container {
-  position: absolute;
-  top: -100px;
-  left: calc(100% - 310px);
-}
-.balloon1 {
-  position: relative;
-  display: inline-block;
-  margin: 1.5em 0;
-  padding: 25px 15px;
-  min-width: 300px;
-  max-width: 100%;
-  color: #555;
-  font-size: 13px;
-  text-align: center;
-  background: #e0edff;
-  border-radius: 50%;
-}
-.balloon1:before {
-  content: "";
-  position: absolute;
-  top: 90%;
-  left: 70%;
-  margin-left: -15px;
-  border: 15px solid transparent;
-  border-top: 15px solid #e0edff;
-}
-.balloon1 p {
-  margin: 0;
-  padding: 0;
-}
-.slide-btn:hover {
-  opacity: 0.8;
-}
-.lesson1-tutorial-indicator {
-  position: absolute;
-  display: inline-block;
-  height: 9px;
-  background-color: rgb(111, 211, 111);
-  transition: width 1s;
-}
-</style>

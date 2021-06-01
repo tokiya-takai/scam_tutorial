@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
-  const alert = document.querySelector('.lesson1-alert-background');
-  const okButton = document.querySelector('.lesson1-alert-btn');
+  const alert = document.querySelector('.lesson-alert-background');
+  const okButton = document.querySelector('.lesson-alert-btn');
 
   // スクロール禁止関数
   function disableScroll(event) {

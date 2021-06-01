@@ -4,8 +4,8 @@ var __webpack_exports__ = {};
   !*** ./resources/js/lesson1.js ***!
   \*********************************/
 window.addEventListener("load", function () {
-  var alert = document.querySelector('.lesson1-alert-background');
-  var okButton = document.querySelector('.lesson1-alert-btn'); // スクロール禁止関数
+  var alert = document.querySelector('.lesson-alert-background');
+  var okButton = document.querySelector('.lesson-alert-btn'); // スクロール禁止関数
 
   function disableScroll(event) {
     event.preventDefault();
