@@ -1873,7 +1873,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      lesson: "Lesson1 フィッシング詐欺",
+      lesson: "Lesson1 フィッシング詐欺 > メール",
       currentView: 'Mail'
     };
   }
@@ -38561,7 +38561,7 @@ var staticRenderFns = [
         ),
         _c("br"),
         _vm._v(
-          "\n      \b緊急メールを模したメールを送りたり、本物そっくりに作った偽サイトでログインさせたりすることで、情報を抜き取られます。\n    "
+          "\n      \b緊急メールを模したメールを送ったり、本物そっくりに作った偽サイトでログインさせたりすることで、情報を抜き取られます。\n    "
         )
       ]),
       _vm._v(" "),

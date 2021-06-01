@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      lesson: "Lesson1 フィッシング詐欺",
+      lesson: "Lesson1 フィッシング詐欺 > メール",
       currentView: 'Mail',
     }
   }
