@@ -1,1 +1,35 @@
-window.addEventListener("load",(function(){var e=document.querySelector(".lesson1-alert-background"),n=document.querySelector(".lesson1-alert-btn");function t(e){e.preventDefault()}document.URL.match(lesson1)&&(e.style.display="flex",document.addEventListener("touchmove",t,{passive:!1}),document.addEventListener("mousewheel",t,{passive:!1})),n.addEventListener("click",(function(){e.style.display="none",document.removeEventListener("touchmove",t,{passive:!1}),document.removeEventListener("mousewheel",t,{passive:!1})}))}));
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*********************************!*\
+  !*** ./resources/js/lesson1.js ***!
+  \*********************************/
+window.addEventListener("load", function () {
+  var alert = document.querySelector('.lesson1-alert-background');
+  var okButton = document.querySelector('.lesson1-alert-btn'); // スクロール禁止関数
+
+  function disableScroll(event) {
+    event.preventDefault();
+  }
+
+  if (document.URL.match(lesson1)) {
+    alert.style.display = "flex";
+    document.addEventListener('touchmove', disableScroll, {
+      passive: false
+    });
+    document.addEventListener('mousewheel', disableScroll, {
+      passive: false
+    });
+  }
+
+  okButton.addEventListener('click', function () {
+    alert.style.display = "none";
+    document.removeEventListener('touchmove', disableScroll, {
+      passive: false
+    });
+    document.removeEventListener('mousewheel', disableScroll, {
+      passive: false
+    });
+  });
+});
+/******/ })()
+;

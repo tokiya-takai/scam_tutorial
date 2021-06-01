@@ -68,12 +68,17 @@
           margin: 0 auto;
         }
         .page-btn {
+          position: relative;
           height: 80px;
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: flex-end;
           padding-right: 50px;
+          .slide-btn-end {
+            opacity: 0.5;
+            margin: 0 25px;
+          }
           button {
             margin: 0 25px;
           }
