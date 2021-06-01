@@ -2,7 +2,11 @@
   <div class="lesson1-tutorial">
     <LessonHeader :lesson="lesson"></LessonHeader>
     <div class="lesson1-tutorial-container">
-      <component :is="currentView" :isActive="isActive"></component>
+      <component :is="currentView"
+        :isActiveNext="isActiveNext"
+        :isActiveBack="isActiveBack"
+        :isActiveIntermediate="isActiveIntermediate"
+      ></component>
       <div class="page-btn">
         <div class="balloon-container animate__animated animate__pulse animate__infinite" v-bind:class="{'not-page1' : isNotInitial}">
           <div class="balloon1">
@@ -11,7 +15,7 @@
         </div>
         <div v-if="currentView == 'Lesson1_1'" class="slide-btn-end"><img src="/images/back.png"></div>
         <button v-else class="slide-btn" @click="setAnimateBack()"><img src="/images/back.png"></button>
-        <div v-if="currentView == 'Lesson1_2'" class="slide-btn-end"><img src="/images/next.png"></div>
+        <div v-if="currentView == 'LessonEnd'" class="slide-btn-end"><img src="/images/next.png"></div>
         <button v-else class="slide-btn" @click="setAnimateNext()"><img src="/images/next.png"></button>
       </div>
     </div>
@@ -21,31 +25,57 @@
 <script>
 import Lesson1_1 from './Lesson1_1.vue'
 import Lesson1_2 from './Lesson1_2.vue'
+import LessonEnd from './LessonEnd.vue'
 import LessonHeader from './LessonHeaderComponent.vue'
 
 export default {
   components: {
     Lesson1_1,
     Lesson1_2,
+    LessonEnd,
     LessonHeader,
   },
   data() {
     return {
       currentView: 'Lesson1_1',
       lesson: "Lesson1 フィッシング詐欺",
-      isActive: false,
-      isNotInitial: false,
       display: 'display: block;',
+
+      // 1->2ページへのクラス付与
+      isActiveNext: false,
+      // 3->2ページへの2ページの fadeInRight を無効化する
+      isActiveBack: false,
+      // 中間ページ用
+      isActiveIntermediate: false,
+      // 1ページ目を判定
+      isNotInitial: false,
+
     }
   },
   methods: {
     setAnimateNext() {
-      this.isActive = true;
+      switch (this.currentView) {
+        case 'Lesson1_1':
+          this.isActiveNext = true;
+          this.isActiveBack = true;
+          this.isNotInitial = true;
+          break;      
+        default:
+          this.isActiveIntermediate = true;
+          break;
+      }
       setTimeout(this.next, 400);
-      this.isNotInitial = true;
     },
     setAnimateBack() {
-      this.isActive = false;
+      switch (this.currentView) {
+        case 'LessonEnd':
+          this.isActiveIntermediate = false;
+          this.isActiveBack = false;
+          break;
+        default:
+          this.isActiveNext = false;
+          break;
+      }
       setTimeout(this.back, 400);
     },
     next() {
@@ -53,12 +83,17 @@ export default {
         case 'Lesson1_1':
           this.currentView = 'Lesson1_2';
           break;
+        case 'Lesson1_2':
+          this.currentView = "LessonEnd";
         default:
           break;
       }
     },
     back() {
       switch (this.currentView) {
+        case 'LessonEnd':
+          this.currentView = "Lesson1_2";
+          break;
         case 'Lesson1_2':
           this.currentView = 'Lesson1_1';
           break;
