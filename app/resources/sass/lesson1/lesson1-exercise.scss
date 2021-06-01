@@ -104,13 +104,11 @@
           border-bottom: 1px solid rgb(182, 182, 182);
           box-shadow: 2px 2px 0 rgb(182, 182, 182);
         }
-        a {
-          width: 100%;
-          line-height: 40px;
-        }
         .mail-btn {
           width: 100%;
+          height: 100%;
           display: flex;
+          align-items: center;
         }
       }
       .mail-sender {

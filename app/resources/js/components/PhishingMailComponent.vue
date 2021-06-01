@@ -13,11 +13,11 @@
       <div class="phishing-mail-mails-area">
         <div class="phishing-mail-mails-header">
           <div class="phishing-mail-mails-header-current"><img src="/images/task-tray.svg">メイン</div>
-          <div class="phishing-mail-mails-mail"><a href="#">
+          <div class="phishing-mail-mails-mail">
             <button class="mail-btn">
               <div class="mail-sender"><span class="dummy-check-box">□</span>Amazon.co.jp</div>
               <div class="mail-title">Amazonプライムをご利用頂きありがとうございます。</div>
-            </button></a>
+            </button>
           </div>
           <ul v-for="n of 15">
             <div class="dummy-mails">

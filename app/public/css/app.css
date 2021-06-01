@@ -4114,13 +4114,11 @@ body {
   border-bottom: 1px solid #b6b6b6;
   box-shadow: 2px 2px 0 #b6b6b6;
 }
-.exercise-area .display-container .phishing-mail-mails-mail a {
-  width: 100%;
-  line-height: 40px;
-}
 .exercise-area .display-container .phishing-mail-mails-mail .mail-btn {
   width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
 }
 .exercise-area .display-container .phishing-mail .mail-sender {
   width: 30%;

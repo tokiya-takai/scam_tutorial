@@ -38887,16 +38887,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "phishing-mail-mails-mail" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("button", { staticClass: "mail-btn" }, [
-          _c("div", { staticClass: "mail-sender" }, [
-            _c("span", { staticClass: "dummy-check-box" }, [_vm._v("□")]),
-            _vm._v("Amazon.co.jp")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mail-title" }, [
-            _vm._v("Amazonプライムをご利用頂きありがとうございます。")
-          ])
+      _c("button", { staticClass: "mail-btn" }, [
+        _c("div", { staticClass: "mail-sender" }, [
+          _c("span", { staticClass: "dummy-check-box" }, [_vm._v("□")]),
+          _vm._v("Amazon.co.jp")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mail-title" }, [
+          _vm._v("Amazonプライムをご利用頂きありがとうございます。")
         ])
       ])
     ])
