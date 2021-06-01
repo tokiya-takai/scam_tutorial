@@ -2,11 +2,12 @@ window.addEventListener("load", function () {
   const alert = document.querySelector('.lesson1-alert-background');
   const okButton = document.querySelector('.lesson1-alert-btn');
 
+  // スクロール禁止関数
+  function disableScroll(event) {
+    event.preventDefault();
+  }
+  
   if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
-    // スクロール禁止関数
-    function disableScroll(event) {
-      event.preventDefault();
-    }
   
     if (document.URL.match(lesson1)) {
       alert.style.display = "flex";
@@ -18,6 +19,7 @@ window.addEventListener("load", function () {
       alert.style.display = "none";
       document.removeEventListener('touchmove', disableScroll, { passive: false });
       document.removeEventListener('mousewheel', disableScroll, { passive: false });
+      window.location.href = '/';
     });
   }
 
@@ -33,9 +35,4 @@ window.addEventListener("load", function () {
     lessonHeaderLogo.classList.remove('animate__flipInY');
     return;
   }
-  
-  //アニメーション終了時にclassを削除
-  // lessonHeaderLogo.addEventListener('mouseleave', () => {
-  //   lessonHeaderLogo.classList.remove('animate__flipInY');
-  // }, false);
 });

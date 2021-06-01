@@ -5,14 +5,13 @@ var __webpack_exports__ = {};
   \*********************************/
 window.addEventListener("load", function () {
   var alert = document.querySelector('.lesson1-alert-background');
-  var okButton = document.querySelector('.lesson1-alert-btn');
+  var okButton = document.querySelector('.lesson1-alert-btn'); // スクロール禁止関数
+
+  function disableScroll(event) {
+    event.preventDefault();
+  }
 
   if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
-    // スクロール禁止関数
-    var disableScroll = function disableScroll(event) {
-      event.preventDefault();
-    };
-
     if (document.URL.match(lesson1)) {
       alert.style.display = "flex";
       document.addEventListener('touchmove', disableScroll, {
@@ -31,6 +30,7 @@ window.addEventListener("load", function () {
       document.removeEventListener('mousewheel', disableScroll, {
         passive: false
       });
+      window.location.href = '/';
     });
   }
 
@@ -44,11 +44,7 @@ window.addEventListener("load", function () {
   function removeAnimateFlipInY() {
     lessonHeaderLogo.classList.remove('animate__flipInY');
     return;
-  } //アニメーション終了時にclassを削除
-  // lessonHeaderLogo.addEventListener('mouseleave', () => {
-  //   lessonHeaderLogo.classList.remove('animate__flipInY');
-  // }, false);
-
+  }
 });
 /******/ })()
 ;
