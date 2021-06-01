@@ -38470,12 +38470,25 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "lesson-header" }, [
-    _c("img", { attrs: { src: "/images/small-logo.png" } }),
+    _vm._m(0),
     _vm._v(" "),
     _c("h2", [_vm._v(_vm._s(_vm.lesson))])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/" } }, [
+      _c("img", {
+        staticClass:
+          "lesson-header-logo lesson-header-logo-animated animate__animated",
+        attrs: { src: "/images/small-logo.png" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 

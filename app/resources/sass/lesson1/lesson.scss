@@ -5,10 +5,11 @@
     background-color: white;
     border-bottom: 1px solid #aaa;
     display: flex;
-    img {
+    &-logo {
       height: 59px;
       margin-left: 10px;
     }
+
     h2 {
       padding-left: 30px;
       font-size: 1.5rem;

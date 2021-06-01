@@ -20,4 +20,22 @@ window.addEventListener("load", function () {
       document.removeEventListener('mousewheel', disableScroll, { passive: false });
     });
   }
+
+  const lessonHeaderLogo = document.querySelector('.lesson-header-logo-animated');
+
+  //クリック時にclassを追加してアニメーション開始
+  lessonHeaderLogo.addEventListener('mouseover', () => {
+    lessonHeaderLogo.classList.add('animate__flipInY');
+    setTimeout(removeAnimateFlipInY, 500);
+  }, false);
+
+  function removeAnimateFlipInY() {
+    lessonHeaderLogo.classList.remove('animate__flipInY');
+    return;
+  }
+  
+  //アニメーション終了時にclassを削除
+  // lessonHeaderLogo.addEventListener('mouseleave', () => {
+  //   lessonHeaderLogo.classList.remove('animate__flipInY');
+  // }, false);
 });
