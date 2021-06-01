@@ -64,7 +64,7 @@
         // Lesson common
         .lesson-tutorial-area {
           width: 70%;
-          height: calc(100% - 80px);
+          height: calc(100% - 95px);
           margin: 0 auto;
         }
         .page-btn {
@@ -84,6 +84,59 @@
           }
           img {
             height: 20px;
+          }
+        }
+      }
+      &-indicator-container {
+        height: 15px;
+        background-color: rgb(70, 70, 70);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-backgournd {
+          width: 98%;
+          height: 9px;
+          border-radius: 3px;
+          background-color: rgb(165, 165, 165);
+          position: relative;
+        }
+      }
+    }
+  }
+  .lesson-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.5em;
+      }
+      p {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        padding: 15px 0;
+      }
+      .to-exercise-btn {
+        position: absolute;
+        left: 50px;
+        button {
+          width: 280px;
+          height: 60px;
+          margin: 10px;
+          padding-bottom: 5px;
+          border-radius: 10px;
+          box-shadow: 0 -5px 0px 0 #974444 inset;
+          color: white;
+          font-size: 1.2rem;
+          background-color: $theme_color1;
+          &:active {
+            box-shadow: 0 0 0 0;
+            padding-bottom: 0;
+            margin-top: 15px;
           }
         }
       }

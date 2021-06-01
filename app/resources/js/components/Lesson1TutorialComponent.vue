@@ -18,6 +18,11 @@
         <div v-if="currentView == 'LessonEnd'" class="slide-btn-end"><img src="/images/next.png"></div>
         <button v-else class="slide-btn" @click="setAnimateNext()"><img src="/images/next.png"></button>
       </div>
+      <div class="lesson1-tutorial-indicator-container">
+        <div class="lesson1-tutorial-indicator-container-backgournd">
+          <span class="lesson1-tutorial-indicator" :style="'width:' + width + '%;'"></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +45,7 @@ export default {
       currentView: 'Lesson1_1',
       lesson: "Lesson1 フィッシング詐欺",
       display: 'display: block;',
+      width: 0,
 
       // 1->2ページへのクラス付与
       isActiveNext: false,
@@ -82,9 +88,11 @@ export default {
       switch (this.currentView) {
         case 'Lesson1_1':
           this.currentView = 'Lesson1_2';
+          this.width = 60;
           break;
         case 'Lesson1_2':
           this.currentView = "LessonEnd";
+          this.width = 100;
         default:
           break;
       }
@@ -93,9 +101,11 @@ export default {
       switch (this.currentView) {
         case 'LessonEnd':
           this.currentView = "Lesson1_2";
+          this.width = 60;
           break;
         case 'Lesson1_2':
           this.currentView = 'Lesson1_1';
+          this.width = 0;
           break;
         default:
           break;
@@ -142,5 +152,12 @@ export default {
 }
 .slide-btn:hover {
   opacity: 0.8;
+}
+.lesson1-tutorial-indicator {
+  position: absolute;
+  display: inline-block;
+  height: 9px;
+  background-color: rgb(111, 211, 111);
+  transition: width 1s;
 }
 </style>

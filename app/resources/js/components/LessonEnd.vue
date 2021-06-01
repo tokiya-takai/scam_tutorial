@@ -1,11 +1,13 @@
 <template>
-  <div class="lesson1-1 lesson-tutorial-area animate__animated"
+  <div class="lesson-end lesson-tutorial-area animate__animated"
     v-bind:class="{ 
       animate__fadeInRight: isActiveIntermediate,
       animate__fadeOutRight: !isActiveIntermediate,
     }">
-    <h1>3</h1>
-    <div class="lesson1-tutorial-content">
+    <div class="lesson-end-content">
+      <h2>スライドはここまでです。<br>実際に見てみましょう。</h2>
+      <p>当アプリで使用する偽サイトは、当アプリでの安全なものになります。</p>
+      <a href="/" class="to-exercise-btn"><button>演習に進む</button></a>
     </div>
   </div>
 </template>

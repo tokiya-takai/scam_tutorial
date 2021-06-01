@@ -1873,6 +1873,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -1889,6 +1894,7 @@ __webpack_require__.r(__webpack_exports__);
       currentView: 'Lesson1_1',
       lesson: "Lesson1 フィッシング詐欺",
       display: 'display: block;',
+      width: 0,
       // 1->2ページへのクラス付与
       isActiveNext: false,
       // 3->2ページへの2ページの fadeInRight を無効化する
@@ -1933,10 +1939,12 @@ __webpack_require__.r(__webpack_exports__);
       switch (this.currentView) {
         case 'Lesson1_1':
           this.currentView = 'Lesson1_2';
+          this.width = 60;
           break;
 
         case 'Lesson1_2':
           this.currentView = "LessonEnd";
+          this.width = 100;
 
         default:
           break;
@@ -1946,10 +1954,12 @@ __webpack_require__.r(__webpack_exports__);
       switch (this.currentView) {
         case 'LessonEnd':
           this.currentView = "Lesson1_2";
+          this.width = 60;
           break;
 
         case 'Lesson1_2':
           this.currentView = 'Lesson1_1';
+          this.width = 0;
           break;
 
         default:
@@ -2054,6 +2064,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -6646,7 +6658,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.not-page1 {\n  display: none;\n}\n.balloon-container {\n  position: absolute;\n  top: -100px;\n  left: calc(100% - 310px);\n}\n.balloon1 {\n  position: relative;\n  display: inline-block;\n  margin: 1.5em 0;\n  padding: 25px 15px;\n  min-width: 300px;\n  max-width: 100%;\n  color: #555;\n  font-size: 13px;\n  text-align: center;\n  background: #e0edff;\n  border-radius: 50%;\n}\n.balloon1:before {\n  content: \"\";\n  position: absolute;\n  top: 90%;\n  left: 70%;\n  margin-left: -15px;\n  border: 15px solid transparent;\n  border-top: 15px solid #e0edff;\n}\n.balloon1 p {\n  margin: 0;\n  padding: 0;\n}\n.slide-btn:hover {\n  opacity: 0.8;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.not-page1 {\n  display: none;\n}\n.balloon-container {\n  position: absolute;\n  top: -100px;\n  left: calc(100% - 310px);\n}\n.balloon1 {\n  position: relative;\n  display: inline-block;\n  margin: 1.5em 0;\n  padding: 25px 15px;\n  min-width: 300px;\n  max-width: 100%;\n  color: #555;\n  font-size: 13px;\n  text-align: center;\n  background: #e0edff;\n  border-radius: 50%;\n}\n.balloon1:before {\n  content: \"\";\n  position: absolute;\n  top: 90%;\n  left: 70%;\n  margin-left: -15px;\n  border: 15px solid transparent;\n  border-top: 15px solid #e0edff;\n}\n.balloon1 p {\n  margin: 0;\n  padding: 0;\n}\n.slide-btn:hover {\n  opacity: 0.8;\n}\n.lesson1-tutorial-indicator {\n  position: absolute;\n  display: inline-block;\n  height: 9px;\n  background-color: rgb(111, 211, 111);\n  transition: width 1s;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38215,6 +38227,21 @@ var render = function() {
                   },
                   [_c("img", { attrs: { src: "/images/next.png" } })]
                 )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "lesson1-tutorial-indicator-container" }, [
+            _c(
+              "div",
+              {
+                staticClass: "lesson1-tutorial-indicator-container-backgournd"
+              },
+              [
+                _c("span", {
+                  staticClass: "lesson1-tutorial-indicator",
+                  style: "width:" + _vm.width + "%;"
+                })
+              ]
+            )
           ])
         ],
         1
@@ -38387,20 +38414,39 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "lesson1-1 lesson-tutorial-area animate__animated",
+      staticClass: "lesson-end lesson-tutorial-area animate__animated",
       class: {
         animate__fadeInRight: _vm.isActiveIntermediate,
         animate__fadeOutRight: !_vm.isActiveIntermediate
       }
     },
-    [
-      _c("h1", [_vm._v("3")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "lesson1-tutorial-content" })
-    ]
+    [_vm._m(0)]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "lesson-end-content" }, [
+      _c("h2", [
+        _vm._v("スライドはここまでです。"),
+        _c("br"),
+        _vm._v("実際に見てみましょう。")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "当アプリで使用する偽サイトは、当アプリでの安全なものになります。"
+        )
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "to-exercise-btn", attrs: { href: "/" } }, [
+        _c("button", [_vm._v("演習に進む")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
