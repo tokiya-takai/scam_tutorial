@@ -1848,6 +1848,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonHeaderComponent.vue */ "./resources/js/components/LessonHeaderComponent.vue");
 /* harmony import */ var _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonFooterComponent.vue */ "./resources/js/components/LessonFooterComponent.vue");
 /* harmony import */ var _PhishingMailComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhishingMailComponent.vue */ "./resources/js/components/PhishingMailComponent.vue");
+/* harmony import */ var _PhishingMailTextComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhishingMailTextComponent.vue */ "./resources/js/components/PhishingMailTextComponent.vue");
 //
 //
 //
@@ -1862,6 +1863,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 
 
 
@@ -1869,13 +1874,22 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     LessonHeader: _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     LessonFotter: _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__.default,
-    Mail: _PhishingMailComponent_vue__WEBPACK_IMPORTED_MODULE_2__.default
+    Mail: _PhishingMailComponent_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    MailText: _PhishingMailTextComponent_vue__WEBPACK_IMPORTED_MODULE_3__.default
   },
   data: function data() {
     return {
       lesson: "Lesson1 フィッシング詐欺 > メール",
       currentView: 'Mail'
     };
+  },
+  methods: {
+    toMailContent: function toMailContent() {
+      this.currentView = 'MailText';
+    },
+    backMail: function backMail() {
+      this.currentView = "Mail";
+    }
   }
 });
 
@@ -2210,7 +2224,76 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    childToMailContent: function childToMailContent() {
+      this.$emit('parentToMailContent');
+    },
+    childBackMail: function childBackMail() {
+      this.$emit('parentBackMail');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      day: new Date()
+    };
+  },
+  methods: {
+    childToMailContent: function childToMailContent() {
+      this.$emit('parentToMailContent');
+    },
+    childBackMail: function childBackMail() {
+      this.$emit('parentBackMail');
+    }
+  }
+});
 
 /***/ }),
 
@@ -38105,6 +38188,45 @@ component.options.__file = "resources/js/components/PhishingMailComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/PhishingMailTextComponent.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/PhishingMailTextComponent.vue ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PhishingMailTextComponent_vue_vue_type_template_id_34559042___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PhishingMailTextComponent.vue?vue&type=template&id=34559042& */ "./resources/js/components/PhishingMailTextComponent.vue?vue&type=template&id=34559042&");
+/* harmony import */ var _PhishingMailTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PhishingMailTextComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _PhishingMailTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _PhishingMailTextComponent_vue_vue_type_template_id_34559042___WEBPACK_IMPORTED_MODULE_0__.render,
+  _PhishingMailTextComponent_vue_vue_type_template_id_34559042___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PhishingMailTextComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Lesson1Component.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/Lesson1Component.vue?vue&type=script&lang=js& ***!
@@ -38214,6 +38336,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PhishingMailComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PhishingMailTextComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -38353,6 +38491,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PhishingMailTextComponent.vue?vue&type=template&id=34559042&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/PhishingMailTextComponent.vue?vue&type=template&id=34559042& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_template_id_34559042___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_template_id_34559042___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_template_id_34559042___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PhishingMailTextComponent.vue?vue&type=template&id=34559042& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=template&id=34559042&");
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Lesson1Component.vue?vue&type=template&id=3a8a4922&":
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Lesson1Component.vue?vue&type=template&id=3a8a4922& ***!
@@ -38381,7 +38536,15 @@ var render = function() {
         _c(
           "div",
           { staticClass: "display-container" },
-          [_c(_vm.currentView, { tag: "component" })],
+          [
+            _c(_vm.currentView, {
+              tag: "component",
+              on: {
+                parentToMailContent: _vm.toMailContent,
+                parentBackMail: _vm.backMail
+              }
+            })
+          ],
           1
         )
       ]),
@@ -38821,7 +38984,27 @@ var render = function() {
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "phishing-mail-content" }, [
-        _vm._m(1),
+        _c("div", { staticClass: "phishing-mail-side-bar" }, [
+          _c("ul", { staticClass: "phishing-mail-side-bar-list" }, [
+            _c(
+              "li",
+              {
+                staticClass: "phishing-mail-side-bar-list-current",
+                on: {
+                  click: function($event) {
+                    return _vm.childBackMail()
+                  }
+                }
+              },
+              [
+                _c("img", { attrs: { src: "/images/task-tray.svg" } }),
+                _vm._v("受信トレイ")
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
+        ]),
         _vm._v(" "),
         _c("div", { staticClass: "phishing-mail-mails-area" }, [
           _c(
@@ -38830,7 +39013,26 @@ var render = function() {
             [
               _vm._m(2),
               _vm._v(" "),
-              _vm._m(3),
+              _c("div", { staticClass: "phishing-mail-mails-mail" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "mail-btn",
+                    on: {
+                      click: function($event) {
+                        return _vm.childToMailContent()
+                      }
+                    }
+                  },
+                  [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mail-title" }, [
+                      _vm._v("【重要】情報を更新する必要があります。")
+                    ])
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _vm._l(15, function(n) {
                 return _c("ul", [_vm._m(4, true)])
@@ -38859,18 +39061,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "phishing-mail-side-bar" }, [
-      _c("ul", { staticClass: "phishing-mail-side-bar-list" }, [
-        _c("li", { staticClass: "phishing-mail-side-bar-list-current" }, [
-          _c("img", { attrs: { src: "/images/task-tray.svg" } }),
-          _vm._v("受信トレイ")
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("img", { attrs: { src: "/images/draft.svg" } }),
-          _vm._v("下書き")
-        ])
-      ])
+    return _c("li", [
+      _c("img", { attrs: { src: "/images/draft.svg" } }),
+      _vm._v("下書き")
     ])
   },
   function() {
@@ -38886,17 +39079,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "phishing-mail-mails-mail" }, [
-      _c("button", { staticClass: "mail-btn" }, [
-        _c("div", { staticClass: "mail-sender" }, [
-          _c("span", { staticClass: "dummy-check-box" }, [_vm._v("□")]),
-          _vm._v("Amazon.co.jp")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mail-title" }, [
-          _vm._v("Amazonプライムをご利用頂きありがとうございます。")
-        ])
-      ])
+    return _c("div", { staticClass: "mail-sender" }, [
+      _c("span", { staticClass: "dummy-check-box" }, [_vm._v("□")]),
+      _vm._v("アマゾン")
     ])
   },
   function() {
@@ -38912,6 +39097,125 @@ var staticRenderFns = [
       _c("div", { staticClass: "mail-title" }, [
         _vm._v("アプリをご利用頂きありがとうございます。")
       ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=template&id=34559042&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=template&id=34559042& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "phishing-mail", attrs: { id: "phishing-mail-text" } },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "phishing-mail-content" }, [
+        _c("div", { staticClass: "phishing-mail-side-bar" }, [
+          _c("ul", { staticClass: "phishing-mail-side-bar-list" }, [
+            _c(
+              "li",
+              {
+                staticClass: "phishing-mail-side-bar-list-current",
+                on: {
+                  click: function($event) {
+                    return _vm.childBackMail()
+                  }
+                }
+              },
+              [
+                _c("img", { attrs: { src: "/images/task-tray.svg" } }),
+                _vm._v("受信トレイ")
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "phishing-mail-text" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", { staticClass: "phishing-mail-text-content" }, [
+            _vm._m(3),
+            _vm._v(" "),
+            _c("div", { staticClass: "phishing-mail-text-content-body" }, [
+              _c("p", [
+                _vm._v(
+                  "Amazonプライムをご利用頂きありがとうございます。お客様のAmazonプライム会員資格は、" +
+                    _vm._s(_vm.day) +
+                    "に更新を迎えます。"
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n          お調べしたところ、会費のお支払いに使用できる有効なクレジットカードがアカウントに登録されていません。クレジットカード情報の更新、"
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n          新しいクレジットカードの追加については、以下の手順をご確認ください。"
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "phishing-mail-header" }, [
+      _c("img", {
+        staticClass: "goodluck-logo",
+        attrs: { src: "/images/goodluck.png" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("img", { attrs: { src: "/images/draft.svg" } }),
+      _vm._v("下書き")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "phishing-mail-text-title" }, [
+      _c("h2", [_vm._v("【重要】情報を更新する必要があります。")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "phishing-mail-text-content-sender" }, [
+      _c("img", { attrs: { src: "/images/user.png" } }),
+      _c("span", [_c("b", [_vm._v("Amazon_info@1234.com")])])
     ])
   }
 ]
