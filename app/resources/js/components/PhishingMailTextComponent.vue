@@ -19,9 +19,9 @@
             <img src="/images/user.png"><span><b>Amazon_info@1234.com</b></span>
           </div>
           <div class="phishing-mail-text-content-body">
-            <p>Amazonプライムをご利用頂きありがとうございます。お客様のAmazonプライム会員資格は、{{ day | moment }}に更新を迎えます。<br>
-            お調べしたところ、会費のお支払いに使用できる有効なクレジットカードがアカウントに登録されていません。クレジットカード情報の更新、<br>
-            新しいクレジットカードの追加については、以下の手順をご確認ください。</p>
+            <p>Amazonプライムをご利用頂きありがとうございます。{{ day | moment }}に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。<br>
+            お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazon.co.jpにログインし、情報の更新を行ってください。</p>
+            <p><a href="javascript:void(0);" class="phising-link">https://www.amazon.co.jp/ap/signin</a></p>
           </div>
         </div>
       </div>
@@ -35,8 +35,12 @@ import moment from "moment";
 export default {
   data() {
     return {
-      day: new Date(),
+      day: Date,
     }
+  },
+  mounted() {
+    var day = new Date();
+    this.day = day.setDate(day.getDate() + 2);
   },
   methods: {
     childToMailContent() {
@@ -48,7 +52,7 @@ export default {
   },
   filters: {
     moment(value) {
-      return moment(value).format('YYYY/MM/DD');
+      return moment(value).format('YYYY/MM/DD HH:mm');
     }
   }
 }

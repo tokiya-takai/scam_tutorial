@@ -2285,8 +2285,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      day: new Date()
+      day: Date
     };
+  },
+  mounted: function mounted() {
+    var day = new Date();
+    this.day = day.setDate(day.getDate() + 2);
   },
   methods: {
     childToMailContent: function childToMailContent() {
@@ -2298,7 +2302,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   filters: {
     moment: function moment(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_0___default()(value).format('YYYY/MM/DD');
+      return moment__WEBPACK_IMPORTED_MODULE_0___default()(value).format('YYYY/MM/DD HH:mm');
     }
   }
 });
@@ -60602,19 +60606,17 @@ var render = function() {
             _c("div", { staticClass: "phishing-mail-text-content-body" }, [
               _c("p", [
                 _vm._v(
-                  "Amazonプライムをご利用頂きありがとうございます。お客様のAmazonプライム会員資格は、" +
+                  "Amazonプライムをご利用頂きありがとうございます。" +
                     _vm._s(_vm._f("moment")(_vm.day)) +
-                    "に更新を迎えます。"
+                    "に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。"
                 ),
                 _c("br"),
                 _vm._v(
-                  "\n          お調べしたところ、会費のお支払いに使用できる有効なクレジットカードがアカウントに登録されていません。クレジットカード情報の更新、"
-                ),
-                _c("br"),
-                _vm._v(
-                  "\n          新しいクレジットカードの追加については、以下の手順をご確認ください。"
+                  "\n          お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazon.co.jpにログインし、情報の更新を行ってください。"
                 )
-              ])
+              ]),
+              _vm._v(" "),
+              _vm._m(4)
             ])
           ])
         ])
@@ -60658,6 +60660,18 @@ var staticRenderFns = [
     return _c("div", { staticClass: "phishing-mail-text-content-sender" }, [
       _c("img", { attrs: { src: "/images/user.png" } }),
       _c("span", [_c("b", [_vm._v("Amazon_info@1234.com")])])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c(
+        "a",
+        { staticClass: "phising-link", attrs: { href: "javascript:void(0);" } },
+        [_vm._v("https://www.amazon.co.jp/ap/signin")]
+      )
     ])
   }
 ]

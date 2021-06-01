@@ -4174,3 +4174,15 @@ body {
   height: 40px;
   margin-right: 15px;
 }
+.exercise-area .display-container .phishing-mail-text-content-body {
+  width: 100%;
+  padding: 15px 5%;
+  line-height: 2.3em;
+}
+.exercise-area .display-container .phishing-mail-text-content-body p {
+  margin-bottom: 30px;
+}
+.exercise-area .display-container .phishing-mail-text-content-body p .phising-link {
+  color: blue;
+  text-decoration: underline;
+}

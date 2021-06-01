@@ -168,6 +168,18 @@
               margin-right: 15px;
             }
           }
+          &-body {
+            width: 100%;
+            padding: 15px 5%;
+            line-height: 2.3em;
+            p {
+              margin-bottom: 30px;
+              .phising-link {
+                color: blue;
+                text-decoration: underline;
+              }
+            }
+          }
         }
       }
     }
