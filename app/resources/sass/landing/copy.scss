@@ -108,6 +108,9 @@
         font-size: 35px;
         line-height: 1.8em;
         padding: 0 30px;
+        span {
+          display: inline-block;
+        }
       }
       &-users {
         height: 50px;

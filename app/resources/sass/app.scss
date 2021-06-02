@@ -1,3 +1,5 @@
+@import "~animate.css/animate";
+
 $theme_color1: #f95959;
 $theme_color2: #fb8a8a;
 
@@ -15,3 +17,8 @@ body {
 
 // footer
 @import "./footer.scss";
+
+// lesson
+@import "./lesson.scss";
+@import "./lesson1/lesson1-tutorial.scss";
+@import "./lesson1/lesson1-exercise.scss";
