@@ -2562,9 +2562,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     slideLink: String
+  },
+  methods: {
+    toSlide: function toSlide() {
+      if (window.confirm('入力した内容などがリセットされますがよろしいですか？')) {
+        window.location.href = this.slideLink;
+        return;
+      } else {
+        return;
+      }
+    }
   }
 });
 
@@ -61683,7 +61697,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("LessonFotter")
+      _c("LessonFotter", { attrs: { slideLink: "/lesson1" } })
     ],
     1
   )
@@ -62593,22 +62607,21 @@ var render = function() {
     { staticClass: "lesson-footer", attrs: { id: "lesson-footer" } },
     [
       _c("div", { staticClass: "to-slide-btn-container" }, [
-        _c("a", { attrs: { href: _vm.slideLink } }, [_vm._m(0)])
+        _c("a", { attrs: { href: _vm.slideLink } }, [
+          _c(
+            "button",
+            { staticClass: "to-slide-btn", on: { click: _vm.toSlide } },
+            [
+              _c("img", { attrs: { src: "/images/slide.svg" } }),
+              _vm._v("スライドを見る")
+            ]
+          )
+        ])
       ])
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "to-slide-btn" }, [
-      _c("img", { attrs: { src: "/images/slide.svg" } }),
-      _vm._v("スライドを見る")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

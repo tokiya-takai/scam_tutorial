@@ -30,7 +30,7 @@
         ></component>
       </div>
     </div>
-    <LessonFotter></LessonFotter>
+    <LessonFotter :slideLink="'/lesson1'"></LessonFotter>
   </div>
 </template>
 
