@@ -4,16 +4,85 @@
   width: 100vw;
   display: flex;
   background-color: rgb(233, 233, 233);
-  .procedure-container {
-    height: calc(100% - 20px);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: calc(25% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    background-color: #000000;
+  // 手順エリア
+  .procedure {
+    &-container {
+      height: calc(100% - 20px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: calc(25% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      background-color: white;
+    }
+    &-header {
+      height: 50px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 1px solid rgb(209, 209, 209);
+      background-color: rgb(238, 243, 255);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+    &-icon {
+      width: 20px;
+      margin-right: 10px;
+    }
+    // 手順本体のコンポーネントエリア
+    &-area {
+      // container 100% - header 50px
+      height: calc(100% - 50px);
+      padding: 30px 15px;
+    }
   }
+  // 受信トレイ位置の手順
+  .procedure {
+    height: 100%;
+    overflow-y: scroll;
+    &-title {
+      font-size: 1rem;
+      line-height: 2em;
+    }
+    &-main-text {
+      font-size: 0.9rem;
+      line-height: 2em;
+    }
+  }
+  .procedure2 {
+    .amazon-link {
+      &-img-container {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-img {
+        width: 75%;
+      }
+    }
+  }
+  // 手順の注意事項
+  .procedure-caution {
+    font-size: 0.4rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .exercise-indicator {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100px;
+    }
+  }
+  // 実際に操作するエリア
   .display-container {
     height: calc(100% - 20px);
     margin-top: 10px;

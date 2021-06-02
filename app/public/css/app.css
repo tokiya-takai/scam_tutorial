@@ -4021,7 +4021,64 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 5px;
-  background-color: #000000;
+  background-color: white;
+}
+.exercise-area .procedure-header {
+  height: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid #d1d1d1;
+  background-color: #eef3ff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.exercise-area .procedure-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+.exercise-area .procedure-area {
+  height: calc(100% - 50px);
+  padding: 30px 15px;
+}
+.exercise-area .procedure {
+  height: 100%;
+  overflow-y: scroll;
+}
+.exercise-area .procedure-title {
+  font-size: 1rem;
+  line-height: 2em;
+}
+.exercise-area .procedure-main-text {
+  font-size: 0.9rem;
+  line-height: 2em;
+}
+.exercise-area .procedure2 .amazon-link-img-container {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exercise-area .procedure2 .amazon-link-img {
+  width: 75%;
+}
+.exercise-area .procedure-caution {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.exercise-area .exercise-indicator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exercise-area .exercise-indicator img {
+  width: 100px;
 }
 .exercise-area .display-container {
   height: calc(100% - 20px);
