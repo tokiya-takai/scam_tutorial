@@ -1,9 +1,7 @@
 <template>
   <div id="lesson-footer" class="lesson-footer">
     <div class="to-slide-btn-container">
-      <a :href="slideLink">
-        <button class="to-slide-btn" @click="toSlide"><img src="/images/slide.svg">スライドを見る</button>
-      </a>
+      <button class="to-slide-btn" @click="toSlide()"><img src="/images/slide.svg">スライドを見る</button>
     </div>
   </div>
 </template>

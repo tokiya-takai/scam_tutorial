@@ -2564,8 +2564,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     slideLink: String
@@ -62607,16 +62605,21 @@ var render = function() {
     { staticClass: "lesson-footer", attrs: { id: "lesson-footer" } },
     [
       _c("div", { staticClass: "to-slide-btn-container" }, [
-        _c("a", { attrs: { href: _vm.slideLink } }, [
-          _c(
-            "button",
-            { staticClass: "to-slide-btn", on: { click: _vm.toSlide } },
-            [
-              _c("img", { attrs: { src: "/images/slide.svg" } }),
-              _vm._v("スライドを見る")
-            ]
-          )
-        ])
+        _c(
+          "button",
+          {
+            staticClass: "to-slide-btn",
+            on: {
+              click: function($event) {
+                return _vm.toSlide()
+              }
+            }
+          },
+          [
+            _c("img", { attrs: { src: "/images/slide.svg" } }),
+            _vm._v("スライドを見る")
+          ]
+        )
       ])
     ]
   )
