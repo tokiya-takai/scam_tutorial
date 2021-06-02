@@ -2022,6 +2022,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     lessonStatus: Boolean
@@ -2133,7 +2137,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      lesson: "Lesson1 フィッシング詐欺 > メール",
+      lesson: "Lesson1 フィッシング詐欺",
       currentView: 'Mail',
       input1: "",
       input2: "",
@@ -61393,12 +61397,29 @@ var render = function() {
     { staticClass: "congratulations", attrs: { id: "congratulations" } },
     [
       _vm.lessonStatus
-        ? _c("div", [_c("div", [_vm._v("lesson1")])])
+        ? _c("div", { staticClass: "congratulations-lesson1" }, [
+            _c("h1", [_vm._v("Congratulations!")]),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
         : _c("div", [_c("div", [_vm._v("Others")])])
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "congratulations-lesson1-body" }, [
+      _c("p", [_vm._v("お疲れ様でした！Lesson1をクリアしました！")]),
+      _vm._v(" "),
+      _c("button", { staticClass: "congratulations-lesson1-btn" }, [
+        _vm._v("トップページに戻る")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

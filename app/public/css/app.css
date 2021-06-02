@@ -4080,7 +4080,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 -5px 0px 0 #974444 inset;
   padding-bottom: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: #f95959;
 }
 .exercise-area .procedure6 .end-lesson1-btn:active {
@@ -4415,7 +4415,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 -5px 0px 0 #974444 inset;
   padding-bottom: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: #f95959;
 }
 .exercise-area .display-container .not-found .to-solution-btn:active {
@@ -4436,4 +4436,42 @@ body {
 .exercise-area .display-container .lesson1-solution1-mail, .exercise-area .display-container .lesson1-solution1-login, .exercise-area .display-container .lesson1-solution2-mail, .exercise-area .display-container .lesson1-solution2-login {
   max-width: 700px;
   width: 100%;
+}
+.exercise-area .display-container .congratulations {
+  width: 100%;
+  height: 100%;
+}
+.exercise-area .display-container .congratulations-lesson1 h1 {
+  width: 100%;
+  height: 130px;
+  padding: 30px 15px;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #f95959;
+}
+.exercise-area .display-container .congratulations-lesson1-body {
+  height: calc(100% - 100px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.exercise-area .display-container .congratulations-lesson1-body p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.exercise-area .display-container .congratulations-lesson1-btn {
+  width: 220px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 -5px 0px 0 #974444 inset;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  background-color: #f95959;
+}
+.exercise-area .display-container .congratulations-lesson1-btn:active {
+  box-shadow: 0 0 0 0;
+  padding-bottom: 0;
+  margin-top: 5px;
 }
