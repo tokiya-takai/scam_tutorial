@@ -40,31 +40,31 @@
     background-color: $theme_color1;
     border-radius: 3px;
   }
-}
-
-// Lesson ヘッダー
-.lesson-header {
-  height: 60px;
-  background-color: white;
-  border-bottom: 1px solid #aaa;
-  display: flex;
-  &-logo {
-    height: 59px;
-    margin-left: 10px;
-  }
-
-  h2 {
-    padding-left: 30px;
-    font-size: 1.5rem;
+  // Lesson ヘッダー
+  &-header {
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
     display: flex;
-    align-items: center;
+    &-logo {
+      height: 59px;
+      margin-left: 10px;
+    }
+  
+    h2 {
+      padding-left: 30px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-tutorial-area {
+    width: 70%;
+    height: calc(100% - 95px);
+    margin: 0 auto;
   }
 }
-.lesson-tutorial-area {
-  width: 70%;
-  height: calc(100% - 95px);
-  margin: 0 auto;
-}
+
 .page-btn {
   position: relative;
   height: 80px;
@@ -146,5 +146,42 @@
     height: 9px;
     background-color: rgb(111, 211, 111);
     transition: width 1s;
+  }
+}
+
+// lesson footer
+.lesson {
+  &-footer {
+    width: 100vw;
+    height: 60px;
+    padding-left: 30px;
+    .to-slide-btn-container {
+      width: 180px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .to-slide-btn {
+      width: 180px;
+      height: 50px;
+      padding-right: 20px;
+      font-size: 0.9rem;
+      color: white;
+      background-color: $theme_color1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      transition: opacity .5s;
+      &:hover {
+        opacity: 0.8;
+        transition: opacity .5s;
+      }
+      img {
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
   }
 }

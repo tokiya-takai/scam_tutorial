@@ -3814,7 +3814,6 @@ body {
   background-color: #f95959;
   border-radius: 3px;
 }
-
 .lesson-header {
   height: 60px;
   background-color: white;
@@ -3831,7 +3830,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .lesson-tutorial-area {
   width: 70%;
   height: calc(100% - 95px);
@@ -3921,6 +3919,40 @@ body {
   height: 9px;
   background-color: #6fd36f;
   transition: width 1s;
+}
+
+.lesson-footer {
+  width: 100vw;
+  height: 60px;
+  padding-left: 30px;
+}
+.lesson-footer .to-slide-btn-container {
+  width: 180px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-footer .to-slide-btn {
+  width: 180px;
+  height: 50px;
+  padding-right: 20px;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #f95959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: opacity 0.5s;
+}
+.lesson-footer .to-slide-btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+.lesson-footer .to-slide-btn img {
+  width: 20px;
+  margin-right: 10px;
 }
 
 #lesson1 {
