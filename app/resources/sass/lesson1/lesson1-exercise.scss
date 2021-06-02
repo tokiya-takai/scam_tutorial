@@ -183,5 +183,106 @@
         }
       }
     }
+    // 偽Amazon ページ
+    .amazon {
+      width: 100%;
+      height: 100%;
+      padding-top: 10px;
+      &-logo {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        img {
+          height: 50px;
+        }
+      }
+      &-login-area {
+        height: calc(100% - 50px);
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      &-login-container {
+        height: 50%;
+        width: 35%;
+        padding: 2% 3%;
+        border: 1px solid rgb(209, 209, 209);
+        border-radius: 3px;
+      }
+      &-login {
+        &-title {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+        // 1ページ目　メールか電話番号
+        &-email-or-tel {
+          display: block;
+          font-size: 0.8rem;
+        }
+        // 入力欄
+        &-input {
+          display: block;
+          width: 100%;
+          height: 35px;
+          margin-top: 7px;
+          padding-left: 10px;
+          padding-right: 10px;
+          border: 1px solid #aaa;
+          border-radius: 5px;
+          box-shadow: 0 1px 0 #aaa inset;
+        }
+        // ボタン共通
+        &-submit {
+          display: block;
+          width: 100%;
+          line-height: 35px;
+          font-size: 0.9rem;
+          text-align: center;
+          background: linear-gradient(#f4dda8, #e8c465);
+          border-radius: 5px;
+          border: 1px solid #977e3e;
+          margin-top: 15px;
+          cursor: pointer;
+          &:hover {
+            background: linear-gradient(#f4dda8, #d8b963);
+          }
+        }
+        // ボタンここまで
+        //　メールか電話番号の下の注意事項みたいなやつ
+        &-supplement {
+          display: block;
+          font-size: 0.7rem;
+          margin-top: 15px;
+          a {
+            color: rgb(46, 46, 206);
+            line-height: 2em;
+          }
+        }
+        // パスワード入力欄
+        // メールか電話番号で入力されたもの
+        &-entered-input1 {
+          font-size: 0.7rem;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+      }
+      // パスワード(Label1 パスワード ---- Label2 パスワードを忘れた場合)
+      &-login-password-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+      }
+      // Label1 パスワード
+      &-login-passowrd {
+        font-weight: bold;
+      }
+      // Label2 パスワードを忘れた場合
+      &-login-password-forgot {
+        a {
+          color: rgb(46, 46, 206);
+        }
+      }
+    }
   }
 }

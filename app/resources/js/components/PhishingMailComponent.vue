@@ -40,6 +40,12 @@ export default {
     childBackMail() {
       this.$emit('parentBackMail');
     },
+    childToAmazonEmailOrTel() {
+      this.$emit('parentToAmazonEmailOrTel');
+    },
+    childToAmazonPassword(){
+      this.$emit('parentToAmazonPassword');
+    }
   },
 }
 </script>

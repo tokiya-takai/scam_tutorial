@@ -8,6 +8,12 @@
         <component :is="currentView"
           @parentToMailContent="toMailContent"
           @parentBackMail="backMail"
+          @parentToAmazonEmailOrTel="toAmazonEmailOrTel"
+          @parentToAmazonPassword="toAmazonPassword"
+          @parentToNotFound="toNotFound"
+          @catchInput1="Input1fromChild"
+          @catchInput2="Input2fromChild"
+          :input1="input1"
         ></component>
       </div>
     </div>
@@ -20,6 +26,9 @@ import LessonHeader from './LessonHeaderComponent.vue'
 import LessonFotter from './LessonFooterComponent.vue'
 import Mail from './PhishingMailComponent.vue'
 import MailText from './PhishingMailTextComponent.vue'
+import AmazonEmailOrTel from './AmazonEmailOrTelComponent.vue'
+import AmazonPassword from './AmazonPasswordComponent.vue'
+import NotFound from './404NotFoundComponent.vue'
 
 export default {
   components: {
@@ -27,11 +36,16 @@ export default {
     LessonFotter,
     Mail,
     MailText,
+    AmazonEmailOrTel,
+    AmazonPassword,
+    NotFound,
   },
   data() {
     return {
       lesson: "Lesson1 フィッシング詐欺 > メール",
       currentView: 'Mail',
+      input1: "",
+      input2: "",
     }
   },
   methods: {
@@ -40,6 +54,21 @@ export default {
     },
     backMail() {
       this.currentView = "Mail";
+    },
+    toAmazonEmailOrTel() {
+      this.currentView = "AmazonEmailOrTel";
+    },
+    toAmazonPassword() {
+      this.currentView = "AmazonPassword";
+    },
+    toNotFound() {
+      this.currentView = "NotFound";
+    },
+    Input1fromChild(input1) {
+      this.input1 = input1;
+    },
+    Input2fromChild(input2) {
+      this.input2 = input2;
     }
   },
 }

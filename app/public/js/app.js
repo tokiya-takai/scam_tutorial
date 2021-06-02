@@ -1834,6 +1834,118 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      input1: ""
+    };
+  },
+  methods: {
+    childToMailContent: function childToMailContent() {
+      this.$emit('parentToMailContent');
+    },
+    childBackMail: function childBackMail() {
+      this.$emit('parentBackMail');
+    },
+    childToAmazonEmailOrTel: function childToAmazonEmailOrTel() {
+      this.$emit('parentToAmazonEmailOrTel');
+    },
+    childToAmazonPassword: function childToAmazonPassword() {
+      this.$emit('catchInput1', this.input1);
+      this.$emit('parentToAmazonPassword');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonPasswordComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonPasswordComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      input2: ""
+    };
+  },
+  props: {
+    input1: String
+  },
+  methods: {
+    childToMailContent: function childToMailContent() {
+      this.$emit('parentToMailContent');
+    },
+    childBackMail: function childBackMail() {
+      this.$emit('parentBackMail');
+    },
+    childToAmazonEmailOrTel: function childToAmazonEmailOrTel() {
+      this.$emit('parentToAmazonEmailOrTel');
+    },
+    childToAmazonPassword: function childToAmazonPassword() {
+      this.$emit('parentToAmazonPassword');
+    },
+    childToNotFound: function childToNotFound() {
+      this.$emit('parentToNotFound');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Lesson1Component.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Lesson1Component.vue?vue&type=script&lang=js& ***!
@@ -1849,6 +1961,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonFooterComponent.vue */ "./resources/js/components/LessonFooterComponent.vue");
 /* harmony import */ var _PhishingMailComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PhishingMailComponent.vue */ "./resources/js/components/PhishingMailComponent.vue");
 /* harmony import */ var _PhishingMailTextComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PhishingMailTextComponent.vue */ "./resources/js/components/PhishingMailTextComponent.vue");
+/* harmony import */ var _AmazonEmailOrTelComponent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AmazonEmailOrTelComponent.vue */ "./resources/js/components/AmazonEmailOrTelComponent.vue");
+/* harmony import */ var _AmazonPasswordComponent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AmazonPasswordComponent.vue */ "./resources/js/components/AmazonPasswordComponent.vue");
+/* harmony import */ var _404NotFoundComponent_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./404NotFoundComponent.vue */ "./resources/js/components/404NotFoundComponent.vue");
 //
 //
 //
@@ -1866,6 +1981,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
+
+
 
 
 
@@ -1875,12 +1999,17 @@ __webpack_require__.r(__webpack_exports__);
     LessonHeader: _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     LessonFotter: _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__.default,
     Mail: _PhishingMailComponent_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    MailText: _PhishingMailTextComponent_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    MailText: _PhishingMailTextComponent_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    AmazonEmailOrTel: _AmazonEmailOrTelComponent_vue__WEBPACK_IMPORTED_MODULE_4__.default,
+    AmazonPassword: _AmazonPasswordComponent_vue__WEBPACK_IMPORTED_MODULE_5__.default,
+    NotFound: _404NotFoundComponent_vue__WEBPACK_IMPORTED_MODULE_6__.default
   },
   data: function data() {
     return {
       lesson: "Lesson1 フィッシング詐欺 > メール",
-      currentView: 'Mail'
+      currentView: 'Mail',
+      input1: "",
+      input2: ""
     };
   },
   methods: {
@@ -1889,6 +2018,21 @@ __webpack_require__.r(__webpack_exports__);
     },
     backMail: function backMail() {
       this.currentView = "Mail";
+    },
+    toAmazonEmailOrTel: function toAmazonEmailOrTel() {
+      this.currentView = "AmazonEmailOrTel";
+    },
+    toAmazonPassword: function toAmazonPassword() {
+      this.currentView = "AmazonPassword";
+    },
+    toNotFound: function toNotFound() {
+      this.currentView = "NotFound";
+    },
+    Input1fromChild: function Input1fromChild(input1) {
+      this.input1 = input1;
+    },
+    Input2fromChild: function Input2fromChild(input2) {
+      this.input2 = input2;
     }
   }
 });
@@ -2231,6 +2375,12 @@ __webpack_require__.r(__webpack_exports__);
     },
     childBackMail: function childBackMail() {
       this.$emit('parentBackMail');
+    },
+    childToAmazonEmailOrTel: function childToAmazonEmailOrTel() {
+      this.$emit('parentToAmazonEmailOrTel');
+    },
+    childToAmazonPassword: function childToAmazonPassword() {
+      this.$emit('parentToAmazonPassword');
     }
   }
 });
@@ -2298,6 +2448,12 @@ __webpack_require__.r(__webpack_exports__);
     },
     childBackMail: function childBackMail() {
       this.$emit('parentBackMail');
+    },
+    childToAmazonEmailOrTel: function childToAmazonEmailOrTel() {
+      this.$emit('parentToAmazonEmailOrTel');
+    },
+    childToAmazonPassword: function childToAmazonPassword() {
+      this.$emit('parentToAmazonPassword');
     }
   },
   filters: {
@@ -59290,6 +59446,121 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/js/components/404NotFoundComponent.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/404NotFoundComponent.vue ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _404NotFoundComponent_vue_vue_type_template_id_1a1470c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./404NotFoundComponent.vue?vue&type=template&id=1a1470c1& */ "./resources/js/components/404NotFoundComponent.vue?vue&type=template&id=1a1470c1&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _404NotFoundComponent_vue_vue_type_template_id_1a1470c1___WEBPACK_IMPORTED_MODULE_0__.render,
+  _404NotFoundComponent_vue_vue_type_template_id_1a1470c1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/404NotFoundComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/AmazonEmailOrTelComponent.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/AmazonEmailOrTelComponent.vue ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AmazonEmailOrTelComponent_vue_vue_type_template_id_aba9673c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c& */ "./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c&");
+/* harmony import */ var _AmazonEmailOrTelComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AmazonEmailOrTelComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _AmazonEmailOrTelComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _AmazonEmailOrTelComponent_vue_vue_type_template_id_aba9673c___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AmazonEmailOrTelComponent_vue_vue_type_template_id_aba9673c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/AmazonEmailOrTelComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/AmazonPasswordComponent.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/AmazonPasswordComponent.vue ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AmazonPasswordComponent_vue_vue_type_template_id_0f2f0363___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363& */ "./resources/js/components/AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363&");
+/* harmony import */ var _AmazonPasswordComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AmazonPasswordComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/AmazonPasswordComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _AmazonPasswordComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _AmazonPasswordComponent_vue_vue_type_template_id_0f2f0363___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AmazonPasswordComponent_vue_vue_type_template_id_0f2f0363___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/AmazonPasswordComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Lesson1Component.vue":
 /*!******************************************************!*\
   !*** ./resources/js/components/Lesson1Component.vue ***!
@@ -59673,6 +59944,38 @@ component.options.__file = "resources/js/components/PhishingMailTextComponent.vu
 
 /***/ }),
 
+/***/ "./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonEmailOrTelComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AmazonEmailOrTelComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonEmailOrTelComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/AmazonPasswordComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/AmazonPasswordComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonPasswordComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AmazonPasswordComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonPasswordComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonPasswordComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Lesson1Component.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/Lesson1Component.vue?vue&type=script&lang=js& ***!
@@ -59798,6 +60101,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PhishingMailTextComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PhishingMailTextComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhishingMailTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/404NotFoundComponent.vue?vue&type=template&id=1a1470c1&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/404NotFoundComponent.vue?vue&type=template&id=1a1470c1& ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_404NotFoundComponent_vue_vue_type_template_id_1a1470c1___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_404NotFoundComponent_vue_vue_type_template_id_1a1470c1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_404NotFoundComponent_vue_vue_type_template_id_1a1470c1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./404NotFoundComponent.vue?vue&type=template&id=1a1470c1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/404NotFoundComponent.vue?vue&type=template&id=1a1470c1&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonEmailOrTelComponent_vue_vue_type_template_id_aba9673c___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonEmailOrTelComponent_vue_vue_type_template_id_aba9673c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonEmailOrTelComponent_vue_vue_type_template_id_aba9673c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonPasswordComponent_vue_vue_type_template_id_0f2f0363___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonPasswordComponent_vue_vue_type_template_id_0f2f0363___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AmazonPasswordComponent_vue_vue_type_template_id_0f2f0363___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363&");
+
 
 /***/ }),
 
@@ -59954,6 +60308,229 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/404NotFoundComponent.vue?vue&type=template&id=1a1470c1&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/404NotFoundComponent.vue?vue&type=template&id=1a1470c1& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("404 Not Found")])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonEmailOrTelComponent.vue?vue&type=template&id=aba9673c& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "amazon", attrs: { id: "amazon" } }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "amazon-login-area" }, [
+      _c("div", { staticClass: "amazon-login-container" }, [
+        _c("p", { staticClass: "amazon-login-title" }, [_vm._v("ログイン")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "amazon-login-email-or-tel" }, [
+          _vm._v("Eメールまたは携帯電話番号")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.input1,
+              expression: "input1"
+            }
+          ],
+          staticClass: "amazon-login-input",
+          attrs: { type: "text" },
+          domProps: { value: _vm.input1 },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.input1 = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "amazon-login-submit",
+            on: {
+              click: function($event) {
+                return _vm.childToAmazonPassword()
+              }
+            }
+          },
+          [_vm._v("次に進む")]
+        ),
+        _vm._v(" "),
+        _vm._m(1)
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "amazon-logo" }, [
+      _c("img", { attrs: { src: "/images/amazon-logo.png" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "amazon-login-supplement" }, [
+      _vm._v("\n        続行することで、 Amazonの"),
+      _c("a", { attrs: { href: "javascript:void(0)" } }, [_vm._v("利用規約")]),
+      _vm._v("および"),
+      _c("a", { attrs: { href: "javascript:void(0)" } }, [
+        _vm._v("プライバシー規約")
+      ]),
+      _vm._v("に同意するものとみなされます。\n      ")
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AmazonPasswordComponent.vue?vue&type=template&id=0f2f0363& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "amazon" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "amazon-login-area" }, [
+      _c("div", { staticClass: "amazon-login-container" }, [
+        _c("p", { staticClass: "amazon-login-title" }, [_vm._v("ログイン")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "amazon-login-entered-input1" }, [
+          _vm._v(_vm._s(_vm.input1))
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.input2,
+              expression: "input2"
+            }
+          ],
+          staticClass: "amazon-login-input",
+          attrs: { type: "text" },
+          domProps: { value: _vm.input2 },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.input2 = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "amazon-login-submit",
+            on: {
+              click: function($event) {
+                return _vm.childToNotFound()
+              }
+            }
+          },
+          [_vm._v("ログイン")]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "amazon-logo" }, [
+      _c("img", { attrs: { src: "/images/amazon-logo.png" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "amazon-login-password-label" }, [
+      _c("span", { staticClass: "amazon-login-passowrd" }, [
+        _vm._v("パスワード")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "amazon-login-password-forgot" }, [
+        _c(
+          "a",
+          { staticClass: "forgot", attrs: { href: "javascript:void(0)" } },
+          [_vm._v("パスワードを忘れた場合")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Lesson1Component.vue?vue&type=template&id=3a8a4922&":
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Lesson1Component.vue?vue&type=template&id=3a8a4922& ***!
@@ -59985,9 +60562,15 @@ var render = function() {
           [
             _c(_vm.currentView, {
               tag: "component",
+              attrs: { input1: _vm.input1 },
               on: {
                 parentToMailContent: _vm.toMailContent,
-                parentBackMail: _vm.backMail
+                parentBackMail: _vm.backMail,
+                parentToAmazonEmailOrTel: _vm.toAmazonEmailOrTel,
+                parentToAmazonPassword: _vm.toAmazonPassword,
+                parentToNotFound: _vm.toNotFound,
+                catchInput1: _vm.Input1fromChild,
+                catchInput2: _vm.Input2fromChild
               }
             })
           ],
@@ -60616,7 +61199,21 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _vm._m(4)
+              _c("p", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "phising-link",
+                    attrs: { href: "javascript:void(0);" },
+                    on: {
+                      click: function($event) {
+                        return _vm.childToAmazonEmailOrTel()
+                      }
+                    }
+                  },
+                  [_vm._v("https://www.amazon.co.jp/ap/signin")]
+                )
+              ])
             ])
           ])
         ])
@@ -60660,18 +61257,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "phishing-mail-text-content-sender" }, [
       _c("img", { attrs: { src: "/images/user.png" } }),
       _c("span", [_c("b", [_vm._v("Amazon_info@1234.com")])])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c(
-        "a",
-        { staticClass: "phising-link", attrs: { href: "javascript:void(0);" } },
-        [_vm._v("https://www.amazon.co.jp/ap/signin")]
-      )
     ])
   }
 ]

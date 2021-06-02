@@ -21,7 +21,7 @@
           <div class="phishing-mail-text-content-body">
             <p>Amazonプライムをご利用頂きありがとうございます。{{ day | moment }}に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。<br>
             お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazon.co.jpにログインし、情報の更新を行ってください。</p>
-            <p><a href="javascript:void(0);" class="phising-link">https://www.amazon.co.jp/ap/signin</a></p>
+            <p><a href="javascript:void(0);" class="phising-link" @click="childToAmazonEmailOrTel()">https://www.amazon.co.jp/ap/signin</a></p>
           </div>
         </div>
       </div>
@@ -49,6 +49,12 @@ export default {
     childBackMail() {
       this.$emit('parentBackMail');
     },
+    childToAmazonEmailOrTel() {
+      this.$emit('parentToAmazonEmailOrTel');
+    },
+    childToAmazonPassword(){
+      this.$emit('parentToAmazonPassword');
+    }
   },
   filters: {
     moment(value) {
