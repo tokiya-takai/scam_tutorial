@@ -40,7 +40,7 @@ export default {
   },
   mounted() {
     var day = new Date();
-    this.day = day.setDate(day.getDate() + 2);
+    this.day = day.setDate(day.getDate() - 1);
   },
   methods: {
     childToMailContent() {

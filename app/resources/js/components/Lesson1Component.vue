@@ -14,6 +14,8 @@
           @catchInput1="Input1fromChild"
           @catchInput2="Input2fromChild"
           :input1="input1"
+          :mailOrTelError="mailOrTelError"
+          :passwordError="passwordError"
         ></component>
       </div>
     </div>
@@ -46,6 +48,8 @@ export default {
       currentView: 'Mail',
       input1: "",
       input2: "",
+      mailOrTelError: false,
+      passwordError: false,
     }
   },
   methods: {
@@ -59,10 +63,18 @@ export default {
       this.currentView = "AmazonEmailOrTel";
     },
     toAmazonPassword() {
-      this.currentView = "AmazonPassword";
+      if(this.input1 != ""){
+        this.currentView = "AmazonPassword";
+        return;
+      }
+      this.mailOrTelError = true;
     },
     toNotFound() {
-      this.currentView = "NotFound";
+      if(this.input2 != ""){
+        this.currentView = "NotFound";
+        return
+      }
+      this.passwordError = true;
     },
     Input1fromChild(input1) {
       this.input1 = input1;

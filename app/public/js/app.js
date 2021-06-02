@@ -1862,11 +1862,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       input1: ""
     };
+  },
+  props: {
+    mailOrTelError: Boolean
   },
   methods: {
     childToMailContent: function childToMailContent() {
@@ -1916,6 +1920,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1923,7 +1929,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   props: {
-    input1: String
+    input1: String,
+    passwordError: Boolean
   },
   methods: {
     childToMailContent: function childToMailContent() {
@@ -1939,6 +1946,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('parentToAmazonPassword');
     },
     childToNotFound: function childToNotFound() {
+      this.$emit('catchInput2', this.input2);
       this.$emit('parentToNotFound');
     }
   }
@@ -1987,6 +1995,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -2009,7 +2019,9 @@ __webpack_require__.r(__webpack_exports__);
       lesson: "Lesson1 フィッシング詐欺 > メール",
       currentView: 'Mail',
       input1: "",
-      input2: ""
+      input2: "",
+      mailOrTelError: false,
+      passwordError: false
     };
   },
   methods: {
@@ -2023,10 +2035,20 @@ __webpack_require__.r(__webpack_exports__);
       this.currentView = "AmazonEmailOrTel";
     },
     toAmazonPassword: function toAmazonPassword() {
-      this.currentView = "AmazonPassword";
+      if (this.input1 != "") {
+        this.currentView = "AmazonPassword";
+        return;
+      }
+
+      this.mailOrTelError = true;
     },
     toNotFound: function toNotFound() {
-      this.currentView = "NotFound";
+      if (this.input2 != "") {
+        this.currentView = "NotFound";
+        return;
+      }
+
+      this.passwordError = true;
     },
     Input1fromChild: function Input1fromChild(input1) {
       this.input1 = input1;
@@ -2440,7 +2462,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var day = new Date();
-    this.day = day.setDate(day.getDate() + 2);
+    this.day = day.setDate(day.getDate() - 1);
   },
   methods: {
     childToMailContent: function childToMailContent() {
@@ -60324,9 +60346,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("404 Not Found")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "not-found", attrs: { id: "not-found" } }, [
+      _c("h1", [_vm._v("404 Not Found")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -60370,6 +60401,7 @@ var render = function() {
             }
           ],
           staticClass: "amazon-login-input",
+          class: { "input-error": _vm.mailOrTelError },
           attrs: { type: "text" },
           domProps: { value: _vm.input1 },
           on: {
@@ -60381,6 +60413,13 @@ var render = function() {
             }
           }
         }),
+        _vm._v(" "),
+        _vm.mailOrTelError
+          ? _c("span", { staticClass: "input-error-message" }, [
+              _c("i", [_vm._v("!")]),
+              _vm._v("Eメールアドレスまたは携帯電話番号を入力")
+            ])
+          : _vm._e(),
         _vm._v(" "),
         _c(
           "div",
@@ -60469,6 +60508,7 @@ var render = function() {
             }
           ],
           staticClass: "amazon-login-input",
+          class: { "input-error": _vm.passwordError },
           attrs: { type: "text" },
           domProps: { value: _vm.input2 },
           on: {
@@ -60481,6 +60521,13 @@ var render = function() {
           }
         }),
         _vm._v(" "),
+        _vm.passwordError
+          ? _c("span", { staticClass: "input-error-message" }, [
+              _c("i", [_vm._v("!")]),
+              _vm._v("パスワードを入力してください")
+            ])
+          : _vm._e(),
+        _vm._v(" "),
         _c(
           "div",
           {
@@ -60492,7 +60539,9 @@ var render = function() {
             }
           },
           [_vm._v("ログイン")]
-        )
+        ),
+        _vm._v(" "),
+        _vm._m(2)
       ])
     ])
   ])
@@ -60522,6 +60571,15 @@ var staticRenderFns = [
           [_vm._v("パスワードを忘れた場合")]
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "amazon-login-keep-checkbox" }, [
+      _c("input", { attrs: { type: "checkbox" } }),
+      _vm._v("ログインしたままにする")
     ])
   }
 ]
@@ -60562,7 +60620,11 @@ var render = function() {
           [
             _c(_vm.currentView, {
               tag: "component",
-              attrs: { input1: _vm.input1 },
+              attrs: {
+                input1: _vm.input1,
+                mailOrTelError: _vm.mailOrTelError,
+                passwordError: _vm.passwordError
+              },
               on: {
                 parentToMailContent: _vm.toMailContent,
                 parentBackMail: _vm.backMail,
