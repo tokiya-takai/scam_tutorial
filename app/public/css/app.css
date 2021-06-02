@@ -4469,9 +4469,39 @@ body {
   padding-bottom: 5px;
   font-size: 1rem;
   background-color: #f95959;
+  margin-bottom: 5px;
 }
 .exercise-area .display-container .congratulations-lesson1-btn:active {
   box-shadow: 0 0 0 0;
   padding-bottom: 0;
+  margin-bottom: 0;
   margin-top: 5px;
+}
+.exercise-area .display-container .congratulations-lesson1-indicator-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.exercise-area .display-container .congratulations-lesson1-indicator-background {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #b6b6b6;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+.exercise-area .display-container .congratulations-lesson1-indicator {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(#cfffcf, #6fd36f, #6aca6a);
+}
+.exercise-area .display-container .congratulations-lesson1-all-lessons {
+  position: absolute;
+  color: #bdbdbd;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-left: 250px;
 }
