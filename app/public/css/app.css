@@ -3755,25 +3755,204 @@ body {
     font-size: 1.2rem;
   }
 }
-#footer {
-  height: 300px;
+@media (max-width: 991px) {
+  #footer {
+    height: 600px;
+    width: 100vw;
+    background-color: #f5f6ff;
+  }
+  #footer .footer-container {
+    width: 100%;
+    padding-bottom: 100px;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-flow: column;
+  }
+  #footer .footer-content1 {
+    width: 100%;
+    height: 350px;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+  }
+  #footer .footer-content1-logo {
+    height: 50px;
+  }
+  #footer .footer-content {
+    width: 100%;
+    height: 350px;
+    padding-top: 35px;
+    display: flex;
+    flex-flow: column;
+  }
+  #footer .footer-content-title1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  #footer .footer-content-body {
+    font-size: 0.7rem;
+    height: 20px;
+    line-height: 20px;
+    color: #494c5c;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #footer .footer-content-body:hover {
+    opacity: 0.7;
+  }
+  #footer .footer-copyright {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-copyright span {
+    display: inline-block;
+  }
 }
-#footer .footer-container {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding-top: 220px;
+@media (min-width: 992px) {
+  #footer {
+    height: 600px;
+    width: 100vw;
+    background-color: #f5f6ff;
+  }
+  #footer .footer-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-content1 {
+    width: 30%;
+    height: 100%;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+  }
+  #footer .footer-content1-logo {
+    height: 50px;
+  }
+  #footer .footer-content {
+    width: 30%;
+    height: 100%;
+    padding-top: 35px;
+    display: flex;
+    flex-flow: column;
+  }
+  #footer .footer-content-title1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  #footer .footer-content-body {
+    font-size: 0.9rem;
+    height: 25px;
+    line-height: 25px;
+    color: #494c5c;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #footer .footer-content-body:hover {
+    opacity: 0.7;
+  }
+  #footer .footer-copyright {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-copyright span {
+    display: inline-block;
+  }
 }
-#footer .footer-container img {
-  display: inline-block;
-  height: 40px;
+@media (max-width: 991px) {
+  .privacy-policy, .terms-of-use {
+    padding: 120px 5% 50px;
+  }
+  .privacy-policy h1, .terms-of-use h1 {
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+  .privacy-policy h4, .terms-of-use h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .privacy-policy p, .terms-of-use p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 2em;
+  }
+  .privacy-policy ol, .terms-of-use ol {
+    list-style-type: decimal;
+    padding: 0 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .privacy-policy ol li, .terms-of-use ol li {
+    font-size: 1rem;
+    line-height: 2em;
+  }
+  .privacy-policy span, .terms-of-use span {
+    display: inline-block;
+    padding: 0 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
-#footer .footer-container span {
-  display: inline-block;
-  line-height: 40px;
+@media (min-width: 992px) {
+  .privacy-policy, .terms-of-use {
+    padding: 150px 15% 50px;
+  }
+  .privacy-policy h1, .terms-of-use h1 {
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+  .privacy-policy h4, .terms-of-use h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .privacy-policy p, .terms-of-use p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 2em;
+  }
+  .privacy-policy ol, .terms-of-use ol {
+    list-style-type: decimal;
+    padding: 0 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .privacy-policy ol li, .terms-of-use ol li {
+    font-size: 1.2rem;
+    line-height: 2em;
+  }
+  .privacy-policy span, .terms-of-use span {
+    display: inline-block;
+    padding: 0 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
-
 .lesson-alert-background {
   position: absolute;
   width: 100vw;
