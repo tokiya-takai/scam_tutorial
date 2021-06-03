@@ -3755,25 +3755,65 @@ body {
     font-size: 1.2rem;
   }
 }
-#footer {
-  height: 300px;
+@media (min-width: 992px) {
+  #footer {
+    height: 600px;
+    width: 100vw;
+    background-color: #f5f6ff;
+  }
+  #footer .footer-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-content1 {
+    width: 30%;
+    height: 100%;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+  }
+  #footer .footer-content1-logo {
+    height: 50px;
+  }
+  #footer .footer-content2 {
+    width: 30%;
+    height: 100%;
+    padding-top: 35px;
+  }
+  #footer .footer-content2-title1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  #footer .footer-content2-body {
+    font-size: 0.9rem;
+    color: #494c5c;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  #footer .footer-content2-body:hover {
+    opacity: 0.7;
+  }
+  #footer .footer-copyright {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-copyright span {
+    display: inline-block;
+  }
 }
-#footer .footer-container {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding-top: 220px;
-}
-#footer .footer-container img {
-  display: inline-block;
-  height: 40px;
-}
-#footer .footer-container span {
-  display: inline-block;
-  line-height: 40px;
-}
-
 .lesson-alert-background {
   position: absolute;
   width: 100vw;
