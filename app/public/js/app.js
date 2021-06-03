@@ -61369,7 +61369,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "amazon-logo" }, [
-      _c("img", { attrs: { src: "/images/amazon-logo.png" } })
+      _c("img", { attrs: { src: "/images/amazon-logo.jpg" } })
     ])
   },
   function() {
@@ -61377,7 +61377,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "amazon-login-supplement" }, [
-      _vm._v("\n        続行することで、 Amazonの"),
+      _vm._v("\n        続行することで、 Amazooonの"),
       _c("a", { attrs: { href: "javascript:void(0)" } }, [_vm._v("利用規約")]),
       _vm._v("および"),
       _c("a", { attrs: { href: "javascript:void(0)" } }, [
@@ -61476,7 +61476,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "amazon-logo" }, [
-      _c("img", { attrs: { src: "/images/amazon-logo.png" } })
+      _c("img", { attrs: { src: "/images/amazon-logo.jpg" } })
     ])
   },
   function() {
@@ -61761,7 +61761,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "procedure-main-text" }, [
           _vm._v(
-            "メールの受信トレイに、どうやらAmazonから重要なメールが届いているようです。"
+            "メールの受信トレイに、どうやらAmazooonから重要なメールが届いているようです。"
           ),
           _c("br"),
           _vm._v("\n  メールをクリックして、開いてみましょう。\n  ")
@@ -61822,7 +61822,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "amazon-link-img-container" }, [
           _c("img", {
             staticClass: "amazon-link-img",
-            attrs: { src: "/images/amazon-link.png" }
+            attrs: { src: "/images/amazon-link.jpg" }
           })
         ])
       ]
@@ -61866,7 +61866,7 @@ var staticRenderFns = [
       },
       [
         _c("span", { staticClass: "procedure-title" }, [
-          _c("b", [_vm._v("3.Amazonのログインページに遷移しましたね。")]),
+          _c("b", [_vm._v("3.Amazooonのログインページに遷移しましたね。")]),
           _c("br")
         ]),
         _vm._v(" "),
@@ -62105,11 +62105,11 @@ var staticRenderFns = [
       _vm._v("\n  メールの送信元を見てみましょう。"),
       _c("br"),
       _vm._v(
-        "\n  このメールは、「Amazon_info@1234.com」というメールアドレスから送信されているようです。"
+        "\n  このメールは、「Amazooon_info@1234.com」というメールアドレスから送信されているようです。"
       ),
       _c("br"),
       _vm._v(
-        "\n  アドレスには確かに「Amazon」の文字があり、一見本物のようです。しかし、このアドレスはアマゾンの公式のものではありません。"
+        "\n  アドレスには確かに「Amazooon」の文字があり、一見本物のようです。しかし、このアドレスはアマゾーンの公式のものではありません。"
       ),
       _c("br"),
       _vm._v("\n  このアドレスはサンプルですが、"),
@@ -62793,7 +62793,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mail-sender" }, [
       _c("span", { staticClass: "dummy-check-box" }, [_vm._v("□")]),
-      _vm._v("アマゾン")
+      _vm._v("アマゾーン")
     ])
   },
   function() {
@@ -62872,13 +62872,13 @@ var render = function() {
             _c("div", { staticClass: "phishing-mail-text-content-body" }, [
               _c("p", [
                 _vm._v(
-                  "Amazonプライムをご利用頂きありがとうございます。" +
+                  "Amazooonプライムをご利用頂きありがとうございます。" +
                     _vm._s(_vm._f("moment")(_vm.day)) +
                     "に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。"
                 ),
                 _c("br"),
                 _vm._v(
-                  "\n          お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazon.co.jpにログインし、情報の更新を行ってください。"
+                  "\n          お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazooon.co.jpにログインし、情報の更新を行ってください。"
                 )
               ]),
               _vm._v(" "),
@@ -62894,7 +62894,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("https://www.amazon.co.jp/ap/signin")]
+                  [_vm._v("https://www.amazooon.co.jp/ap/signin")]
                 )
               ])
             ])
@@ -62939,7 +62939,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "phishing-mail-text-content-sender" }, [
       _c("img", { attrs: { src: "/images/user.png" } }),
-      _c("span", [_c("b", [_vm._v("Amazon_info@1234.com")])])
+      _c("span", [_c("b", [_vm._v("Amazooon_info@1234.com")])])
     ])
   }
 ]

@@ -16,12 +16,12 @@
         </div>
         <div class="phishing-mail-text-content">
           <div class="phishing-mail-text-content-sender">
-            <img src="/images/user.png"><span><b>Amazon_info@1234.com</b></span>
+            <img src="/images/user.png"><span><b>Amazooon_info@1234.com</b></span>
           </div>
           <div class="phishing-mail-text-content-body">
-            <p>Amazonプライムをご利用頂きありがとうございます。{{ day | moment }}に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。<br>
-            お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazon.co.jpにログインし、情報の更新を行ってください。</p>
-            <p><a href="javascript:void(0);" class="phising-link" @click="childToAmazonEmailOrTel()">https://www.amazon.co.jp/ap/signin</a></p>
+            <p>Amazooonプライムをご利用頂きありがとうございます。{{ day | moment }}に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。<br>
+            お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazooon.co.jpにログインし、情報の更新を行ってください。</p>
+            <p><a href="javascript:void(0);" class="phising-link" @click="childToAmazonEmailOrTel()">https://www.amazooon.co.jp/ap/signin</a></p>
           </div>
         </div>
       </div>

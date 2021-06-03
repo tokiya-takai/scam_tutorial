@@ -1,6 +1,6 @@
 <template>
   <div class="amazon">
-    <div class="amazon-logo"><img src="/images/amazon-logo.png"></div>
+    <div class="amazon-logo"><img src="/images/amazon-logo.jpg"></div>
     <div class="amazon-login-area">
       <div class="amazon-login-container">
         <p class="amazon-login-title">ログイン</p>

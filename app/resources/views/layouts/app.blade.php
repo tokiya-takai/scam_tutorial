@@ -11,6 +11,9 @@
 
     <!-- Scripts -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
     <!-- Styles -->
     <link href="/css/destyle.css" rel="stylesheet">

@@ -15,7 +15,7 @@
           <div class="phishing-mail-mails-header-current"><img src="/images/task-tray.svg">メイン</div>
           <div class="phishing-mail-mails-mail">
             <button class="mail-btn" @click="childToMailContent()">
-              <div class="mail-sender"><span class="dummy-check-box">□</span>アマゾン</div>
+              <div class="mail-sender"><span class="dummy-check-box">□</span>アマゾーン</div>
               <div class="mail-title">【重要】情報を更新する必要があります。</div>
             </button>
           </div>

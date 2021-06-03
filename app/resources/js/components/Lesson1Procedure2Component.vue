@@ -6,7 +6,7 @@
     メールの内容に従って、リンクからログインしましょう。
     </p>
     <div class="amazon-link-img-container">
-      <img class="amazon-link-img" src="/images/amazon-link.png">
+      <img class="amazon-link-img" src="/images/amazon-link.jpg">
     </div>
   </div>
 </template>
