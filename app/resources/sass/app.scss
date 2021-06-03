@@ -7,6 +7,9 @@ body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+// auth
+@import "./auth/login.scss";
+
 // header
 @import "./header.scss";
 

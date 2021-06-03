@@ -3186,6 +3186,21 @@ body {
 }
 
 @media (max-width: 554px) {
+  .login {
+    padding-top: 90px;
+  }
+}
+@media (min-width: 555px) and (max-width: 991px) {
+  .login {
+    padding-top: 90px;
+  }
+}
+@media (min-width: 992px) {
+  .login {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 554px) {
   #main {
     position: relative;
   }
@@ -3292,6 +3307,7 @@ body {
   }
   #main .landing-header .header-nav .nav-login {
     margin: 0 8px;
+    cursor: pointer;
   }
   #main .landing-header .header-nav .nav-register {
     background-color: #f95959;

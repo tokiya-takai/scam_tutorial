@@ -4,13 +4,6 @@
       <img class="landing-header-small-logo" src="/images/small-logo.png" alt="logo">
     </a>
     <nav class="header-nav">
-      <div class="form-group row mt-2">
-        <div class="col-md-8 offset-md-4">
-            <a href="/login/google" class="btn btn-secondary" role="button">
-                Google Login
-            </a>
-        </div>
-      </div>
       @guest
           @if(Route::has('login'))
             <a class="nav-item nav-login" href="{{ route('login') }}">ログイン</a>
