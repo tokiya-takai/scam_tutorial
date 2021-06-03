@@ -6,6 +6,7 @@
     <div class="footer-content2">
       <p class="footer-content2-title1">サポート</p>
       <p class="footer-content2-body"><a href="{{ route('privacyPolicy') }}">プライバシーポリシー</a></p>
+      <p class="footer-content2-body"><a href="{{ route('termsOfUse') }}">利用規約</a></p>
     </div>
   </div>
   <div class="footer-copyright">

@@ -1,6 +1,6 @@
 @media (max-width: 991px)
 {
-  .privacy-policy {
+  .privacy-policy, .terms-of-use {
     padding: 120px 5% 50px;
     h1 {
       font-size: 1.5rem;
@@ -37,7 +37,7 @@
 }
 
 @media (min-width: 992px) {
-  .privacy-policy {
+  .privacy-policy, .terms-of-use {
     padding: 150px 15% 50px;
     h1 {
       font-size: 2.5rem;

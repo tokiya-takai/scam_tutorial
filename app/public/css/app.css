@@ -3784,6 +3784,8 @@ body {
     width: 100%;
     height: 350px;
     padding-top: 35px;
+    display: flex;
+    flex-flow: column;
   }
   #footer .footer-content2-title1 {
     height: 50px;
@@ -3794,10 +3796,12 @@ body {
   }
   #footer .footer-content2-body {
     font-size: 0.7rem;
+    height: 20px;
+    line-height: 20px;
     color: #494c5c;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   #footer .footer-content2-body:hover {
     opacity: 0.7;
@@ -3843,6 +3847,8 @@ body {
     width: 30%;
     height: 100%;
     padding-top: 35px;
+    display: flex;
+    flex-flow: column;
   }
   #footer .footer-content2-title1 {
     height: 50px;
@@ -3853,10 +3859,12 @@ body {
   }
   #footer .footer-content2-body {
     font-size: 0.9rem;
+    height: 25px;
+    line-height: 25px;
     color: #494c5c;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   #footer .footer-content2-body:hover {
     opacity: 0.7;
@@ -3873,35 +3881,35 @@ body {
   }
 }
 @media (max-width: 991px) {
-  .privacy-policy {
+  .privacy-policy, .terms-of-use {
     padding: 120px 5% 50px;
   }
-  .privacy-policy h1 {
+  .privacy-policy h1, .terms-of-use h1 {
     font-size: 1.5rem;
     padding: 20px;
     text-align: center;
   }
-  .privacy-policy h4 {
+  .privacy-policy h4, .terms-of-use h4 {
     font-size: 1.2rem;
     font-weight: bold;
   }
-  .privacy-policy p {
+  .privacy-policy p, .terms-of-use p {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 1rem;
     line-height: 2em;
   }
-  .privacy-policy ol {
+  .privacy-policy ol, .terms-of-use ol {
     list-style-type: decimal;
     padding: 0 25px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .privacy-policy ol li {
+  .privacy-policy ol li, .terms-of-use ol li {
     font-size: 1rem;
     line-height: 2em;
   }
-  .privacy-policy span {
+  .privacy-policy span, .terms-of-use span {
     display: inline-block;
     padding: 0 50px;
     margin-top: 10px;
@@ -3909,35 +3917,35 @@ body {
   }
 }
 @media (min-width: 992px) {
-  .privacy-policy {
+  .privacy-policy, .terms-of-use {
     padding: 150px 15% 50px;
   }
-  .privacy-policy h1 {
+  .privacy-policy h1, .terms-of-use h1 {
     font-size: 2.5rem;
     padding: 20px;
     text-align: center;
   }
-  .privacy-policy h4 {
+  .privacy-policy h4, .terms-of-use h4 {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  .privacy-policy p {
+  .privacy-policy p, .terms-of-use p {
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 1.2rem;
     line-height: 2em;
   }
-  .privacy-policy ol {
+  .privacy-policy ol, .terms-of-use ol {
     list-style-type: decimal;
     padding: 0 50px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .privacy-policy ol li {
+  .privacy-policy ol li, .terms-of-use ol li {
     font-size: 1.2rem;
     line-height: 2em;
   }
-  .privacy-policy span {
+  .privacy-policy span, .terms-of-use span {
     display: inline-block;
     padding: 0 50px;
     margin-top: 10px;

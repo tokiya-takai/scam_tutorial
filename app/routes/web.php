@@ -26,3 +26,4 @@ Route::get('/lesson1/exercise',[Lesson1Controller::class, 'show']);
 
 // Support
 Route::get('/privacypolicy', [SupportsController::class, 'privacyPolicy'])->name('privacyPolicy');
+Route::get('/termsofuse', [SupportsController::class, 'termsOfUse'])->name('termsOfUse');
