@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Lesson1Controller;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\SupportsController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -22,3 +23,6 @@ Route::get('/', [LandingController::class, 'index']);
 // Lesson1
 Route::get('/lesson1',[Lesson1Controller::class, 'index'])->name('lesson1');
 Route::get('/lesson1/exercise',[Lesson1Controller::class, 'show']);
+
+// Support
+Route::get('/privacypolicy', [SupportsController::class, 'privacyPolicy'])->name('privacyPolicy');
