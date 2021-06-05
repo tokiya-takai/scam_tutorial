@@ -3211,7 +3211,7 @@ body {
     height: 400px;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
   }
   .login-content1 {
@@ -3346,7 +3346,7 @@ body {
     height: 480px;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
   }
   .register-content1 {
@@ -3408,7 +3408,7 @@ body {
     width: calc(700px * 0.75);
     height: calc(400px * 0.75);
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
   }
   .verify-header {
     height: 80px;
@@ -3446,7 +3446,7 @@ body {
     width: calc(700px * 0.75);
     height: calc(400px * 0.75);
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
   }
   .verify-header {
     height: 80px;
@@ -3486,7 +3486,7 @@ body {
     height: calc(400px * 0.75);
     border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     background: url("/images/send-mail.jpg");
     background-size: contain;
   }
@@ -3573,7 +3573,7 @@ body {
   margin-right: 30px;
   border: 1px solid #d1d1d1;
   border-radius: 5px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .home-header {
   height: 30%;
@@ -3610,7 +3610,7 @@ body {
   margin-left: 15px;
   border: 1px solid #d1d1d1;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .password-reset-mail-alert {
   padding-left: 30px;

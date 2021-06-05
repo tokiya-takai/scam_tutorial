@@ -12,7 +12,7 @@
       width: calc(700px * 0.75);
       height: calc(400px * 0.75);
       border-radius: 10px;
-      background-color: white;
+      background-color: rgba(255,255,255, 0.7);
     }
     &-header {
       height: 80px;
@@ -53,7 +53,7 @@
       width: calc(700px * 0.75);
       height: calc(400px * 0.75);
       border-radius: 10px;
-      background-color: white;
+      background-color: rgba(255,255,255, 0.7);
     }
     &-header {
       height: 80px;
@@ -96,7 +96,7 @@
       height: calc(400px * 0.75);
       border: 1px solid $border;
       border-radius: 10px;
-      background-color: white;
+      background-color: rgba(255,255,255, 0.7);
       background: url('/images/send-mail.jpg');
       background-size: contain;
     }
