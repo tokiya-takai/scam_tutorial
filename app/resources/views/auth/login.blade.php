@@ -43,6 +43,11 @@
                         <button type="submit" class="auth-submit-btn btn btn-primary">{{ __('Login') }}</button>
                     </div>
                 </form>
+                <div class="agree">
+                    <span>続行することで、 i-Liteの<a href="{{ route('termsOfUse') }}">利用規約</a>
+                        および<a href="{{ route('privacyPolicy') }}">プライバシーポリシー</a>に同意するものとみなされます。
+                    </span>
+                </div>
             </div>
             <div class="login-content2">
                 <div class="login-content2-google">
