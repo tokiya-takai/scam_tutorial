@@ -5,6 +5,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Lesson1Controller;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\SupportsController;
+use App\Http\Controllers\UserDeleteController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -12,6 +13,9 @@ use App\Http\Controllers\SupportsController;
 
 Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// アカウント削除
+Route::get('/userdelete', [UserDeleteController::class, 'index'])->name('userdelete.index');
 
 // Googleログイン用
 Route::get('login/google', [LoginController::class, 'redirectToGoogle']);

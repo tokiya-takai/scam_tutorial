@@ -3,7 +3,6 @@
   .login {
     width: 100vw;
     height: 100vh;
-    padding-top: 150px;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -20,6 +19,7 @@
       &1 {
         width: 100%;
         border-bottom: 1px solid $border;
+        margin-top: 120px;
         &-label {
           display: block;
           text-align: center;
