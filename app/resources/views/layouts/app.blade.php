@@ -29,5 +29,6 @@
     </div>
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="{{ mix('js/lesson1.js') }}" defer></script>
+    <script src="{{ mix('js/wave.js') }}" defer></script>
 </body>
 </html>
