@@ -3190,7 +3190,7 @@ body {
   .login {
     width: 100vw;
     height: 100vh;
-    padding-top: 90px;
+    padding-top: 150px;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -3199,8 +3199,6 @@ body {
     align-items: center;
   }
   .login-container {
-    border-top: 1px solid #d1d1d1;
-    border-bottom: 1px solid #d1d1d1;
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-flow: column;
@@ -3208,8 +3206,6 @@ body {
   }
   .login-content1 {
     width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
     border-bottom: 1px solid #d1d1d1;
   }
   .login-content1-label {
@@ -3235,8 +3231,8 @@ body {
     text-align: center;
   }
   .login-content2-google .google-login-btn {
-    width: calc(100vw - 30px);
-    height: calc((100vw - 30px) * 0.24);
+    width: calc(382px * 0.5);
+    height: calc(92px * 0.5);
     margin: 0 auto;
     background: url("/images/google_signin_light.png");
     background-size: contain;
@@ -3460,7 +3456,7 @@ body {
 .submit-form-group {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   text-align: center;
 }
 .submit-form-group .auth-submit-btn {
@@ -3479,12 +3475,170 @@ body {
   color: #36ea1c;
 }
 
+.agree {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.agree span {
+  font-size: 0.7rem;
+}
+.agree a {
+  color: #2e2ece;
+}
+
 #sineCanvas {
+  position: fixed;
   width: 100vw;
   height: 300px;
   margin-top: calc(100vh - 300px);
 }
 
+@media (max-width: 554px) {
+  .register {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 150px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .register-content1 {
+    width: 100%;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  .register-content1-label {
+    display: block;
+    text-align: center;
+    height: 63px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .register-content1-form {
+    width: 100%;
+  }
+  .register-content2 {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .register-content2-google {
+    width: 100%;
+    text-align: center;
+  }
+  .register-content2-google .google-login-btn {
+    width: calc(382px * 0.5);
+    height: calc(92px * 0.5);
+    margin: 0 auto;
+    background: url("/images/google_signin_light.png");
+    background-size: contain;
+  }
+  .register-content2-google .google-login-btn:hover {
+    background: url("/images/google_signin_dark.png");
+    background-size: contain;
+  }
+  .register .submit-form-group .auth-submit-btn {
+    transition: background-color 0.3s;
+  }
+  .register .submit-form-group .auth-submit-btn:hover {
+    background-color: #da3737;
+    transition: background-color 0.3s;
+  }
+
+  .form-sub-group {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .form-sub-group .remember {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8rem;
+  }
+  .form-sub-group .password-request {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8rem;
+    color: #2e2ece;
+  }
+}
+@media (min-width: 555px) and (max-width: 991px) {
+  .register {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-container {
+    width: 740px;
+    height: 480px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+  }
+  .register-content1 {
+    width: 50%;
+    border-right: 1px solid #d1d1d1;
+  }
+  .register-content1-label {
+    display: block;
+    text-align: center;
+    height: 63px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .register-content1-form {
+    width: 100%;
+  }
+  .register-content2 {
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .register-content2-google {
+    width: 100%;
+    text-align: center;
+  }
+  .register-content2-google .google-login-btn {
+    width: calc(382px * 0.6);
+    height: calc(92px * 0.6);
+    margin: 0 auto;
+    background: url("/images/google_signin_light.png");
+    background-size: contain;
+  }
+  .register-content2-google .google-login-btn:hover {
+    background: url("/images/google_signin_dark.png");
+    background-size: contain;
+  }
+  .register .submit-form-group .auth-submit-btn {
+    transition: background-color 0.3s;
+  }
+  .register .submit-form-group .auth-submit-btn:hover {
+    background-color: #da3737;
+    transition: background-color 0.3s;
+  }
+}
 @media (min-width: 992px) {
   .register {
     width: 100vw;

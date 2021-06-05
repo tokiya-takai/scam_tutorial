@@ -1,11 +1,160 @@
 @media (max-width: 554px)
 {
-
+  .register {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 150px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      background-color: rgba(255,255,255, 0.7);
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+    &-content {
+      &1 {
+        width: 100%;
+        border-bottom: 1px solid $border;
+        &-label {
+          display: block;
+          text-align: center;
+          height: 63px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-size: 1.3rem;
+        }
+        &-form {
+          // .form-group > input のwidthを決定する必要があるので、formのwidthは必ず指定する
+          width: 100%;
+        }
+      }
+      &2 {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &-google {
+          width: 100%;
+          text-align: center;
+          .google-login-btn {
+            width: calc(382px * 0.5);
+            height: calc(92px * 0.5);
+            margin: 0 auto;
+            background: url('/images/google_signin_light.png');
+            background-size: contain;
+            &:hover {
+              background: url('/images/google_signin_dark.png');
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+    // submitボタンのスタイルはcommonで指定(hoverが何故か無効なのでここで指定)
+    .submit-form-group {
+      .auth-submit-btn{
+        transition: background-color .3s;
+        &:hover {
+          background-color: $theme_color_hover;
+          transition: background-color .3s;
+        }
+      }
+    }
+  }
+  .form-sub-group {
+    padding-left: 30px;
+    padding-right: 30px;
+    .remember {
+      height: 30px;
+      line-height: 30px;
+      font-size: 0.8rem;
+    }
+    .password-request {
+      height: 30px;
+      line-height: 30px;
+      font-size: 0.8rem;
+      color: $link_color;
+    }
+  }
 }
 
 @media (min-width: 555px) and (max-width: 991px)
 {
-
+  .register {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      width: 740px;
+      height: 480px;
+      border: 1px solid $border;
+      border-radius: 10px;
+      background-color: rgba(255,255,255, 0.7);
+      margin-left: 15px;
+      margin-right: 15px;
+      display: flex;
+    }
+    &-content {
+      &1 {
+        width: 50%;
+        border-right: 1px solid $border;
+        &-label {
+          display: block;
+          text-align: center;
+          height: 63px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-size: 1.3rem;
+        }
+        &-form {
+          // .form-group > input のwidthを決定する必要があるので、formのwidthは必ず指定する
+          width: 100%;
+        }
+      }
+      &2 {
+        width: 50%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &-google {
+          width: 100%;
+          text-align: center;
+          .google-login-btn {
+            width: calc(382px * 0.6);
+            height: calc(92px * 0.6);
+            margin: 0 auto;
+            background: url('/images/google_signin_light.png');
+            background-size: contain;
+            &:hover {
+              background: url('/images/google_signin_dark.png');
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+    // submitボタンのスタイルはcommonで指定(hoverが何故か無効なのでここで指定)
+    .submit-form-group {
+      .auth-submit-btn{
+        transition: background-color .3s;
+        &:hover {
+          background-color: $theme_color_hover;
+          transition: background-color .3s;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px)

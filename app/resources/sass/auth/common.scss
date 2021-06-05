@@ -32,7 +32,7 @@
 .submit-form-group {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   text-align: center;
   .auth-submit-btn {
     width: 200px;
@@ -51,8 +51,22 @@
 .alert-success {
   color: #36ea1c;
 }
+// 同意文
+.agree {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  span {
+    font-size: 0.7rem;
+  }
+  a {
+    color: $link_color;
+  }
+}
 // wave.js
 #sineCanvas {
+  position: fixed;
   width: 100vw;
   height: 300px;
   margin-top: calc(100vh - 300px);

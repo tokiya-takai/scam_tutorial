@@ -3,7 +3,7 @@
   .login {
     width: 100vw;
     height: 100vh;
-    padding-top: 90px;
+    padding-top: 150px;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -11,8 +11,6 @@
     justify-content: center;
     align-items: center;
     &-container {
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
       background-color: rgba(255,255,255, 0.7);
       display: flex;
       flex-flow: column;
@@ -21,8 +19,6 @@
     &-content {
       &1 {
         width: 100%;
-        margin-left: 10px;
-        margin-right: 10px;
         border-bottom: 1px solid $border;
         &-label {
           display: block;
@@ -47,8 +43,8 @@
           width: 100%;
           text-align: center;
           .google-login-btn {
-            width: calc(100vw - 30px);
-            height: calc((100vw - 30px) * 0.24);
+            width: calc(382px * 0.5);
+            height: calc(92px * 0.5);
             margin: 0 auto;
             background: url('/images/google_signin_light.png');
             background-size: contain;
