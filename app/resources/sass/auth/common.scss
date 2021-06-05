@@ -47,6 +47,10 @@
     // ここでのhoverの指定が(何故か)無効になるので、login, registerそれぞれでhoverのみ指定
   }
 }
+// 確認メールの再送信アラート
+.alert-success {
+  color: #36ea1c;
+}
 // wave.js
 #sineCanvas {
   width: 100vw;
