@@ -3582,6 +3582,9 @@ body {
   align-items: center;
   font-size: 1.2rem;
 }
+.home-status-alert {
+  text-align: center;
+}
 .home-content .submit-form-group .auth-submit-btn {
   transition: background-color 0.3s;
 }
