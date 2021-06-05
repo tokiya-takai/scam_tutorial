@@ -3590,6 +3590,84 @@ body {
   transition: background-color 0.3s;
 }
 
+.password-reset-mail {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.password-reset-mail-container {
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  background-color: white;
+}
+.password-reset-mail-alert {
+  padding-left: 30px;
+}
+.password-reset-mail-header {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.password-reset-mail-description {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 1.5em;
+  font-size: 0.8rem;
+}
+.password-reset-mail .submit-form-group .auth-submit-btn {
+  transition: background-color 0.3s;
+}
+.password-reset-mail .submit-form-group .auth-submit-btn:hover {
+  background-color: #da3737;
+  transition: background-color 0.3s;
+}
+
+.reset {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-container {
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.reset-header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.reset .submit-form-group .auth-submit-btn {
+  transition: background-color 0.3s;
+}
+.reset .submit-form-group .auth-submit-btn:hover {
+  background-color: #da3737;
+  transition: background-color 0.3s;
+}
+
 @media (max-width: 554px) {
   #main {
     position: relative;
