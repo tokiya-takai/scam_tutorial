@@ -1,0 +1,172 @@
+@media (max-width: 362px)
+{
+  .verify {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      width: calc(700px * 0.75);
+      height: calc(400px * 0.75);
+      border-radius: 10px;
+      background-color: white;
+    }
+    &-header {
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 1rem;
+    }
+    &-alert {
+      text-align: center;
+      font-size: 0.5rem;
+      padding-bottom: 20px;
+    }
+    &-content {
+      //header 80px + alert 30px
+      height: calc(100% - 110px);
+      text-align: center;
+      font-size: 0.7rem;
+      line-height: 2.5em;
+      .verify-resend-btn {
+        display: inline-block;
+        color: $link_color;
+      }
+    }
+  } 
+}
+
+@media (min-width: 362px) and (max-width: 554px)
+{
+  .verify {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      width: calc(700px * 0.75);
+      height: calc(400px * 0.75);
+      border-radius: 10px;
+      background-color: white;
+    }
+    &-header {
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    &-alert {
+      text-align: center;
+      font-size: 0.9rem;
+      padding-top: 15px;
+      padding-bottom: 20px;
+    }
+    &-content {
+      //header 80px + alert 30px
+      height: calc(100% - 110px);
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 2.5em;
+      .verify-resend-btn {
+        display: inline-block;
+        color: $link_color;
+      }
+    }
+  } 
+}
+
+@media (min-width: 555px) and (max-width: 991px)
+{
+  .verify {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      width: calc(700px * 0.75);
+      height: calc(400px * 0.75);
+      border: 1px solid $border;
+      border-radius: 10px;
+      background-color: white;
+      background: url('/images/send-mail.jpg');
+      background-size: contain;
+    }
+    &-header {
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    &-alert {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    &-content {
+      //header 80px + alert 30px
+      height: calc(100% - 110px);
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 2.5em;
+      .verify-resend-btn {
+        display: inline-block;
+        color: $link_color;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px)
+{
+  .verify {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      width: 740px;
+      height: 400px;
+      border: 1px solid $border;
+      border-radius: 10px;
+      background-color: white;
+      background: url('/images/send-mail.jpg');
+      background-size: contain;
+    }
+    &-header {
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    &-alert {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    &-content {
+      //header 80px + alert 30px
+      height: calc(100% - 110px);
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 2.5em;
+      .verify-resend-btn {
+        display: inline-block;
+        color: $link_color;
+      }
+    }
+  }
+}
