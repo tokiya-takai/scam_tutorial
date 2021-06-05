@@ -3182,7 +3182,7 @@
 }
 
 body {
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "M PLUS Rounded 1c", sans-serif, "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic";
   color: #414141;
 }
 
@@ -3265,12 +3265,6 @@ body {
     font-size: 1rem;
     color: #2e2ece;
   }
-
-  #sineCanvas {
-    width: 100vw;
-    height: 300px;
-    margin-top: calc(100vh - 300px);
-  }
 }
 .form-group {
   width: 100%;
@@ -3295,6 +3289,11 @@ body {
   font-weight: normal;
   color: #fc3737;
 }
+.form-group .auth-error i {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 .submit-form-group {
   width: 100%;
@@ -3314,6 +3313,67 @@ body {
   font-weight: bold;
 }
 
+#sineCanvas {
+  width: 100vw;
+  height: 300px;
+  margin-top: calc(100vh - 300px);
+}
+
+@media (min-width: 992px) {
+  .register {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-container {
+    width: 740px;
+    height: 480px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+  }
+  .register-content1 {
+    width: 50%;
+    border-right: 1px solid #d1d1d1;
+  }
+  .register-content1-label {
+    display: block;
+    text-align: center;
+    height: 63px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .register-content1-form {
+    width: 100%;
+  }
+  .register-content2 {
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .register-content2-google {
+    width: 100%;
+    text-align: center;
+  }
+  .register-content2-google .google-login-btn {
+    width: calc(382px * 0.82);
+    height: calc(92px * 0.82);
+    margin: 0 auto;
+    background: url("/images/google_signin_light.png");
+    background-size: contain;
+  }
+  .register-content2-google .google-login-btn:hover {
+    background: url("/images/google_signin_dark.png");
+    background-size: contain;
+  }
+}
 @media (max-width: 554px) {
   #main {
     position: relative;

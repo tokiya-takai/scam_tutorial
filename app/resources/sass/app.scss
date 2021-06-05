@@ -8,7 +8,7 @@ $error: rgb(252, 55, 55);
 
 
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif, "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic";
   // default font color
   color: rgb(65,65,65);
 }
@@ -16,6 +16,7 @@ body {
 // auth
 @import "./auth/login.scss";
 @import "./auth/common.scss";
+@import "./auth/register.scss";
 
 // header
 @import "./header.scss";

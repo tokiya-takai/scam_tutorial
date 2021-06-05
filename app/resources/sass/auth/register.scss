@@ -1,20 +1,16 @@
 @media (max-width: 554px)
 {
-  .login {
-    padding-top: 90px;
-  }
+
 }
 
 @media (min-width: 555px) and (max-width: 991px)
 {
-  .login {
-    padding-top: 90px;
-  }
+
 }
 
 @media (min-width: 992px)
 {
-  .login {
+  .register {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -23,13 +19,12 @@
     align-items: center;
     &-container {
       width: 740px;
-      height: 400px;
+      height: 480px;
       border: 1px solid $border;
       border-radius: 10px;
       background-color: white;
       display: flex;
     }
-    // .login-contentクラスは無い(.login-content1, .login-content2に分けている)
     &-content {
       &1 {
         width: 50%;
@@ -68,21 +63,6 @@
             }
           }
         }
-      }
-    }
-    .form-sub-group {
-      padding-left: 30px;
-      padding-right: 30px;
-      .remember {
-        height: 30px;
-        line-height: 30px;
-        font-size: 0.8rem;
-      }
-      .password-request {
-        height: 30px;
-        line-height: 30px;
-        font-size: 1rem;
-        color: $link_color;
       }
     }
   }
