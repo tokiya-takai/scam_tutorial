@@ -14,6 +14,7 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +63,16 @@
               background-size: contain;
             }
           }
+        }
+      }
+    }
+    // submitボタンのスタイルはcommonで指定(hoverが何故か無効なのでここで指定)
+    .submit-form-group {
+      .auth-submit-btn{
+        transition: background-color .3s;
+        &:hover {
+          background-color: $theme_color_hover;
+          transition: background-color .3s;
         }
       }
     }

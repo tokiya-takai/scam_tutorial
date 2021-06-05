@@ -3201,6 +3201,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: absolute;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3265,6 +3266,13 @@ body {
     font-size: 1rem;
     color: #2e2ece;
   }
+  .login .submit-form-group .auth-submit-btn {
+    transition: background-color 0.3s;
+  }
+  .login .submit-form-group .auth-submit-btn:hover {
+    background-color: #da3737;
+    transition: background-color 0.3s;
+  }
 }
 .form-group {
   width: 100%;
@@ -3324,6 +3332,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: absolute;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3373,6 +3382,13 @@ body {
     background: url("/images/google_signin_dark.png");
     background-size: contain;
   }
+  .register .submit-form-group .auth-submit-btn {
+    transition: background-color 0.3s;
+  }
+  .register .submit-form-group .auth-submit-btn:hover {
+    background-color: #da3737;
+    transition: background-color 0.3s;
+  }
 }
 @media (max-width: 554px) {
   #main {
@@ -3386,7 +3402,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 100;
   }
   #main .landing-header .header-logo img {
     height: 36px;
@@ -3406,7 +3422,7 @@ body {
   #main .landing-header .header-nav .nav-login {
     margin: 0 8px;
   }
-  #main .landing-header .header-nav .nav-register {
+  #main .landing-header .header-nav .nav-register, #main .landing-header .header-nav .nav-logout {
     background-color: #f95959;
     color: white;
     border-radius: 3px;
@@ -3424,7 +3440,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 100;
   }
   #main .landing-header .header-logo img {
     height: 36px;
@@ -3444,7 +3460,7 @@ body {
   #main .landing-header .header-nav .nav-login {
     margin: 0 8px;
   }
-  #main .landing-header .header-nav .nav-register {
+  #main .landing-header .header-nav .nav-register, #main .landing-header .header-nav .nav-logout {
     background-color: #f95959;
     color: white;
     border-radius: 3px;
@@ -3462,7 +3478,7 @@ body {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 100;
   }
   #main .landing-header .header-logo img {
     height: 36px;
@@ -3483,7 +3499,7 @@ body {
     margin: 0 8px;
     cursor: pointer;
   }
-  #main .landing-header .header-nav .nav-register {
+  #main .landing-header .header-nav .nav-register, #main .landing-header .header-nav .nav-logout {
     background-color: #f95959;
     color: white;
     border-radius: 3px;

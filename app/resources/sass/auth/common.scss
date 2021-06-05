@@ -44,6 +44,7 @@
     text-align: center;
     color: white;
     font-weight: bold;
+    // ここでのhoverの指定が(何故か)無効になるので、login, registerそれぞれでhoverのみ指定
   }
 }
 // wave.js
