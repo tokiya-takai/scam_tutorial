@@ -7,7 +7,7 @@
                 {{ __('You are logged in!') }}
             </div>
             @if (session('status'))
-            <div class="home-alert alert-success" role="alert">
+            <div class="home-status-alert alert-success" role="alert">
                 {{ session('status') }}
             </div>
             @endif

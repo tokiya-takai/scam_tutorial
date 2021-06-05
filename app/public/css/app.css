@@ -3188,12 +3188,166 @@ body {
 
 @media (max-width: 554px) {
   .login {
+    width: 100vw;
+    height: 100vh;
     padding-top: 90px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-container {
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .login-content1 {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  .login-content1-label {
+    display: block;
+    text-align: center;
+    height: 63px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .login-content1-form {
+    width: 100%;
+  }
+  .login-content2 {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .login-content2-google {
+    width: 100%;
+    text-align: center;
+  }
+  .login-content2-google .google-login-btn {
+    width: calc(100vw - 30px);
+    height: calc((100vw - 30px) * 0.24);
+    margin: 0 auto;
+    background: url("/images/google_signin_light.png");
+    background-size: contain;
+  }
+  .login-content2-google .google-login-btn:hover {
+    background: url("/images/google_signin_dark.png");
+    background-size: contain;
+  }
+  .login .submit-form-group .auth-submit-btn {
+    transition: background-color 0.3s;
+  }
+  .login .submit-form-group .auth-submit-btn:hover {
+    background-color: #da3737;
+    transition: background-color 0.3s;
+  }
+
+  .form-sub-group {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .form-sub-group .remember {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8rem;
+  }
+  .form-sub-group .password-request {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8rem;
+    color: #2e2ece;
   }
 }
 @media (min-width: 555px) and (max-width: 991px) {
   .login {
-    padding-top: 90px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-container {
+    max-width: 700px;
+    width: 100%;
+    height: 400px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+  }
+  .login-content1 {
+    width: 50%;
+    border-right: 1px solid #d1d1d1;
+  }
+  .login-content1-label {
+    display: block;
+    text-align: center;
+    height: 63px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .login-content1-form {
+    width: 100%;
+  }
+  .login-content2 {
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .login-content2-google {
+    width: 100%;
+    text-align: center;
+  }
+  .login-content2-google .google-login-btn {
+    width: calc(382px * 0.6);
+    height: calc(92px * 0.6);
+    margin: 0 auto;
+    background: url("/images/google_signin_light.png");
+    background-size: contain;
+  }
+  .login-content2-google .google-login-btn:hover {
+    background: url("/images/google_signin_dark.png");
+    background-size: contain;
+  }
+  .login .form-sub-group {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .login .form-sub-group .remember {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8rem;
+  }
+  .login .form-sub-group .password-request {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8rem;
+    color: #2e2ece;
+  }
+  .login .submit-form-group .auth-submit-btn {
+    transition: background-color 0.3s;
+  }
+  .login .submit-form-group .auth-submit-btn:hover {
+    background-color: #da3737;
+    transition: background-color 0.3s;
   }
 }
 @media (min-width: 992px) {
@@ -3211,7 +3365,7 @@ body {
     height: 400px;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
   }
   .login-content1 {
@@ -3346,7 +3500,7 @@ body {
     height: 480px;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
   }
   .register-content1 {
@@ -3408,7 +3562,7 @@ body {
     width: calc(700px * 0.75);
     height: calc(400px * 0.75);
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
   }
   .verify-header {
     height: 80px;
@@ -3446,7 +3600,7 @@ body {
     width: calc(700px * 0.75);
     height: calc(400px * 0.75);
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
   }
   .verify-header {
     height: 80px;
@@ -3486,7 +3640,7 @@ body {
     height: calc(400px * 0.75);
     border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     background: url("/images/send-mail.jpg");
     background-size: contain;
   }
@@ -3573,7 +3727,7 @@ body {
   margin-right: 30px;
   border: 1px solid #d1d1d1;
   border-radius: 5px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .home-header {
   height: 30%;
@@ -3582,10 +3736,91 @@ body {
   align-items: center;
   font-size: 1.2rem;
 }
+.home-status-alert {
+  text-align: center;
+}
 .home-content .submit-form-group .auth-submit-btn {
   transition: background-color 0.3s;
 }
 .home-content .submit-form-group .auth-submit-btn:hover {
+  background-color: #da3737;
+  transition: background-color 0.3s;
+}
+
+.password-reset-mail {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.password-reset-mail-container {
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.password-reset-mail-alert {
+  padding-left: 30px;
+}
+.password-reset-mail-header {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.password-reset-mail-description {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 1.5em;
+  font-size: 0.8rem;
+}
+.password-reset-mail .submit-form-group .auth-submit-btn {
+  transition: background-color 0.3s;
+}
+.password-reset-mail .submit-form-group .auth-submit-btn:hover {
+  background-color: #da3737;
+  transition: background-color 0.3s;
+}
+
+.reset {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-container {
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.reset-header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.reset .submit-form-group .auth-submit-btn {
+  transition: background-color 0.3s;
+}
+.reset .submit-form-group .auth-submit-btn:hover {
   background-color: #da3737;
   transition: background-color 0.3s;
 }

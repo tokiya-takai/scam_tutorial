@@ -10,6 +10,7 @@ use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Notifications\PasswordResetNotification;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
@@ -44,4 +45,15 @@ class User extends Authenticatable implements MustVerifyEmailContract
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+        /**
+     * パスワードリセット通知の送信をオーバーライド
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+      $this->notify(new PasswordResetNotification($token));
+    }
 }

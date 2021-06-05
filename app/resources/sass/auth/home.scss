@@ -15,7 +15,7 @@
     margin-right: 30px;
     border: 1px solid $border;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgba(255,255,255, 0.7);
   }
   &-header {
     height: 30%;
@@ -23,6 +23,9 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+  }
+  &-status-alert {
+    text-align: center;
   }
   &-content {
     .submit-form-group {
