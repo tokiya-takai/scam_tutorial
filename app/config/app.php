@@ -178,6 +178,8 @@ return [
 
     ],
 
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
