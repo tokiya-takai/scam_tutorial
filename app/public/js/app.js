@@ -2778,18 +2778,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       value: "",
-      canDelete: false
+      canDelete: false,
+      userDeleteUrl: "/userdelete/" + this.user_id + "/delete"
     };
   },
   props: {
     csrf: {
       type: String,
       required: true
-    }
+    },
+    user_id: Number
   },
   methods: {
     detection: function detection() {
@@ -2799,6 +2805,16 @@ __webpack_require__.r(__webpack_exports__);
         this.canDelete = true;
       } else {
         this.canDelete = false;
+      }
+    },
+    userDelete: function userDelete(e) {
+      var answer = window.confirm('確認');
+
+      if (!answer) {
+        e.preventDefault();
+        return;
+      } else {
+        return;
       }
     }
   }
@@ -63106,60 +63122,72 @@ var render = function() {
         _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),
-        _c("form", { attrs: { action: "", action: "post" } }, [
-          _c("div", { staticClass: "form-group" }, [
+        _c(
+          "form",
+          {
+            attrs: { action: _vm.userDeleteUrl, method: "post" },
+            on: { submit: _vm.userDelete }
+          },
+          [
             _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.value,
-                  expression: "value"
+              attrs: { type: "hidden", name: "_token" },
+              domProps: { value: _vm.csrf }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.value,
+                    expression: "value"
+                  }
+                ],
+                attrs: {
+                  type: "text",
+                  maxlength: "2",
+                  name: "delete",
+                  placeholder: "削除",
+                  required: "",
+                  autofocus: ""
+                },
+                domProps: { value: _vm.value },
+                on: {
+                  input: [
+                    function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.value = $event.target.value
+                    },
+                    _vm.detection
+                  ]
                 }
-              ],
-              attrs: {
-                type: "text",
-                maxlength: "2",
-                name: "delete",
-                placeholder: "削除",
-                required: "",
-                autofocus: ""
-              },
-              domProps: { value: _vm.value },
-              on: {
-                input: [
-                  function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.value = $event.target.value
-                  },
-                  _vm.detection
-                ]
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "submit-form-group" }, [
-            _vm.canDelete
-              ? _c(
-                  "button",
-                  {
-                    staticClass: "auth-submit-btn btn btn-primary",
-                    attrs: { type: "submit" }
-                  },
-                  [_vm._v("削除")]
-                )
-              : _c(
-                  "button",
-                  {
-                    staticClass: "dummy-submit-btn",
-                    attrs: { type: "button", role: "button" }
-                  },
-                  [_vm._v("削除")]
-                )
-          ])
-        ])
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "submit-form-group" }, [
+              _vm.canDelete
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "auth-submit-btn btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("削除")]
+                  )
+                : _c(
+                    "button",
+                    {
+                      staticClass: "dummy-submit-btn",
+                      attrs: { type: "button", role: "button" }
+                    },
+                    [_vm._v("削除")]
+                  )
+            ])
+          ]
+        )
       ])
     ]
   )

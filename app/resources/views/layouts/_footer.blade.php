@@ -5,7 +5,9 @@
     </div>
     <div class="footer-content">
       <p class="footer-content-title1">サービス</p>
-      <p class="footer-content-body"><a href="/userdelete">退会手続</a></p>
+      @if (Auth::check())
+        <p class="footer-content-body"><a href="{{ route('userdelete.index', ['id'=>Auth::id()]) }}">退会手続</a></p>
+      @endif
     </div>
     <div class="footer-content">
       <p class="footer-content-title1">サポート</p>

@@ -14,8 +14,12 @@ use App\Http\Controllers\UserDeleteController;
 Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::middleware('verified')->group(function() {
+});
 // アカウント削除
-Route::get('/userdelete', [UserDeleteController::class, 'index'])->name('userdelete.index');
+Route::get('/userdelete/{id}', [UserDeleteController::class, 'index'])->name('userdelete.index');
+Route::post('/userdelete/{id}/delete', [UserDeleteController::class, 'delete']);
+
 
 // Googleログイン用
 Route::get('login/google', [LoginController::class, 'redirectToGoogle']);
