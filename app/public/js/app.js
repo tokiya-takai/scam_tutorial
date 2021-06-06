@@ -2808,7 +2808,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     userDelete: function userDelete(e) {
-      var answer = window.confirm('確認');
+      var answer = window.confirm('アカウントを削除すると、もとに戻せません。\nよろしいですか？');
 
       if (!answer) {
         e.preventDefault();

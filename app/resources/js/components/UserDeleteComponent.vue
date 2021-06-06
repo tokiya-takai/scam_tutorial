@@ -46,7 +46,7 @@ export default {
       }
     },
     userDelete(e) {
-      const answer = window.confirm('確認');
+      const answer = window.confirm('アカウントを削除すると、もとに戻せません。\nよろしいですか？');
       if(!answer) {
         e.preventDefault();
         return;

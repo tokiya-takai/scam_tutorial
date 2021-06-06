@@ -10,11 +10,7 @@ class LandingController extends Controller
 {
     public function index()
     {
-        $user = null;
         $userNum = User::count();
-        if(Auth::check()){
-            $user = User::find(Auth::id());
-        }
-        return view('landing.landing', ['userNum'=>$userNum, 'user'=>$user]);
+        return view('landing.landing', ['userNum'=>$userNum]);
     }
 }
