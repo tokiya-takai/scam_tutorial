@@ -1,24 +1,32 @@
+// スクロール禁止関数
+function disableScroll(event) {
+  event.preventDefault();
+};
+
+function no_scroll() {
+  document.addEventListener('touchmove', disableScroll, { passive: false });
+  document.addEventListener('mousewheel', disableScroll, { passive: false });
+}
+
+function return_scroll() {
+  document.removeEventListener('touchmove', disableScroll, { passive: false });
+  document.removeEventListener('mousewheel', disableScroll, { passive: false });
+}
+
 window.addEventListener("load", function () {
   const alert = document.querySelector('.lesson-alert-background');
   const okButton = document.querySelector('.lesson-alert-btn');
 
-  // スクロール禁止関数
-  function disableScroll(event) {
-    event.preventDefault();
-  }
-  
   if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
   
     if (document.URL.match(lesson1)) {
       alert.style.display = "flex";
-      document.addEventListener('touchmove', disableScroll, { passive: false });
-      document.addEventListener('mousewheel', disableScroll, { passive: false });
+      no_scroll();
     }
   
     okButton.addEventListener('click', () => {
       alert.style.display = "none";
-      document.removeEventListener('touchmove', disableScroll, { passive: false });
-      document.removeEventListener('mousewheel', disableScroll, { passive: false });
+      return_scroll();
       window.location.href = '/';
     });
   }
@@ -34,6 +42,23 @@ window.addEventListener("load", function () {
   function removeAnimateFlipInY() {
     lessonHeaderLogo.classList.remove('animate__flipInY');
     return;
+  };
+
+});
+
+window.addEventListener("load", function () {
+  
+  // Lesson1終了時flashのスクロール禁止
+  const flashSelectBtns = document.querySelectorAll('.flash-select-btn');
+  const landingFlash = document.getElementById('landing-flash');
+  
+  if ( landingFlash != null) {
+    no_scroll();
   }
 
+  flashSelectBtns.forEach(function (button) {
+    button.addEventListener('click', () => {
+      return_scroll();
+    });
+  });
 });

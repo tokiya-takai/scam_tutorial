@@ -3,33 +3,44 @@ var __webpack_exports__ = {};
 /*!*********************************!*\
   !*** ./resources/js/lesson1.js ***!
   \*********************************/
+// スクロール禁止関数
+function disableScroll(event) {
+  event.preventDefault();
+}
+
+;
+
+function no_scroll() {
+  document.addEventListener('touchmove', disableScroll, {
+    passive: false
+  });
+  document.addEventListener('mousewheel', disableScroll, {
+    passive: false
+  });
+}
+
+function return_scroll() {
+  document.removeEventListener('touchmove', disableScroll, {
+    passive: false
+  });
+  document.removeEventListener('mousewheel', disableScroll, {
+    passive: false
+  });
+}
+
 window.addEventListener("load", function () {
   var alert = document.querySelector('.lesson-alert-background');
-  var okButton = document.querySelector('.lesson-alert-btn'); // スクロール禁止関数
-
-  function disableScroll(event) {
-    event.preventDefault();
-  }
+  var okButton = document.querySelector('.lesson-alert-btn');
 
   if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
     if (document.URL.match(lesson1)) {
       alert.style.display = "flex";
-      document.addEventListener('touchmove', disableScroll, {
-        passive: false
-      });
-      document.addEventListener('mousewheel', disableScroll, {
-        passive: false
-      });
+      no_scroll();
     }
 
     okButton.addEventListener('click', function () {
       alert.style.display = "none";
-      document.removeEventListener('touchmove', disableScroll, {
-        passive: false
-      });
-      document.removeEventListener('mousewheel', disableScroll, {
-        passive: false
-      });
+      return_scroll();
       window.location.href = '/';
     });
   }
@@ -45,6 +56,23 @@ window.addEventListener("load", function () {
     lessonHeaderLogo.classList.remove('animate__flipInY');
     return;
   }
+
+  ;
+});
+window.addEventListener("load", function () {
+  // Lesson1終了時flashのスクロール禁止
+  var flashSelectBtns = document.querySelectorAll('.flash-select-btn');
+  var landingFlash = document.getElementById('landing-flash');
+
+  if (landingFlash != null) {
+    no_scroll();
+  }
+
+  flashSelectBtns.forEach(function (button) {
+    button.addEventListener('click', function () {
+      return_scroll();
+    });
+  });
 });
 /******/ })()
 ;
