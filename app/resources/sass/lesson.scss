@@ -143,6 +143,7 @@
   &-indicator {
     position: absolute;
     display: inline-block;
+    border-radius: 3px;
     height: 9px;
     background-color: rgb(111, 211, 111);
     transition: width 1s;

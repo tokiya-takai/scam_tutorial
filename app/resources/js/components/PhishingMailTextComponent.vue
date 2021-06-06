@@ -20,7 +20,7 @@
           </div>
           <div class="phishing-mail-text-content-body">
             <p>Amazooonプライムをご利用頂きありがとうございます。{{ day | moment }}に、あなたのアカウントに不正ログインの疑いのあるアクセスがありました。<br>
-            お客様のログイン状態は既に漏洩している可能性があります。下記リンクからAmazooon.co.jpにログインし、情報の更新を行ってください。</p>
+            お客様のログイン情報は既に漏洩している可能性があります。下記リンクからAmazooon.co.jpにログインし、情報の更新を行ってください。</p>
             <p><a href="javascript:void(0);" class="phising-link" @click="childToAmazonEmailOrTel()">https://www.amazooon.co.jp/ap/signin</a></p>
           </div>
         </div>
