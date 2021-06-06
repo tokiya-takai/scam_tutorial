@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
+use DateTime;
 
 class LoginController extends Controller
 {
@@ -52,13 +53,13 @@ class LoginController extends Controller
         $gUser = Socialite::driver('google')->stateless()->user();
         // email が合致するユーザーを取得
         $user = User::where('email', $gUser->email)->first();
-        // emailがなければ新規ユーザーとして作成
+        // emailがなければ新規ユーザーとして作成し、メール認証を免除する
         if ($user == null) {
             $user = $this->createUserByGoogle($gUser);
         }
-        // ログイン処理
+        // ログインし、rememberにする
         \Auth::login($user, true);
-        return redirect('/');
+        return redirect('/home');
     }
 
     public function createUserByGoogle($gUser)
