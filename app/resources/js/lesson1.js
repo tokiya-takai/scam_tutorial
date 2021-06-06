@@ -35,4 +35,5 @@ window.addEventListener("load", function () {
     lessonHeaderLogo.classList.remove('animate__flipInY');
     return;
   }
+
 });

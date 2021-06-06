@@ -61722,7 +61722,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "congratulations-lesson1-body" }, [
       _c("p", [_vm._v("お疲れ様でした！Lesson1をクリアしました！")]),
       _vm._v(" "),
-      _c("a", { attrs: { href: "/" } }, [
+      _c("a", { attrs: { href: "/relay" } }, [
         _c("button", { staticClass: "congratulations-lesson1-btn" }, [
           _vm._v("トップページに戻る")
         ])

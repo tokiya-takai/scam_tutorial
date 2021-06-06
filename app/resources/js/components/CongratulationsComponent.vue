@@ -4,7 +4,7 @@
       <h1>Congratulations!</h1>
       <div class="congratulations-lesson1-body">
         <p>お疲れ様でした！Lesson1をクリアしました！</p>
-        <a href="/"><button class="congratulations-lesson1-btn">トップページに戻る</button></a>
+        <a href="/relay"><button class="congratulations-lesson1-btn">トップページに戻る</button></a>
       </div>
       <div class="congratulations-lesson1-indicator-container">
         <div class="congratulations-lesson1-indicator-background">
