@@ -26,7 +26,8 @@ Route::get('login/google', [LoginController::class, 'redirectToGoogle']);
 Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback']);
 
 // Landing Page
-Route::get('/', [LandingController::class, 'index']);
+Route::get('/', [LandingController::class, 'index'])->name('landing.index');
+Route::get('/relay', [LandingController::class, 'relay']);
 
 // Lesson1
 Route::get('/lesson1',[Lesson1Controller::class, 'index'])->name('lesson1');

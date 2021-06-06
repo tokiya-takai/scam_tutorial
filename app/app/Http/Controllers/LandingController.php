@@ -13,4 +13,8 @@ class LandingController extends Controller
         $userNum = User::count();
         return view('landing.landing', ['userNum'=>$userNum]);
     }
+
+    public function relay() {
+        return redirect('/')->with('flash_message', 'Lesson1クリアおめでとうございます。');
+    }
 }

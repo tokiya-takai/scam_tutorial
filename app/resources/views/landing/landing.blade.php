@@ -2,6 +2,12 @@
 
 @section('content')
 
+  @guest
+    @if (session('flash_message'))
+      @include('landing._flash')
+    @endif
+  @endguest
+
   @include('layouts._header')
 
   <div class="landing">
