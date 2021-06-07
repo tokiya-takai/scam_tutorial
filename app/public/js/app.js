@@ -2830,8 +2830,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default; // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
 Vue.component('lesson-alert-component', __webpack_require__(/*! ./components/LessonAlertComponent.vue */ "./resources/js/components/LessonAlertComponent.vue").default);
 Vue.component('lesson1-tutorial-component', __webpack_require__(/*! ./components/Lesson1TutorialComponent.vue */ "./resources/js/components/Lesson1TutorialComponent.vue").default);
 Vue.component('lesson1-component', __webpack_require__(/*! ./components/Lesson1Component.vue */ "./resources/js/components/Lesson1Component.vue").default);
