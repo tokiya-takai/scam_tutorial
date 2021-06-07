@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import LessonHeader from './LessonHeaderComponent.vue'
-import LessonFotter from './LessonFooterComponent.vue'
+import LessonHeader from '../LessonHeaderComponent.vue'
+import LessonFotter from '../LessonFooterComponent.vue'
 // 手順
 import Procedure1 from './Lesson1Procedure1Component.vue'
 import Procedure2 from './Lesson1Procedure2Component.vue'
@@ -50,7 +50,7 @@ import MailText from './PhishingMailTextComponent.vue'
 import AmazonEmailOrTel from './AmazonEmailOrTelComponent.vue'
 import AmazonPassword from './AmazonPasswordComponent.vue'
 import NotFound from './404NotFoundComponent.vue'
-import Indicator from './IndicatorComponent.vue'
+import Indicator from '../IndicatorComponent.vue'
 import Solution from './Lesson1SolutionComponent.vue'
 // Congratulations
 import Congratulations from './CongratulationsComponent.vue'

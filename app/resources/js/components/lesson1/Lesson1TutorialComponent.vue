@@ -31,8 +31,8 @@
 <script>
 import Lesson1_1 from './Lesson1_1.vue'
 import Lesson1_2 from './Lesson1_2.vue'
-import LessonEnd from './LessonEnd.vue'
-import LessonHeader from './LessonHeaderComponent.vue'
+import LessonEnd from '../LessonEnd.vue'
+import LessonHeader from '../LessonHeaderComponent.vue'
 
 export default {
   components: {
