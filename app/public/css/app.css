@@ -4336,47 +4336,44 @@ body {
     font-size: 0.8rem;
     margin: 30px 0;
   }
-  #landing-intro .landing-intro-initial-1 {
+  #landing-intro .landing-intro-initial-1, #landing-intro .landing-intro-initial-2 {
     grid-column: 1/-1;
     max-width: 500px;
     width: 100%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing {
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-2 .phishing {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover, #landing-intro .landing-intro-initial-2 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .password-list {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list:hover, #landing-intro .landing-intro-initial-2 .password-list:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .phishing, #landing-intro .landing-intro-initial-2 .password-list {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 40px 0 60px;
     border-radius: 10px;
-    background-color: #ffcbcb;
-    transition: background-color 0.3s ease-in-out;
   }
-  #landing-intro .landing-intro-initial-1 .phishing img {
+  #landing-intro .landing-intro-initial-1 .phishing img, #landing-intro .landing-intro-initial-1 .password-list img, #landing-intro .landing-intro-initial-2 .phishing img, #landing-intro .landing-intro-initial-2 .password-list img {
     width: 60%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing span {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
     text-align: center;
     font-size: 1.2rem;
   }
-  #landing-intro .landing-intro-initial-1 .phishing h4 {
+  #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 1.3rem;
-  }
-  #landing-intro .landing-intro-initial-1 .phishing:hover {
-    background-color: #ffeaea;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #landing-intro .landing-intro-initial-2 {
-    grid-column: 1/-1;
-    max-width: 500px;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 275px;
   }
 }
 @media (min-width: 555px) and (max-width: 991px) {
@@ -4429,44 +4426,50 @@ body {
     font-size: 0.5rem;
     margin: 30px 0;
   }
-  #landing-intro .landing-intro-initial-1 {
+  #landing-intro .landing-intro-initial-1, #landing-intro .landing-intro-initial-2 {
     max-width: 500px;
     width: 100%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing {
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-2 .phishing {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover, #landing-intro .landing-intro-initial-2 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .password-list {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list:hover, #landing-intro .landing-intro-initial-2 .password-list:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .phishing, #landing-intro .landing-intro-initial-2 .password-list {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 40px 0 60px;
     border-radius: 10px;
-    background-color: #ffcbcb;
-    transition: background-color 0.3s ease-in-out;
   }
-  #landing-intro .landing-intro-initial-1 .phishing img {
+  #landing-intro .landing-intro-initial-1 .phishing img, #landing-intro .landing-intro-initial-1 .password-list img, #landing-intro .landing-intro-initial-2 .phishing img, #landing-intro .landing-intro-initial-2 .password-list img {
     width: 60%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing span {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
-    text-align: left;
-    padding-left: 13%;
+    text-align: center;
     font-size: 1.2rem;
   }
-  #landing-intro .landing-intro-initial-1 .phishing h4 {
+}
+@media (min-width: 555px) and (max-width: 991px) and (max-width: 667px) {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 555px) and (max-width: 991px) {
+  #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 1.5rem;
-  }
-  #landing-intro .landing-intro-initial-1 .phishing:hover {
-    background-color: #ffeaea;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #landing-intro .landing-intro-initial-2 {
-    max-width: 500px;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 10px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 @media (min-width: 992px) {
@@ -4516,44 +4519,44 @@ body {
     font-size: 1rem;
     margin: 30px 0;
   }
-  #landing-intro .landing-intro-initial-1 {
+  #landing-intro .landing-intro-initial-1, #landing-intro .landing-intro-initial-2 {
     max-width: 500px;
     width: 100%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing {
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-2 .phishing {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover, #landing-intro .landing-intro-initial-2 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .password-list {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list:hover, #landing-intro .landing-intro-initial-2 .password-list:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .phishing, #landing-intro .landing-intro-initial-2 .password-list {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 40px 0 60px;
     border-radius: 10px;
-    background-color: #ffcbcb;
-    transition: background-color 0.3s ease-in-out;
   }
-  #landing-intro .landing-intro-initial-1 .phishing img {
+  #landing-intro .landing-intro-initial-1 .phishing img, #landing-intro .landing-intro-initial-1 .password-list img, #landing-intro .landing-intro-initial-2 .phishing img, #landing-intro .landing-intro-initial-2 .password-list img {
     width: 60%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing span {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
     text-align: left;
-    padding-left: 24%;
+    text-align: center;
     font-size: 1.2rem;
   }
-  #landing-intro .landing-intro-initial-1 .phishing h4 {
+  #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 2rem;
-  }
-  #landing-intro .landing-intro-initial-1 .phishing:hover {
-    background-color: #ffeaea;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #landing-intro .landing-intro-initial-2 {
-    max-width: 500px;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 10px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 #landing-message .landing-message {
