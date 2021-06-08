@@ -27,6 +27,7 @@
     "dependencies": {
         "animate.css": "^4.1.1",
         "moment": "^2.29.1",
-        "smoothscroll-polyfill": "^0.4.4"
+        "smoothscroll-polyfill": "^0.4.4",
+        "vue-clipboard2": "^0.3.1"
     }
 }
