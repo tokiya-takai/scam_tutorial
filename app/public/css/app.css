@@ -5062,6 +5062,46 @@ body {
   margin-right: 10px;
 }
 
+.lesson-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-end-content {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.lesson-end-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+.lesson-end-content p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  padding: 15px 0;
+}
+.lesson-end-content .to-exercise-btn {
+  position: absolute;
+  left: 50px;
+}
+.lesson-end-content .to-exercise-btn button {
+  width: 280px;
+  height: 60px;
+  margin: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 0 -5px 0px 0 #974444 inset;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #f95959;
+}
+.lesson-end-content .to-exercise-btn button:active {
+  box-shadow: 0 0 0 0;
+  padding-bottom: 0;
+  margin-top: 15px;
+}
+
 #lesson1 {
   position: relative;
 }
@@ -5105,45 +5145,6 @@ body {
   height: calc(100% - 20px - 60px);
   margin: 10px;
   background: linear-gradient(0.25turn, #ffcbcb, #ffe6e6, #ffcbcb);
-}
-#lesson1 .lesson-end {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#lesson1 .lesson-end-content {
-  display: inline-block;
-  text-align: center;
-  position: relative;
-}
-#lesson1 .lesson-end-content h2 {
-  font-size: 1.5rem;
-  line-height: 1.5em;
-}
-#lesson1 .lesson-end-content p {
-  font-size: 0.8rem;
-  opacity: 0.8;
-  padding: 15px 0;
-}
-#lesson1 .lesson-end-content .to-exercise-btn {
-  position: absolute;
-  left: 50px;
-}
-#lesson1 .lesson-end-content .to-exercise-btn button {
-  width: 280px;
-  height: 60px;
-  margin: 10px;
-  padding-bottom: 5px;
-  border-radius: 10px;
-  box-shadow: 0 -5px 0px 0 #974444 inset;
-  color: white;
-  font-size: 1.2rem;
-  background-color: #f95959;
-}
-#lesson1 .lesson-end-content .to-exercise-btn button:active {
-  box-shadow: 0 0 0 0;
-  padding-bottom: 0;
-  margin-top: 15px;
 }
 
 .exercise-area {
@@ -5641,4 +5642,42 @@ body {
   width: 100%;
   text-align: center;
   padding-left: 250px;
+}
+
+#lesson2 {
+  position: relative;
+}
+#lesson2 .lesson2-tutorial {
+  height: 100vh;
+}
+#lesson2 .lesson2-tutorial-title {
+  padding: 30px 3%;
+  font-size: 2rem;
+}
+#lesson2 .lesson2-tutorial-content {
+  height: calc(100% - 96px);
+}
+#lesson2 .lesson2-tutorial-content span {
+  display: inline-block;
+  padding: 0 3%;
+  font-size: 1.2rem;
+  line-height: 1.8em;
+}
+#lesson2 .lesson2-tutorial-content .phishing-hero-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lesson2 .lesson2-tutorial-content .phishing-hero-container .phishing-hero {
+  height: 70%;
+  margin: 0 auto;
+}
+#lesson2 .lesson2-tutorial-container {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px - 60px);
+  margin: 10px;
+  background: linear-gradient(0.25turn, #d1d4ff, #f6f7ff, #d1d4ff);
 }
