@@ -1,549 +1,488 @@
-.exercise-area {
-  // header 60px, footer, 60px
-  height: calc(100vh - 120px);
-  width: 100vw;
-  display: flex;
-  background-color: rgb(233, 233, 233);
-  // 手順エリア
-  .procedure {
-    &-container {
-      height: calc(100% - 20px);
-      margin-top: 10px;
-      margin-bottom: 10px;
-      width: calc(25% - 20px);
-      margin-left: 10px;
-      margin-right: 10px;
-      border-radius: 5px;
-      background-color: white;
+// 手順エリア
+// 手順のコンポーネント
+.procedure2 {
+  .amazon-link {
+    &-img-container {
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    &-header {
+    &-img {
+      width: 75%;
+    }
+  }
+}
+.procedure6 {
+  .end-lesson1{
+    &-container {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-btn {
+      width: 150px;
       height: 50px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom: 1px solid $border;
-      background-color: rgb(238, 243, 255);
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 -5px 0px 0 #974444 inset;
+      padding-bottom: 5px;
+      font-size: 1rem;
+      background-color: $theme_color1;
+      &:active {
+        box-shadow: 0 0 0 0;
+        padding-bottom: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+// 手順の注意事項
+.procedure-caution {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+// 回転インジケータ
+.exercise-indicator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100px;
+  }
+}
+
+// メール共通
+.phishing-mail {
+  width: 100%;
+  height: 100%;
+  &-header {
+    height: 60px;
+    border-bottom: 1px solid $border;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .goodluck-logo {
+      height: 40px;
+    }
+  }
+  &-content {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+  }
+  &-side-bar {
+    width: calc(20% - 5px);
+    height: 100%;
+    margin-right: 5px;
+    padding: 5% 3% 5% 0;
+    &-list {
+      li {
+        padding: 4% 0 4% 30px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 20px;
+          margin: 0 5px;
+        }
+      }
+      &-current {
+        background-color: rgb(255, 202, 202);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: $error;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  // メールボックス
+  &-mails-area {
+    width: calc(80% - 5px);
+    height: 100%;
+    margin-left: 5px;
+    overflow-y: scroll;
+  }
+  &-mails-header {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid $border;
+    &-current {
+      width: 30%;
+      height: 100%;
+      border-bottom: 3px solid $error;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        height: 20px;
+        margin: 0 10px;
+      }
+    }
+  }
+  &-mails-mail {
+    height: 40px;
+    padding-left: 10px;
+    border-bottom: 1px solid $border;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    &:hover {
+      padding-left: 9px;
+      border-top: 1px solid rgb(182, 182, 182);
+      border-left: 1px solid rgb(182, 182, 182);
+      border-right: 1px solid rgb(182, 182, 182);
+      border-bottom: 1px solid rgb(182, 182, 182);
+      box-shadow: 0 2px 0 rgb(129, 129, 129);
+    }
+    .mail-btn {
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      padding-left: 20px;
-    }
-    &-icon {
-      width: 20px;
-      margin-right: 10px;
-    }
-    // 手順本体のコンポーネントエリア
-    &-area {
-      // container 100% - header 50px
-      height: calc(100% - 50px);
-      padding: 30px 15px;
     }
   }
-  // 受信トレイ位置の手順
-  .procedure {
-    height: 100%;
-    overflow-y: scroll;
-    &-title {
-      font-size: 1rem;
-      line-height: 2em;
-    }
-    &-main-text {
-      font-size: 0.9rem;
-      line-height: 2em;
-    }
+  .mail-sender {
+    width: 30%;
+    // font-weight: bold;
   }
-  .procedure2 {
-    .amazon-link {
-      &-img-container {
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      &-img {
-        width: 75%;
-      }
-    }
+  .mail-title {
+    width: 70%;
+    // font-weight: bold;
   }
-  .procedure6 {
-    .end-lesson1{
-      &-container {
-        width: 100%;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      &-btn {
-        width: 150px;
-        height: 50px;
-        color: white;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 -5px 0px 0 #974444 inset;
-        padding-bottom: 5px;
-        font-size: 1rem;
-        background-color: $theme_color1;
-        &:active {
-          box-shadow: 0 0 0 0;
-          padding-bottom: 0;
-          margin-top: 5px;
-        }
-      }
-    }
+  .dummy-check-box {
+    padding: 0 13px 0 3px;
   }
-  // 手順の注意事項
-  .procedure-caution {
-    font-size: 0.4rem;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-  .exercise-indicator {
+  .dummy-mails {
+    height: 40px;
     width: 100%;
-    height: 100%;
+    padding-left: 10px;
+    border-bottom: 1px solid $border;
     display: flex;
-    justify-content: center;
     align-items: center;
-    img {
-      width: 100px;
+    background-color: rgb(240, 240, 240);
+  }
+
+  // メール本文
+  &-text {
+    width: calc(80% - 5px);
+    height: 100%;
+    margin-left: 5px;
+    &-title {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $border;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    &-content {
+      height: calc(100% - 55px);
+      &-sender {
+        height: 80px;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        img {
+          height: 40px;
+          margin-right: 15px;
+        }
+      }
+      &-body {
+        width: 100%;
+        padding: 15px 5%;
+        line-height: 2.3em;
+        p {
+          margin-bottom: 30px;
+          .phising-link {
+            color: blue;
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
-  // 実際に操作するエリア
-  .display-container {
-    height: calc(100% - 20px);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: calc(75% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: white;
-
-    // メール共通
-    .phishing-mail {
+}
+// 偽Amazon ページ
+.amazon {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  &-logo {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    img {
+      height: 50px;
+    }
+  }
+  &-login {
+    &-area {
+      height: calc(100% - 50px);
+      padding-top: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    &-container {
+      // height: 50%;
+      width: 35%;
+      padding: 2% 3%;
+      border: 1px solid $border;
+      border-radius: 3px;
+    }
+    &-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    // 1ページ目　メールか電話番号
+    &-email-or-tel {
+      display: block;
+      font-size: 0.8rem;
+    }
+    // 入力欄
+    &-input {
+      display: block;
       width: 100%;
-      height: 100%;
-      &-header {
-        height: 60px;
-        border-bottom: 1px solid $border;
-        padding-left: 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .goodluck-logo {
-          height: 40px;
-        }
-      }
-      &-content {
-        width: 100%;
-        height: calc(100% - 60px);
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: flex;
-      }
-      &-side-bar {
-        width: calc(20% - 5px);
-        height: 100%;
-        margin-right: 5px;
-        padding: 5% 3% 5% 0;
-        &-list {
-          li {
-            padding: 4% 0 4% 30px;
-            display: flex;
-            align-items: center;
-            img {
-              width: 20px;
-              margin: 0 5px;
-            }
-          }
-          &-current {
-            background-color: rgb(255, 202, 202);
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            color: $error;
-            font-weight: bold;
-            cursor: pointer;
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-        }
-      }
-      // メールボックス
-      &-mails-area {
-        width: calc(80% - 5px);
-        height: 100%;
-        margin-left: 5px;
-        overflow-y: scroll;
-      }
-      &-mails-header {
-        width: 100%;
-        height: 40px;
-        border-bottom: 1px solid $border;
-        &-current {
-          width: 30%;
-          height: 100%;
-          border-bottom: 3px solid $error;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          img {
-            height: 20px;
-            margin: 0 10px;
-          }
-        }
-      }
-      &-mails-mail {
-        height: 40px;
-        padding-left: 10px;
-        border-bottom: 1px solid $border;
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        &:hover {
-          padding-left: 9px;
-          border-top: 1px solid rgb(182, 182, 182);
-          border-left: 1px solid rgb(182, 182, 182);
-          border-right: 1px solid rgb(182, 182, 182);
-          border-bottom: 1px solid rgb(182, 182, 182);
-          box-shadow: 0 2px 0 rgb(129, 129, 129);
-        }
-        .mail-btn {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-        }
-      }
-      .mail-sender {
-        width: 30%;
-        // font-weight: bold;
-      }
-      .mail-title {
-        width: 70%;
-        // font-weight: bold;
-      }
-      .dummy-check-box {
-        padding: 0 13px 0 3px;
-      }
-      .dummy-mails {
-        height: 40px;
-        width: 100%;
-        padding-left: 10px;
-        border-bottom: 1px solid $border;
-        display: flex;
-        align-items: center;
-        background-color: rgb(240, 240, 240);
-      }
-
-      // メール本文
-      &-text {
-        width: calc(80% - 5px);
-        height: 100%;
-        margin-left: 5px;
-        &-title {
-          width: 100%;
-          height: 55px;
-          display: flex;
-          align-items: center;
-          border-bottom: 1px solid $border;
-          h2 {
-            font-size: 1.5rem;
-          }
-        }
-        &-content {
-          height: calc(100% - 55px);
-          &-sender {
-            height: 80px;
-            padding-left: 15px;
-            display: flex;
-            align-items: center;
-            img {
-              height: 40px;
-              margin-right: 15px;
-            }
-          }
-          &-body {
-            width: 100%;
-            padding: 15px 5%;
-            line-height: 2.3em;
-            p {
-              margin-bottom: 30px;
-              .phising-link {
-                color: blue;
-                text-decoration: underline;
-              }
-            }
-          }
-        }
+      height: 35px;
+      margin-top: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      box-shadow: 0 1px 0 #aaa inset;
+    }
+    // ボタン共通
+    &-submit {
+      display: block;
+      width: 100%;
+      line-height: 35px;
+      font-size: 0.9rem;
+      text-align: center;
+      background: linear-gradient(#f4dda8, #e8c465);
+      border-radius: 5px;
+      border: 1px solid #977e3e;
+      margin-top: 15px;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(#f4dda8, #d8b963);
       }
     }
-    // 偽Amazon ページ
-    .amazon {
-      width: 100%;
-      height: 100%;
-      padding-top: 10px;
-      &-logo {
-        width: 100%;
-        height: 50px;
-        text-align: center;
-        img {
-          height: 50px;
-        }
-      }
-      &-login {
-        &-area {
-          height: calc(100% - 50px);
-          padding-top: 15px;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-        }
-        &-container {
-          // height: 50%;
-          width: 35%;
-          padding: 2% 3%;
-          border: 1px solid $border;
-          border-radius: 3px;
-        }
-        &-title {
-          font-size: 1.5rem;
-          margin-bottom: 15px;
-        }
-        // 1ページ目　メールか電話番号
-        &-email-or-tel {
-          display: block;
-          font-size: 0.8rem;
-        }
-        // 入力欄
-        &-input {
-          display: block;
-          width: 100%;
-          height: 35px;
-          margin-top: 7px;
-          padding-left: 10px;
-          padding-right: 10px;
-          border: 1px solid #aaa;
-          border-radius: 5px;
-          box-shadow: 0 1px 0 #aaa inset;
-        }
-        // ボタン共通
-        &-submit {
-          display: block;
-          width: 100%;
-          line-height: 35px;
-          font-size: 0.9rem;
-          text-align: center;
-          background: linear-gradient(#f4dda8, #e8c465);
-          border-radius: 5px;
-          border: 1px solid #977e3e;
-          margin-top: 15px;
-          cursor: pointer;
-          &:hover {
-            background: linear-gradient(#f4dda8, #d8b963);
-          }
-        }
-        // ボタンここまで
-        //　メールか電話番号の下の注意事項みたいなやつ
-        &-supplement {
-          display: block;
-          font-size: 0.7rem;
-          margin-top: 15px;
-          a {
-            color: $link_color;
-            line-height: 2em;
-          }
-        }
-        // パスワード入力欄
-        // メールか電話番号で入力されたもの
-        &-entered-input1 {
-          font-size: 0.7rem;
-          margin-top: 15px;
-          margin-bottom: 15px;
-        }
-        &-keep-checkbox {
-          margin-top: 20px;
-          margin-bottom: 5px;
-          font-size: 0.7rem;
-          input {
-            margin-right: 10px;
-          }
-        }
-      }
-      // パスワード(Label1 パスワード ---- Label2 パスワードを忘れた場合)
-      &-login-password-label {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.8rem;
-      }
-      // Label1 パスワード
-      &-login-passowrd {
-        font-weight: bold;
-      }
-      // Label2 パスワードを忘れた場合
-      &-login-password-forgot {
-        a {
-          color: $link_color;
-        }
-      }
-      // 入力エラー
-      // エラーの際に付与されるクラス
-      .input-error {
-        border: 1px solid $error;
-        box-shadow: 0 0 0 3px rgb(247, 200, 200) inset;
-      }
-      // エラーメッセージ
-      .input-error-message {
-        font-size: 0.7rem;
-        color: $error;
-        i {
-          display: inline-block;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
-    }
-    // 404 Not Found ページ
-    .not-found {
-      padding: 20px 15px;
-      height: 100%;
-      h1 {
-        height: 100px;
-        font-size: 2rem;
-      }
-      &-error-message {
-        height: 200px;
+    // ボタンここまで
+    //　メールか電話番号の下の注意事項みたいなやつ
+    &-supplement {
+      display: block;
+      font-size: 0.7rem;
+      margin-top: 15px;
+      a {
+        color: $link_color;
         line-height: 2em;
-        a {
-          color: $link_color;
-        }
       }
-      .to-solution {
-        &-fotter {
-          margin-top: 100px;
-          height: calc(100% - 400px);
-          border-top: 1px solid $border;
-        }
-        &-result {
-          height: 50%;
-          padding: 30px 15px;
-          overflow-y: visible;
-          &-body {
-            span {
-              display: block;
-              line-height: 2em;
-            }
-          }
-        }
-        &-btn-area {
-          height: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        &-btn {
-          width: 150px;
-          height: 50px;
-          color: white;
-          text-align: center;
-          border-radius: 10px;
-          box-shadow: 0 -5px 0px 0 #974444 inset;
-          padding-bottom: 5px;
-          font-size: 1rem;
-          background-color: $theme_color1;
-          &:active {
-            box-shadow: 0 0 0 0;
-            padding-bottom: 0;
-            margin-top: 5px;
-          }
+    }
+    // パスワード入力欄
+    // メールか電話番号で入力されたもの
+    &-entered-input1 {
+      font-size: 0.7rem;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    &-keep-checkbox {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-size: 0.7rem;
+      input {
+        margin-right: 10px;
+      }
+    }
+  }
+  // パスワード(Label1 パスワード ---- Label2 パスワードを忘れた場合)
+  &-login-password-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  // Label1 パスワード
+  &-login-passowrd {
+    font-weight: bold;
+  }
+  // Label2 パスワードを忘れた場合
+  &-login-password-forgot {
+    a {
+      color: $link_color;
+    }
+  }
+  // 入力エラー
+  // エラーの際に付与されるクラス
+  .input-error {
+    border: 1px solid $error;
+    box-shadow: 0 0 0 3px rgb(247, 200, 200) inset;
+  }
+  // エラーメッセージ
+  .input-error-message {
+    font-size: 0.7rem;
+    color: $error;
+    i {
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+// 404 Not Found ページ
+.not-found {
+  padding: 20px 15px;
+  height: 100%;
+  h1 {
+    height: 100px;
+    font-size: 2rem;
+  }
+  &-error-message {
+    height: 200px;
+    line-height: 2em;
+    a {
+      color: $link_color;
+    }
+  }
+  .to-solution {
+    &-fotter {
+      margin-top: 100px;
+      height: calc(100% - 400px);
+      border-top: 1px solid $border;
+    }
+    &-result {
+      height: 50%;
+      padding: 30px 15px;
+      overflow-y: visible;
+      &-body {
+        span {
+          display: block;
+          line-height: 2em;
         }
       }
     }
-    // 解決策ページ
-    .lesson1-solution {
-      height: 100%;
-      overflow-y: scroll;
+    &-btn-area {
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-btn {
+      width: 150px;
+      height: 50px;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 -5px 0px 0 #974444 inset;
+      padding-bottom: 5px;
+      font-size: 1rem;
+      background-color: $theme_color1;
+      &:active {
+        box-shadow: 0 0 0 0;
+        padding-bottom: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+// 解決策ページ
+.lesson1-solution {
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  &1 , &2{
+    border-bottom: 1px solid $border;
+    &-mail, &-login {
+      max-width: 700px;
+      width: 100%;
+    }
+  }
+}
+.congratulations {
+  width: 100%;
+  height: 100%;
+  &-lesson1 {
+    h1 {
+      width: 100%;
+      height: 130px;
+      padding: 30px 15px;
+      font-size: 3.5rem;
+      text-align: center;
+      color: $theme_color1;
+    }
+    &-body {
+      height: calc(100% - 100px);
       display: flex;
       flex-flow: column;
       align-items: center;
-      &1 , &2{
-        border-bottom: 1px solid $border;
-        &-mail, &-login {
-          max-width: 700px;
-          width: 100%;
-        }
+      p {
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
     }
-    .congratulations {
-      width: 100%;
-      height: 100%;
-      &-lesson1 {
-        h1 {
-          width: 100%;
-          height: 130px;
-          padding: 30px 15px;
-          font-size: 3.5rem;
-          text-align: center;
-          color: $theme_color1;
-        }
-        &-body {
-          height: calc(100% - 100px);
-          display: flex;
-          flex-flow: column;
-          align-items: center;
-          p {
-            margin-top: 30px;
-            margin-bottom: 30px;
-          }
-        }
-        &-btn {
-          width: 220px;
-          height: 50px;
-          color: white;
-          text-align: center;
-          border-radius: 10px;
-          box-shadow: 0 -5px 0px 0 #974444 inset;
-          padding-bottom: 5px;
-          font-size: 1rem;
-          background-color: $theme_color1;
-          margin-bottom: 5px;
-          &:active {
-            box-shadow: 0 0 0 0;
-            padding-bottom: 0;
-            margin-bottom: 0;
-            margin-top: 5px;
-          }
-        }
-        &-indicator-container {
-          width: 100%;
-          height: 100px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-        }
-        &-indicator-background {
-          width: 200px;
-          height: 20px;
-          border: 1px solid rgb(182, 182, 182);
-          background-color: rgb(240, 240, 240);
-          border-radius: 10px;
-        }
-        &-indicator {
-          height: 100%;
-          border-radius: 10px;
-          background: linear-gradient(#cfffcf, #6fd36f, #6aca6a);
-        }
-        &-all-lessons {
-          position: absolute;
-          color: rgb(189, 189, 189);
-          display: inline-block;
-          width: 100%;
-          text-align: center;
-          padding-left: 250px;
-        }
+    &-btn {
+      width: 220px;
+      height: 50px;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 -5px 0px 0 #974444 inset;
+      padding-bottom: 5px;
+      font-size: 1rem;
+      background-color: $theme_color1;
+      margin-bottom: 5px;
+      &:active {
+        box-shadow: 0 0 0 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 5px;
       }
+    }
+    &-indicator-container {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    &-indicator-background {
+      width: 200px;
+      height: 20px;
+      border: 1px solid rgb(182, 182, 182);
+      background-color: rgb(240, 240, 240);
+      border-radius: 10px;
+    }
+    &-indicator {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(#cfffcf, #6fd36f, #6aca6a);
+    }
+    &-all-lessons {
+      position: absolute;
+      color: rgb(189, 189, 189);
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding-left: 250px;
     }
   }
 }

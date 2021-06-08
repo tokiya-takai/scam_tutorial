@@ -227,3 +227,73 @@
     }
   }
 }
+
+// Exercise
+.exercise-area {
+  // header 60px, footer, 60px
+  height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  background-color: rgb(233, 233, 233);
+  .procedure {
+    &-container {
+      height: calc(100% - 20px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: calc(25% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      background-color: white;
+    }
+    &-header {
+      height: 50px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 1px solid $border;
+      background-color: rgb(238, 243, 255);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+    &-icon {
+      width: 20px;
+      margin-right: 10px;
+    }
+    &-area {
+      // container 100% - header 50px
+      height: calc(100% - 50px);
+      padding: 30px 15px;
+    }
+  }
+}
+// 手順
+.procedure {
+  height: 100%;
+  overflow-y: scroll;
+  &-title {
+    font-size: 1rem;
+    line-height: 2em;
+  }
+  &-main-text {
+    font-size: 0.9rem;
+    line-height: 2em;
+  }
+}
+// 手順の注意事項
+.procedure-caution {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+// 実際に操作するエリア
+.display-container {
+  height: calc(100% - 20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(75% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+}

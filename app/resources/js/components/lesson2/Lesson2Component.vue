@@ -7,11 +7,12 @@
           <img class="procedure-icon" src="/images/procedure.svg"><span>手順</span>
         </div>
         <div class="procedure-area">
-          <component></component>
+          <component :is="currentProcedure"></component>
         </div>
       </div>
       <div class="display-container">
-        <component></component>
+        <component :is="currentView"
+        ></component>
       </div>
     </div>
     <LessonFotter :slideLink="'/lesson2'"></LessonFotter>
@@ -21,16 +22,21 @@
 <script>
 import LessonHeader from '../LessonHeaderComponent.vue'
 import LessonFotter from '../LessonFooterComponent.vue'
-
+import InstakilogramLogin from './InstakilogramLogin.vue'
+import Procedure1 from './Lesson2Procedure1.vue'
 
 export default {
   components: {
     LessonHeader,
-    LessonFotter
+    LessonFotter,
+    InstakilogramLogin,
+    Procedure1
   },
   data() {
     return {
       lesson: "Lesson2 パスワードリスト攻撃",
+      currentView: "InstakilogramLogin",
+      currentProcedure: 'Procedure1'
     }
   }
 }
