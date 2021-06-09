@@ -64638,7 +64638,46 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("TimeLine")])])
+    return _c(
+      "div",
+      {
+        staticClass: "instakilogram-timeline",
+        attrs: { id: "instakilogram-timeline" }
+      },
+      [
+        _c("div", { staticClass: "instakilogram-timeline-header" }, [
+          _c(
+            "div",
+            { staticClass: "instakilogram-timeline-header-container" },
+            [
+              _c("img", {
+                attrs: { src: "/images/instakilogram-logo.png", alt: "logo" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "dummy-search-area" }, [
+                _c("span", [_vm._v("検索")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "dummy-icons" }, [
+                _c("img", { attrs: { src: "/images/home.png", alt: "home" } }),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: "/images/message.png", alt: "message" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: "/images/explore.png", alt: "explore" }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: "/images/favo.png", alt: "favorite" }
+                })
+              ])
+            ]
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
