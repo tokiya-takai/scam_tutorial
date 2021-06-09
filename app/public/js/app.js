@@ -2898,6 +2898,9 @@ __webpack_require__.r(__webpack_exports__);
       loginError: false
     };
   },
+  props: {
+    verificationFlag: Boolean
+  },
   mounted: function mounted() {
     setInterval(function () {
       switch (this.displayStatus) {
@@ -2942,7 +2945,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     instakilogramSubmit: function instakilogramSubmit() {
       if (this.submitAddress === "example@ilite.co.jp" && this.submitPass === "mypassword123") {
-        this.$emit('parentToInstakilogramTimeLine');
+        // 二段階認証の場合
+        if (this.verificationFlag) {
+          this.$emit('parentToVerificationPage');
+        } else {
+          // 二段階認証無しの場合
+          this.$emit('parentToInstakilogramTimeLine');
+        }
       } else {
         this.loginError = true;
       }
@@ -2965,10 +2974,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../LessonHeaderComponent.vue */ "./resources/js/components/LessonHeaderComponent.vue");
 /* harmony import */ var _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../LessonFooterComponent.vue */ "./resources/js/components/LessonFooterComponent.vue");
-/* harmony import */ var _InstakilogramLogin_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InstakilogramLogin.vue */ "./resources/js/components/lesson2/InstakilogramLogin.vue");
-/* harmony import */ var _InstakilogramTimeLine_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InstakilogramTimeLine.vue */ "./resources/js/components/lesson2/InstakilogramTimeLine.vue");
-/* harmony import */ var _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Lesson2Procedure1.vue */ "./resources/js/components/lesson2/Lesson2Procedure1.vue");
-/* harmony import */ var _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Lesson2Procedure2.vue */ "./resources/js/components/lesson2/Lesson2Procedure2.vue");
+/* harmony import */ var _IndicatorComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../IndicatorComponent.vue */ "./resources/js/components/IndicatorComponent.vue");
+/* harmony import */ var _InstakilogramLogin_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InstakilogramLogin.vue */ "./resources/js/components/lesson2/InstakilogramLogin.vue");
+/* harmony import */ var _InstakilogramTimeLine_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InstakilogramTimeLine.vue */ "./resources/js/components/lesson2/InstakilogramTimeLine.vue");
+/* harmony import */ var _VerificationPage_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./VerificationPage.vue */ "./resources/js/components/lesson2/VerificationPage.vue");
+/* harmony import */ var _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Lesson2Procedure1.vue */ "./resources/js/components/lesson2/Lesson2Procedure1.vue");
+/* harmony import */ var _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Lesson2Procedure2.vue */ "./resources/js/components/lesson2/Lesson2Procedure2.vue");
+//
+//
+//
 //
 //
 //
@@ -2997,8 +3011,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+ // 操作する部分
 
 
+
+
+ // 手順
 
 
 
@@ -3006,22 +3024,38 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     LessonHeader: _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     LessonFotter: _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__.default,
-    InstakilogramLogin: _InstakilogramLogin_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    InstakilogramTimeLine: _InstakilogramTimeLine_vue__WEBPACK_IMPORTED_MODULE_3__.default,
-    Procedure1: _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_4__.default,
-    Procedure2: _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_5__.default
+    Indicator: _IndicatorComponent_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    InstakilogramLogin: _InstakilogramLogin_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    InstakilogramTimeLine: _InstakilogramTimeLine_vue__WEBPACK_IMPORTED_MODULE_4__.default,
+    VerificationPage: _VerificationPage_vue__WEBPACK_IMPORTED_MODULE_5__.default,
+    Procedure1: _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_6__.default,
+    Procedure2: _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_7__.default
   },
   data: function data() {
     return {
       lesson: "Lesson2 パスワードリスト攻撃",
       currentView: "InstakilogramLogin",
-      currentProcedure: 'Procedure1'
+      currentProcedure: 'Procedure1',
+      verificationFlag: false
     };
   },
   methods: {
+    // ログイン後、インジケータを表示してタイムラインへ
     toInstakilogramTimeLine: function toInstakilogramTimeLine() {
-      this.currentView = 'InstakilogramTimeLine';
-      this.currentProcedure = 'Procedure2';
+      this.currentView = "Indicator";
+      setTimeout(function () {
+        this.currentView = 'InstakilogramTimeLine';
+        this.currentProcedure = 'Procedure2';
+      }.bind(this), 2000);
+    },
+    // タイムライン表示後、二段階認証バージョンへ
+    toVerificationLogin: function toVerificationLogin() {
+      this.verificationFlag = true;
+      this.currentView = "InstakilogramLogin";
+    },
+    // 二段階認証ページへ
+    toVerificationPage: function toVerificationPage() {
+      this.currentView = "VerificationPage";
     }
   }
 });
@@ -3115,6 +3149,40 @@ __webpack_require__.r(__webpack_exports__);
         default:
           break;
       }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    childToTwoStepVerification: function childToTwoStepVerification() {
+      this.$emit('parentToVerificationLogin');
     }
   }
 });
@@ -61536,15 +61604,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae& */ "./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Lesson2Procedure2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Lesson2Procedure2.vue?vue&type=script&lang=js& */ "./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Lesson2Procedure2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__.render,
   _Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -61674,6 +61744,43 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/lesson2/Lesson2_2.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/lesson2/VerificationPage.vue":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/lesson2/VerificationPage.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _VerificationPage_vue_vue_type_template_id_6744caac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VerificationPage.vue?vue&type=template&id=6744caac& */ "./resources/js/components/lesson2/VerificationPage.vue?vue&type=template&id=6744caac&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _VerificationPage_vue_vue_type_template_id_6744caac___WEBPACK_IMPORTED_MODULE_0__.render,
+  _VerificationPage_vue_vue_type_template_id_6744caac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/lesson2/VerificationPage.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -61963,6 +62070,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2Procedure1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2Procedure2.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -62537,6 +62660,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2_2_vue_vue_type_template_id_241ebe7d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2_2_vue_vue_type_template_id_241ebe7d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2_2.vue?vue&type=template&id=241ebe7d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2_2.vue?vue&type=template&id=241ebe7d&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/lesson2/VerificationPage.vue?vue&type=template&id=6744caac&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/lesson2/VerificationPage.vue?vue&type=template&id=6744caac& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VerificationPage_vue_vue_type_template_id_6744caac___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VerificationPage_vue_vue_type_template_id_6744caac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VerificationPage_vue_vue_type_template_id_6744caac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./VerificationPage.vue?vue&type=template&id=6744caac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/VerificationPage.vue?vue&type=template&id=6744caac&");
 
 
 /***/ }),
@@ -64737,7 +64877,12 @@ var render = function() {
           _c(
             "div",
             { staticClass: "procedure-area" },
-            [_c(_vm.currentProcedure, { tag: "component" })],
+            [
+              _c(_vm.currentProcedure, {
+                tag: "component",
+                on: { parentToVerificationLogin: _vm.toVerificationLogin }
+              })
+            ],
             1
           )
         ]),
@@ -64748,7 +64893,11 @@ var render = function() {
           [
             _c(_vm.currentView, {
               tag: "component",
-              on: { parentToInstakilogramTimeLine: _vm.toInstakilogramTimeLine }
+              attrs: { verificationFlag: _vm.verificationFlag },
+              on: {
+                parentToInstakilogramTimeLine: _vm.toInstakilogramTimeLine,
+                parentToVerificationPage: _vm.toVerificationPage
+              }
             })
           ],
           1
@@ -64915,7 +65064,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "procedure-title" }, [
-      _c("b", [_vm._v("今回は、犯人になり切ってみましょう。")]),
+      _c("b", [_vm._v("1.今回は、犯人になり切ってみましょう。")]),
       _c("br")
     ])
   },
@@ -64951,14 +65100,68 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass: "procedure2 procedure animate__animated animate__fadeInUp",
+      attrs: { id: "procedure2" }
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("p", { staticClass: "procedure-caution" }, [
+        _vm._v("※このページはInstagram.comが提供しているものではありません。")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "to-login2" }, [
+        _c(
+          "button",
+          {
+            on: {
+              click: function($event) {
+                return _vm.childToTwoStepVerification()
+              }
+            }
+          },
+          [_vm._v("次へ進む")]
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("手順2")])])
+    return _c("span", { staticClass: "procedure-title" }, [
+      _c("b", [
+        _vm._v(
+          "2.あらら、他人のアカウントでログインすることができてしまいました。"
+        )
+      ]),
+      _c("br")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "procedure-main-text" }, [
+      _vm._v(
+        "このアカウントの持ち主は、情報を手に入れたサイトとは別のサイトでも、同じアカウント情報を使っていることがわかりました。"
+      ),
+      _c("br"),
+      _vm._v(
+        "\n  正式な情報でログインしたので、あなたはこのアカウントを好きなようにできてしまいます。"
+      ),
+      _c("br"),
+      _vm._v(
+        "例えばパスワードを変えて、持ち主がログインできないようにしたり、\n  投稿したり、電話番号を手に入れることもできてしまいます。"
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -65209,6 +65412,31 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/VerificationPage.vue?vue&type=template&id=6744caac&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/VerificationPage.vue?vue&type=template&id=6744caac& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("VerificationPage")])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

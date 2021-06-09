@@ -1,6 +1,6 @@
 <template>
   <div id="procedure2" class="procedure2 procedure animate__animated animate__fadeInUp">
-    <span class="procedure-title"><b>今回は、犯人になり切ってみましょう。</b><br></span>
+    <span class="procedure-title"><b>1.今回は、犯人になり切ってみましょう。</b><br></span>
     <p class="procedure-main-text">Lesson1で学習したフィッシングによって、以下のメールアドレスとパスワードを手に入れました。</p>
     <p class="procedure-main-data">メールアドレス: example@ilite.co.jp
         <span class="copied copied-address animate__animated animate__fadeInUp animate__faster" :style="style1">Copied!</span>

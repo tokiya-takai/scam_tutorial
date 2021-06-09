@@ -64,6 +64,9 @@ export default {
       loginError: false,
     }
   },
+  props: {
+    verificationFlag: Boolean,
+  },
   mounted() {
     setInterval(function(){
       switch (this.displayStatus) {
@@ -105,7 +108,13 @@ export default {
     },
     instakilogramSubmit() {
       if((this.submitAddress === "example@ilite.co.jp") && (this.submitPass === "mypassword123")){
-        this.$emit('parentToInstakilogramTimeLine');
+        // 二段階認証の場合
+        if(this.verificationFlag) {
+          this.$emit('parentToVerificationPage')
+        } else {
+        // 二段階認証無しの場合
+          this.$emit('parentToInstakilogramTimeLine');
+        }
       } else {
         this.loginError = true;
       }
