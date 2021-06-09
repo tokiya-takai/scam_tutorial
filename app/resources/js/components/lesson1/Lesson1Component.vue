@@ -27,6 +27,7 @@
           :mailOrTelError="mailOrTelError"
           :passwordError="passwordError"
           :lessonStatus="lessonStatus"
+          :lessonNumber="lessonNumber"
         ></component>
       </div>
     </div>
@@ -53,7 +54,7 @@ import NotFound from './404NotFoundComponent.vue'
 import Indicator from '../IndicatorComponent.vue'
 import Solution from './Lesson1SolutionComponent.vue'
 // Congratulations
-import Congratulations from './CongratulationsComponent.vue'
+import Congratulations from '../CongratulationsComponent.vue'
 
 export default {
   components: {
@@ -82,6 +83,7 @@ export default {
       input2: "",
       mailOrTelError: false,
       passwordError: false,
+      lessonNumber: "Lesson1",
 
       currentProcedure: 'Procedure1',
 

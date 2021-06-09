@@ -3,7 +3,7 @@
     <div v-if="lessonStatus" class="congratulations-lesson1">
       <h1>Congratulations!</h1>
       <div class="congratulations-lesson1-body">
-        <p>お疲れ様でした！Lesson1をクリアしました！</p>
+        <p>お疲れ様でした！{{ lessonNumber }}をクリアしました！</p>
         <a href="/relay"><button class="congratulations-lesson1-btn">トップページに戻る</button></a>
       </div>
       <div class="congratulations-lesson1-indicator-container">
@@ -26,11 +26,12 @@ export default {
       width: 0,
     }
   },
-  mounted() {
-    setTimeout(this.updateIndicator, 300);
-  },
   props: {
     lessonStatus: Boolean,
+    lessonNumber: String,
+  },
+  mounted() {
+    setTimeout(this.updateIndicator, 300);
   },
   methods: {
     updateIndicator() {

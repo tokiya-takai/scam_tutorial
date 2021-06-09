@@ -4336,47 +4336,44 @@ body {
     font-size: 0.8rem;
     margin: 30px 0;
   }
-  #landing-intro .landing-intro-initial-1 {
+  #landing-intro .landing-intro-initial-1, #landing-intro .landing-intro-initial-2 {
     grid-column: 1/-1;
     max-width: 500px;
     width: 100%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing {
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-2 .phishing {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover, #landing-intro .landing-intro-initial-2 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .password-list {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list:hover, #landing-intro .landing-intro-initial-2 .password-list:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .phishing, #landing-intro .landing-intro-initial-2 .password-list {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 40px 0 60px;
     border-radius: 10px;
-    background-color: #ffcbcb;
-    transition: background-color 0.3s ease-in-out;
   }
-  #landing-intro .landing-intro-initial-1 .phishing img {
+  #landing-intro .landing-intro-initial-1 .phishing img, #landing-intro .landing-intro-initial-1 .password-list img, #landing-intro .landing-intro-initial-2 .phishing img, #landing-intro .landing-intro-initial-2 .password-list img {
     width: 60%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing span {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
     text-align: center;
     font-size: 1.2rem;
   }
-  #landing-intro .landing-intro-initial-1 .phishing h4 {
+  #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 1.3rem;
-  }
-  #landing-intro .landing-intro-initial-1 .phishing:hover {
-    background-color: #ffeaea;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #landing-intro .landing-intro-initial-2 {
-    grid-column: 1/-1;
-    max-width: 500px;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 275px;
   }
 }
 @media (min-width: 555px) and (max-width: 991px) {
@@ -4429,44 +4426,50 @@ body {
     font-size: 0.5rem;
     margin: 30px 0;
   }
-  #landing-intro .landing-intro-initial-1 {
+  #landing-intro .landing-intro-initial-1, #landing-intro .landing-intro-initial-2 {
     max-width: 500px;
     width: 100%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing {
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-2 .phishing {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover, #landing-intro .landing-intro-initial-2 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .password-list {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list:hover, #landing-intro .landing-intro-initial-2 .password-list:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .phishing, #landing-intro .landing-intro-initial-2 .password-list {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 40px 0 60px;
     border-radius: 10px;
-    background-color: #ffcbcb;
-    transition: background-color 0.3s ease-in-out;
   }
-  #landing-intro .landing-intro-initial-1 .phishing img {
+  #landing-intro .landing-intro-initial-1 .phishing img, #landing-intro .landing-intro-initial-1 .password-list img, #landing-intro .landing-intro-initial-2 .phishing img, #landing-intro .landing-intro-initial-2 .password-list img {
     width: 60%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing span {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
-    text-align: left;
-    padding-left: 13%;
+    text-align: center;
     font-size: 1.2rem;
   }
-  #landing-intro .landing-intro-initial-1 .phishing h4 {
+}
+@media (min-width: 555px) and (max-width: 991px) and (max-width: 667px) {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 555px) and (max-width: 991px) {
+  #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 1.5rem;
-  }
-  #landing-intro .landing-intro-initial-1 .phishing:hover {
-    background-color: #ffeaea;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #landing-intro .landing-intro-initial-2 {
-    max-width: 500px;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 10px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 @media (min-width: 992px) {
@@ -4516,44 +4519,44 @@ body {
     font-size: 1rem;
     margin: 30px 0;
   }
-  #landing-intro .landing-intro-initial-1 {
+  #landing-intro .landing-intro-initial-1, #landing-intro .landing-intro-initial-2 {
     max-width: 500px;
     width: 100%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing {
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-2 .phishing {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing:hover, #landing-intro .landing-intro-initial-2 .phishing:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .password-list {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .password-list:hover, #landing-intro .landing-intro-initial-2 .password-list:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #landing-intro .landing-intro-initial-1 .phishing, #landing-intro .landing-intro-initial-1 .password-list, #landing-intro .landing-intro-initial-2 .phishing, #landing-intro .landing-intro-initial-2 .password-list {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 40px 0 60px;
     border-radius: 10px;
-    background-color: #ffcbcb;
-    transition: background-color 0.3s ease-in-out;
   }
-  #landing-intro .landing-intro-initial-1 .phishing img {
+  #landing-intro .landing-intro-initial-1 .phishing img, #landing-intro .landing-intro-initial-1 .password-list img, #landing-intro .landing-intro-initial-2 .phishing img, #landing-intro .landing-intro-initial-2 .password-list img {
     width: 60%;
   }
-  #landing-intro .landing-intro-initial-1 .phishing span {
+  #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
     text-align: left;
-    padding-left: 24%;
+    text-align: center;
     font-size: 1.2rem;
   }
-  #landing-intro .landing-intro-initial-1 .phishing h4 {
+  #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 2rem;
-  }
-  #landing-intro .landing-intro-initial-1 .phishing:hover {
-    background-color: #ffeaea;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #landing-intro .landing-intro-initial-2 {
-    max-width: 500px;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 10px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 #landing-message .landing-message {
@@ -5059,6 +5062,124 @@ body {
   margin-right: 10px;
 }
 
+.lesson-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lesson-end-content {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.lesson-end-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+.lesson-end-content p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  padding: 15px 0;
+}
+.lesson-end-content .to-exercise-btn {
+  position: absolute;
+  left: 50px;
+}
+.lesson-end-content .to-exercise-btn button {
+  width: 280px;
+  height: 60px;
+  margin: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 0 -5px 0px 0 #974444 inset;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #f95959;
+}
+.lesson-end-content .to-exercise-btn button:active {
+  box-shadow: 0 0 0 0;
+  padding-bottom: 0;
+  margin-top: 15px;
+}
+
+.exercise-area {
+  height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  background-color: #e9e9e9;
+}
+.exercise-area .procedure-container {
+  height: calc(100% - 20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(25% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.exercise-area .procedure-header {
+  height: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid #d1d1d1;
+  background-color: #eef3ff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.exercise-area .procedure-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+.exercise-area .procedure-area {
+  height: calc(100% - 50px);
+  padding: 30px 15px;
+}
+
+.procedure {
+  height: 100%;
+  overflow-y: scroll;
+}
+.procedure-title {
+  font-size: 1rem;
+  line-height: 2em;
+}
+.procedure-main-text {
+  font-size: 0.9rem;
+  line-height: 2em;
+}
+
+.procedure-caution {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.procedure-sub-info {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  line-height: 20px;
+  text-align: center;
+}
+.procedure-sub-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.display-container {
+  height: calc(100% - 20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(75% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+}
+
 #lesson1 {
   position: relative;
 }
@@ -5103,94 +5224,8 @@ body {
   margin: 10px;
   background: linear-gradient(0.25turn, #ffcbcb, #ffe6e6, #ffcbcb);
 }
-#lesson1 .lesson-end {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#lesson1 .lesson-end-content {
-  display: inline-block;
-  text-align: center;
-  position: relative;
-}
-#lesson1 .lesson-end-content h2 {
-  font-size: 1.5rem;
-  line-height: 1.5em;
-}
-#lesson1 .lesson-end-content p {
-  font-size: 0.8rem;
-  opacity: 0.8;
-  padding: 15px 0;
-}
-#lesson1 .lesson-end-content .to-exercise-btn {
-  position: absolute;
-  left: 50px;
-}
-#lesson1 .lesson-end-content .to-exercise-btn button {
-  width: 280px;
-  height: 60px;
-  margin: 10px;
-  padding-bottom: 5px;
-  border-radius: 10px;
-  box-shadow: 0 -5px 0px 0 #974444 inset;
-  color: white;
-  font-size: 1.2rem;
-  background-color: #f95959;
-}
-#lesson1 .lesson-end-content .to-exercise-btn button:active {
-  box-shadow: 0 0 0 0;
-  padding-bottom: 0;
-  margin-top: 15px;
-}
 
-.exercise-area {
-  height: calc(100vh - 120px);
-  width: 100vw;
-  display: flex;
-  background-color: #e9e9e9;
-}
-.exercise-area .procedure-container {
-  height: calc(100% - 20px);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: calc(25% - 20px);
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  background-color: white;
-}
-.exercise-area .procedure-header {
-  height: 50px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: 1px solid #d1d1d1;
-  background-color: #eef3ff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
-}
-.exercise-area .procedure-icon {
-  width: 20px;
-  margin-right: 10px;
-}
-.exercise-area .procedure-area {
-  height: calc(100% - 50px);
-  padding: 30px 15px;
-}
-.exercise-area .procedure {
-  height: 100%;
-  overflow-y: scroll;
-}
-.exercise-area .procedure-title {
-  font-size: 1rem;
-  line-height: 2em;
-}
-.exercise-area .procedure-main-text {
-  font-size: 0.9rem;
-  line-height: 2em;
-}
-.exercise-area .procedure2 .amazon-link-img-container {
+.procedure2 .amazon-link-img-container {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -5198,17 +5233,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-.exercise-area .procedure2 .amazon-link-img {
+.procedure2 .amazon-link-img {
   width: 75%;
 }
-.exercise-area .procedure6 .end-lesson1-container {
+
+.procedure6 .end-lesson1-container {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.exercise-area .procedure6 .end-lesson1-btn {
+.procedure6 .end-lesson1-btn {
   width: 150px;
   height: 50px;
   color: white;
@@ -5219,40 +5255,34 @@ body {
   font-size: 1rem;
   background-color: #f95959;
 }
-.exercise-area .procedure6 .end-lesson1-btn:active {
+.procedure6 .end-lesson1-btn:active {
   box-shadow: 0 0 0 0;
   padding-bottom: 0;
   margin-top: 5px;
 }
-.exercise-area .procedure-caution {
+
+.procedure-caution {
   font-size: 0.4rem;
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.exercise-area .exercise-indicator {
+
+.exercise-indicator {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.exercise-area .exercise-indicator img {
+.exercise-indicator img {
   width: 100px;
 }
-.exercise-area .display-container {
-  height: calc(100% - 20px);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: calc(75% - 20px);
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: white;
-}
-.exercise-area .display-container .phishing-mail {
+
+.phishing-mail {
   width: 100%;
   height: 100%;
 }
-.exercise-area .display-container .phishing-mail-header {
+.phishing-mail-header {
   height: 60px;
   border-bottom: 1px solid #d1d1d1;
   padding-left: 20px;
@@ -5260,32 +5290,32 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-.exercise-area .display-container .phishing-mail-header .goodluck-logo {
+.phishing-mail-header .goodluck-logo {
   height: 40px;
 }
-.exercise-area .display-container .phishing-mail-content {
+.phishing-mail-content {
   width: 100%;
   height: calc(100% - 60px);
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
 }
-.exercise-area .display-container .phishing-mail-side-bar {
+.phishing-mail-side-bar {
   width: calc(20% - 5px);
   height: 100%;
   margin-right: 5px;
   padding: 5% 3% 5% 0;
 }
-.exercise-area .display-container .phishing-mail-side-bar-list li {
+.phishing-mail-side-bar-list li {
   padding: 4% 0 4% 30px;
   display: flex;
   align-items: center;
 }
-.exercise-area .display-container .phishing-mail-side-bar-list li img {
+.phishing-mail-side-bar-list li img {
   width: 20px;
   margin: 0 5px;
 }
-.exercise-area .display-container .phishing-mail-side-bar-list-current {
+.phishing-mail-side-bar-list-current {
   background-color: #ffcaca;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -5293,21 +5323,21 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-.exercise-area .display-container .phishing-mail-side-bar-list-current:hover {
+.phishing-mail-side-bar-list-current:hover {
   opacity: 0.8;
 }
-.exercise-area .display-container .phishing-mail-mails-area {
+.phishing-mail-mails-area {
   width: calc(80% - 5px);
   height: 100%;
   margin-left: 5px;
   overflow-y: scroll;
 }
-.exercise-area .display-container .phishing-mail-mails-header {
+.phishing-mail-mails-header {
   width: 100%;
   height: 40px;
   border-bottom: 1px solid #d1d1d1;
 }
-.exercise-area .display-container .phishing-mail-mails-header-current {
+.phishing-mail-mails-header-current {
   width: 30%;
   height: 100%;
   border-bottom: 3px solid #fc3737;
@@ -5315,11 +5345,11 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-.exercise-area .display-container .phishing-mail-mails-header-current img {
+.phishing-mail-mails-header-current img {
   height: 20px;
   margin: 0 10px;
 }
-.exercise-area .display-container .phishing-mail-mails-mail {
+.phishing-mail-mails-mail {
   height: 40px;
   padding-left: 10px;
   border-bottom: 1px solid #d1d1d1;
@@ -5328,7 +5358,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.exercise-area .display-container .phishing-mail-mails-mail:hover {
+.phishing-mail-mails-mail:hover {
   padding-left: 9px;
   border-top: 1px solid #b6b6b6;
   border-left: 1px solid #b6b6b6;
@@ -5336,22 +5366,22 @@ body {
   border-bottom: 1px solid #b6b6b6;
   box-shadow: 0 2px 0 #818181;
 }
-.exercise-area .display-container .phishing-mail-mails-mail .mail-btn {
+.phishing-mail-mails-mail .mail-btn {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.exercise-area .display-container .phishing-mail .mail-sender {
+.phishing-mail .mail-sender {
   width: 30%;
 }
-.exercise-area .display-container .phishing-mail .mail-title {
+.phishing-mail .mail-title {
   width: 70%;
 }
-.exercise-area .display-container .phishing-mail .dummy-check-box {
+.phishing-mail .dummy-check-box {
   padding: 0 13px 0 3px;
 }
-.exercise-area .display-container .phishing-mail .dummy-mails {
+.phishing-mail .dummy-mails {
   height: 40px;
   width: 100%;
   padding-left: 10px;
@@ -5360,81 +5390,82 @@ body {
   align-items: center;
   background-color: #f0f0f0;
 }
-.exercise-area .display-container .phishing-mail-text {
+.phishing-mail-text {
   width: calc(80% - 5px);
   height: 100%;
   margin-left: 5px;
 }
-.exercise-area .display-container .phishing-mail-text-title {
+.phishing-mail-text-title {
   width: 100%;
   height: 55px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #d1d1d1;
 }
-.exercise-area .display-container .phishing-mail-text-title h2 {
+.phishing-mail-text-title h2 {
   font-size: 1.5rem;
 }
-.exercise-area .display-container .phishing-mail-text-content {
+.phishing-mail-text-content {
   height: calc(100% - 55px);
 }
-.exercise-area .display-container .phishing-mail-text-content-sender {
+.phishing-mail-text-content-sender {
   height: 80px;
   padding-left: 15px;
   display: flex;
   align-items: center;
 }
-.exercise-area .display-container .phishing-mail-text-content-sender img {
+.phishing-mail-text-content-sender img {
   height: 40px;
   margin-right: 15px;
 }
-.exercise-area .display-container .phishing-mail-text-content-body {
+.phishing-mail-text-content-body {
   width: 100%;
   padding: 15px 5%;
   line-height: 2.3em;
 }
-.exercise-area .display-container .phishing-mail-text-content-body p {
+.phishing-mail-text-content-body p {
   margin-bottom: 30px;
 }
-.exercise-area .display-container .phishing-mail-text-content-body p .phising-link {
+.phishing-mail-text-content-body p .phising-link {
   color: blue;
   text-decoration: underline;
 }
-.exercise-area .display-container .amazon {
+
+.amazon {
   width: 100%;
   height: 100%;
   padding-top: 10px;
 }
-.exercise-area .display-container .amazon-logo {
+.amazon-logo {
   width: 100%;
   height: 50px;
   text-align: center;
 }
-.exercise-area .display-container .amazon-logo img {
+.amazon-logo img {
   height: 50px;
 }
-.exercise-area .display-container .amazon-login-area {
+.amazon-login-area {
   height: calc(100% - 50px);
   padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.exercise-area .display-container .amazon-login-container {
+.amazon-login-container {
   width: 35%;
   padding: 2% 3%;
   border: 1px solid #d1d1d1;
   border-radius: 3px;
 }
-.exercise-area .display-container .amazon-login-title {
+.amazon-login-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
-.exercise-area .display-container .amazon-login-email-or-tel {
+.amazon-login-email-or-tel {
   display: block;
   font-size: 0.8rem;
 }
-.exercise-area .display-container .amazon-login-input {
+.amazon-login-input {
   display: block;
   width: 100%;
   height: 35px;
@@ -5445,7 +5476,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 1px 0 #aaa inset;
 }
-.exercise-area .display-container .amazon-login-submit {
+.amazon-login-submit {
   display: block;
   width: 100%;
   line-height: 35px;
@@ -5457,91 +5488,92 @@ body {
   margin-top: 15px;
   cursor: pointer;
 }
-.exercise-area .display-container .amazon-login-submit:hover {
+.amazon-login-submit:hover {
   background: linear-gradient(#f4dda8, #d8b963);
 }
-.exercise-area .display-container .amazon-login-supplement {
+.amazon-login-supplement {
   display: block;
   font-size: 0.7rem;
   margin-top: 15px;
 }
-.exercise-area .display-container .amazon-login-supplement a {
+.amazon-login-supplement a {
   color: #2e2ece;
   line-height: 2em;
 }
-.exercise-area .display-container .amazon-login-entered-input1 {
+.amazon-login-entered-input1 {
   font-size: 0.7rem;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.exercise-area .display-container .amazon-login-keep-checkbox {
+.amazon-login-keep-checkbox {
   margin-top: 20px;
   margin-bottom: 5px;
   font-size: 0.7rem;
 }
-.exercise-area .display-container .amazon-login-keep-checkbox input {
+.amazon-login-keep-checkbox input {
   margin-right: 10px;
 }
-.exercise-area .display-container .amazon-login-password-label {
+.amazon-login-password-label {
   display: flex;
   justify-content: space-between;
   font-size: 0.8rem;
 }
-.exercise-area .display-container .amazon-login-passowrd {
+.amazon-login-passowrd {
   font-weight: bold;
 }
-.exercise-area .display-container .amazon-login-password-forgot a {
+.amazon-login-password-forgot a {
   color: #2e2ece;
 }
-.exercise-area .display-container .amazon .input-error {
+.amazon .input-error {
   border: 1px solid #fc3737;
   box-shadow: 0 0 0 3px #f7c8c8 inset;
 }
-.exercise-area .display-container .amazon .input-error-message {
+.amazon .input-error-message {
   font-size: 0.7rem;
   color: #fc3737;
 }
-.exercise-area .display-container .amazon .input-error-message i {
+.amazon .input-error-message i {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
 }
-.exercise-area .display-container .not-found {
+
+.not-found {
   padding: 20px 15px;
   height: 100%;
 }
-.exercise-area .display-container .not-found h1 {
+.not-found h1 {
   height: 100px;
   font-size: 2rem;
 }
-.exercise-area .display-container .not-found-error-message {
+.not-found-error-message {
   height: 200px;
   line-height: 2em;
 }
-.exercise-area .display-container .not-found-error-message a {
+.not-found-error-message a {
   color: #2e2ece;
 }
-.exercise-area .display-container .not-found .to-solution-fotter {
+.not-found .to-solution-fotter {
   margin-top: 100px;
   height: calc(100% - 400px);
   border-top: 1px solid #d1d1d1;
 }
-.exercise-area .display-container .not-found .to-solution-result {
+.not-found .to-solution-result {
   height: 50%;
   padding: 30px 15px;
   overflow-y: visible;
 }
-.exercise-area .display-container .not-found .to-solution-result-body span {
+.not-found .to-solution-result-body span {
   display: block;
   line-height: 2em;
 }
-.exercise-area .display-container .not-found .to-solution-btn-area {
+.not-found .to-solution-btn-area {
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.exercise-area .display-container .not-found .to-solution-btn {
+.not-found .to-solution-btn {
   width: 150px;
   height: 50px;
   color: white;
@@ -5552,30 +5584,32 @@ body {
   font-size: 1rem;
   background-color: #f95959;
 }
-.exercise-area .display-container .not-found .to-solution-btn:active {
+.not-found .to-solution-btn:active {
   box-shadow: 0 0 0 0;
   padding-bottom: 0;
   margin-top: 5px;
 }
-.exercise-area .display-container .lesson1-solution {
+
+.lesson1-solution {
   height: 100%;
   overflow-y: scroll;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-.exercise-area .display-container .lesson1-solution1, .exercise-area .display-container .lesson1-solution2 {
+.lesson1-solution1, .lesson1-solution2 {
   border-bottom: 1px solid #d1d1d1;
 }
-.exercise-area .display-container .lesson1-solution1-mail, .exercise-area .display-container .lesson1-solution1-login, .exercise-area .display-container .lesson1-solution2-mail, .exercise-area .display-container .lesson1-solution2-login {
+.lesson1-solution1-mail, .lesson1-solution1-login, .lesson1-solution2-mail, .lesson1-solution2-login {
   max-width: 700px;
   width: 100%;
 }
-.exercise-area .display-container .congratulations {
+
+.congratulations {
   width: 100%;
   height: 100%;
 }
-.exercise-area .display-container .congratulations-lesson1 h1 {
+.congratulations-lesson1 h1 {
   width: 100%;
   height: 130px;
   padding: 30px 15px;
@@ -5583,17 +5617,17 @@ body {
   text-align: center;
   color: #f95959;
 }
-.exercise-area .display-container .congratulations-lesson1-body {
+.congratulations-lesson1-body {
   height: calc(100% - 100px);
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-.exercise-area .display-container .congratulations-lesson1-body p {
+.congratulations-lesson1-body p {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.exercise-area .display-container .congratulations-lesson1-btn {
+.congratulations-lesson1-btn {
   width: 220px;
   height: 50px;
   color: white;
@@ -5605,13 +5639,13 @@ body {
   background-color: #f95959;
   margin-bottom: 5px;
 }
-.exercise-area .display-container .congratulations-lesson1-btn:active {
+.congratulations-lesson1-btn:active {
   box-shadow: 0 0 0 0;
   padding-bottom: 0;
   margin-bottom: 0;
   margin-top: 5px;
 }
-.exercise-area .display-container .congratulations-lesson1-indicator-container {
+.congratulations-lesson1-indicator-container {
   width: 100%;
   height: 100px;
   display: flex;
@@ -5619,23 +5653,398 @@ body {
   align-items: center;
   position: relative;
 }
-.exercise-area .display-container .congratulations-lesson1-indicator-background {
+.congratulations-lesson1-indicator-background {
   width: 200px;
   height: 20px;
   border: 1px solid #b6b6b6;
   background-color: #f0f0f0;
   border-radius: 10px;
 }
-.exercise-area .display-container .congratulations-lesson1-indicator {
+.congratulations-lesson1-indicator {
   height: 100%;
   border-radius: 10px;
   background: linear-gradient(#cfffcf, #6fd36f, #6aca6a);
 }
-.exercise-area .display-container .congratulations-lesson1-all-lessons {
+.congratulations-lesson1-all-lessons {
   position: absolute;
   color: #bdbdbd;
   display: inline-block;
   width: 100%;
   text-align: center;
   padding-left: 250px;
+}
+
+#lesson2 {
+  position: relative;
+}
+#lesson2 .lesson2-tutorial {
+  height: 100vh;
+}
+#lesson2 .lesson2-tutorial-title {
+  padding: 30px 3%;
+  font-size: 2rem;
+}
+#lesson2 .lesson2-tutorial-content {
+  height: calc(100% - 96px);
+}
+#lesson2 .lesson2-tutorial-content span {
+  display: inline-block;
+  padding: 0 3%;
+  font-size: 1.2rem;
+  line-height: 1.8em;
+}
+#lesson2 .lesson2-tutorial-content .phishing-hero-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lesson2 .lesson2-tutorial-content .phishing-hero-container .phishing-hero {
+  height: 70%;
+  margin: 0 auto;
+}
+#lesson2 .lesson2-tutorial-container {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px - 60px);
+  margin: 10px;
+  background: linear-gradient(0.25turn, #d1d4ff, #f6f7ff, #d1d4ff);
+}
+
+.procedure-main-data {
+  padding-left: 10px;
+  line-height: 22px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.procedure-main-data .copied {
+  position: absolute;
+  text-align: right;
+  left: 63%;
+  bottom: 32px;
+  width: 65px;
+  height: 30px;
+  color: white;
+  background-color: #4e4e4e;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 3px;
+}
+.procedure-main-data .copied-address {
+  left: 78%;
+}
+.procedure-main-data button {
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+.procedure-main-data button img {
+  width: 100%;
+}
+.procedure-main-data button:hover {
+  opacity: 0.7;
+}
+
+.nextButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nextButton button {
+  width: 150px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 -5px 0px 0 #974444 inset;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  background-color: #f95959;
+}
+.nextButton button:active {
+  box-shadow: 0 0 0 0;
+  padding-bottom: 0;
+  margin-top: 5px;
+}
+
+.instakilogram-login {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instakilogram-login-main {
+  display: flex;
+  justify-content: center;
+}
+.instakilogram-login-image {
+  width: calc(454px * 0.8);
+  height: calc(618px * 0.8);
+  background: url("/images/instakilogram-login.png");
+  background-size: contain;
+}
+.instakilogram-login-image-margin {
+  width: calc(454px * 0.8);
+  height: 0;
+  margin-top: calc(99px * 0.8);
+  margin-left: calc(151px * 0.8);
+  position: relative;
+}
+.instakilogram-login-image-margin img {
+  position: absolute;
+  width: calc(240px * 0.8);
+}
+.instakilogram-login-input {
+  width: calc(380px * 0.8);
+  height: calc(618px * 0.8);
+}
+.instakilogram-login-input-container {
+  width: 100%;
+  height: calc(380px * 0.8);
+  border: 1px solid #d1d1d1;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+}
+.instakilogram-login-input-container .instakilogram-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instakilogram-login-input-container .instakilogram-logo img {
+  width: 175px;
+  height: 51px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.instakilogram-login-input-container input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  background-color: #fafafa;
+}
+.instakilogram-login-input-submit-notactive {
+  width: 100%;
+  height: 27px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: rgba(0, 149, 246, 0.3);
+}
+.instakilogram-login-input-submit-active {
+  width: 100%;
+  height: 27px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: #0095f6;
+}
+.instakilogram-login-input-error {
+  padding-top: 20px;
+}
+.instakilogram-login-input-error span {
+  font-size: 0.8rem;
+  color: #fc3737;
+  text-align: center;
+}
+.instakilogram-login-input-sub {
+  width: calc(350 * 0.8);
+  height: calc(63 * 0.8);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid #d1d1d1;
+  text-align: center;
+}
+.instakilogram-login-input-sub span {
+  font-size: 0.7rem;
+  line-height: calc(63px * 0.8 - 20px);
+}
+.instakilogram-login-input-sub a {
+  color: #2e2ece;
+}
+
+.instakilogram-timeline {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+.instakilogram-timeline-header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #d1d1d1;
+  background-color: white;
+}
+.instakilogram-timeline-header-container {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.instakilogram-timeline-header-container img {
+  height: 40px;
+}
+.instakilogram-timeline-header-container .dummy-search-area {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.instakilogram-timeline-header-container .dummy-search-area span {
+  line-height: 30px;
+  color: #b4b4b4;
+  padding-right: 15px;
+}
+.instakilogram-timeline-header-container .dummy-search-area span::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 5px;
+  background-image: url("/images/search.png");
+  background-size: contain;
+  vertical-align: middle;
+}
+.instakilogram-timeline-header-container .dummy-icons img {
+  height: 23px;
+  margin: 0 10px;
+}
+.instakilogram-timeline-content {
+  width: 70%;
+  display: flex;
+  height: calc(100% - 50px);
+  margin: 0 auto;
+}
+.instakilogram-timeline-content-body {
+  width: 65%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.instakilogram-timeline-content-body .stories {
+  width: 100%;
+  height: 65px;
+  border: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.instakilogram-timeline-content-body .stories img {
+  height: 50px;
+}
+.instakilogram-timeline-content-body .posts {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.instakilogram-timeline-content-body .posts img {
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 20px;
+}
+.instakilogram-timeline-content-sidebar {
+  width: 35%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.instakilogram-timeline-content-sidebar img {
+  width: 100%;
+}
+
+.verification {
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+}
+.verification-container {
+  width: 300px;
+  height: 400px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid #d1d1d1;
+  background-color: white;
+}
+.verification-mark {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.verification-mark img {
+  width: 65px;
+}
+.verification-tel {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.verification .input-security-code {
+  width: 100%;
+  height: 35px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+.verification .submit-security-code {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 13px;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  background-color: #0095f6;
+  text-align: center;
+}
+.verification .security-code-error {
+  font-size: 0.8rem;
+  color: #fc3737;
+  text-align: center;
+}
+
+.passwordlist-solution {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.passwordlist-solution-image1 {
+  width: 70%;
+  margin: 0 auto 30px auto;
+}
+.passwordlist-solution-image1 figure {
+  width: 100%;
+}
+.passwordlist-solution-image1 figure img {
+  width: 100%;
+}
+.passwordlist-solution-image1 p {
+  line-height: 2em;
 }

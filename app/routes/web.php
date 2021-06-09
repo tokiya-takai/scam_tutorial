@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Lesson1Controller;
+use App\Http\Controllers\Lesson2Controller;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\SupportsController;
 use App\Http\Controllers\UserDeleteController;
@@ -32,6 +33,9 @@ Route::get('/relay', [LandingController::class, 'relay']);
 // Lesson1
 Route::get('/lesson1',[Lesson1Controller::class, 'index'])->name('lesson1');
 Route::get('/lesson1/exercise',[Lesson1Controller::class, 'show']);
+// Lesson2
+Route::get('/lesson2', [Lesson2Controller::class, 'index'])->name('lesson2');
+Route::get('lesson2/exercise', [Lesson2Controller::class, 'show']);
 
 // Support
 Route::get('/privacypolicy', [SupportsController::class, 'privacyPolicy'])->name('privacyPolicy');

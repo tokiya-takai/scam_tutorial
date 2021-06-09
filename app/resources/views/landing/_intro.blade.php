@@ -18,7 +18,11 @@
         </a>
       </div>
       <div class="landing-intro-initial-2">
-        <div class="coming-soon">Coming Soon</div>
+        <a class="password-list" href="/lesson2">
+          <img src="/images/passwordlist.png" alt="Phishing">
+          <span>Lesson 2</span>
+          <h4>パスワードリスト攻撃</h4>
+        </a>
       </div>
     </div>
   </div>
