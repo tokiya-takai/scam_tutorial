@@ -12,5 +12,17 @@
         </div>
       </div>
     </div>
+    <div class="instakilogram-timeline-content">
+      <div class="instakilogram-timeline-content-body">
+        <div class="stories"><img src="/images/stories1.png" alt="story"></div>
+        <div class="posts">
+          <img src="/images/post1.jpg" alt="post">
+          <img src="/images/post2.jpg" alt="post">
+        </div>
+      </div>
+      <div class="instakilogram-timeline-content-sidebar">
+        <img src="/images/instakilogram-mine.png" alt="">
+      </div>
+    </div>
   </div>
 </template>

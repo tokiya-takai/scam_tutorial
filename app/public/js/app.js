@@ -64675,6 +64675,28 @@ var staticRenderFns = [
               ])
             ]
           )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "instakilogram-timeline-content" }, [
+          _c("div", { staticClass: "instakilogram-timeline-content-body" }, [
+            _c("div", { staticClass: "stories" }, [
+              _c("img", {
+                attrs: { src: "/images/stories1.png", alt: "story" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "posts" }, [
+              _c("img", { attrs: { src: "/images/post1.jpg", alt: "post" } }),
+              _vm._v(" "),
+              _c("img", { attrs: { src: "/images/post2.jpg", alt: "post" } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "instakilogram-timeline-content-sidebar" }, [
+            _c("img", {
+              attrs: { src: "/images/instakilogram-mine.png", alt: "" }
+            })
+          ])
         ])
       ]
     )
