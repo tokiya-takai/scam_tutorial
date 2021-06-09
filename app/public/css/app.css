@@ -5157,6 +5157,19 @@ body {
   padding-bottom: 25px;
 }
 
+.procedure-sub-info {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  line-height: 20px;
+  text-align: center;
+}
+.procedure-sub-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
 .display-container {
   height: calc(100% - 20px);
   margin-top: 10px;
@@ -5701,7 +5714,37 @@ body {
 
 .procedure-main-data {
   padding-left: 10px;
-  line-height: 2em;
+  line-height: 22px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.procedure-main-data .copied {
+  position: absolute;
+  text-align: right;
+  left: 63%;
+  bottom: 32px;
+  width: 65px;
+  height: 30px;
+  color: white;
+  background-color: #4e4e4e;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 3px;
+}
+.procedure-main-data .copied-address {
+  left: 78%;
+}
+.procedure-main-data button {
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+.procedure-main-data button img {
+  width: 100%;
+}
+.procedure-main-data button:hover {
+  opacity: 0.7;
 }
 
 .instakilogram-login {
@@ -5734,7 +5777,7 @@ body {
   width: calc(240px * 0.8);
 }
 .instakilogram-login-input {
-  width: calc(350px * 0.8);
+  width: calc(380px * 0.8);
   height: calc(618px * 0.8);
 }
 .instakilogram-login-input-container {
@@ -5763,13 +5806,24 @@ body {
   height: 35px;
   border: 1px solid #d1d1d1;
   border-radius: 2px;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   margin-top: 5px;
   margin-bottom: 5px;
   padding-left: 10px;
   background-color: #fafafa;
 }
-.instakilogram-login-input-container button {
+.instakilogram-login-input-submit-notactive {
+  width: 100%;
+  height: 27px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: rgba(0, 149, 246, 0.3);
+}
+.instakilogram-login-input-submit-active {
   width: 100%;
   height: 27px;
   text-align: center;
@@ -5779,6 +5833,14 @@ body {
   font-size: 0.8rem;
   border-radius: 5px;
   background-color: #0095f6;
+}
+.instakilogram-login-input-error {
+  padding-top: 20px;
+}
+.instakilogram-login-input-error span {
+  font-size: 0.8rem;
+  color: #fc3737;
+  text-align: center;
 }
 .instakilogram-login-input-sub {
   width: calc(350 * 0.8);

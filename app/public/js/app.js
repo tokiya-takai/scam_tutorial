@@ -2874,6 +2874,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2887,7 +2891,11 @@ __webpack_require__.r(__webpack_exports__);
       isActiveOpacity2: false,
       isActiveOpacity3: false,
       displayStatus: 1,
-      opacity: 1
+      opacity: 1,
+      submitAddress: "",
+      submitPass: "",
+      isActiveSubmitBtn: false,
+      loginError: false
     };
   },
   mounted: function mounted() {
@@ -2899,7 +2907,6 @@ __webpack_require__.r(__webpack_exports__);
           this.isActiveFadeOut1 = true;
           this.isActiveFadeIn2 = true;
           this.displayStatus = 2;
-          this.$refs.img1.classList.add('top');
           break;
 
         case 2:
@@ -2924,6 +2931,22 @@ __webpack_require__.r(__webpack_exports__);
           break;
       }
     }.bind(this), 6000);
+  },
+  methods: {
+    activeSubmitBtn: function activeSubmitBtn() {
+      if (this.submitAddress != "" && this.submitPass != "") {
+        this.isActiveSubmitBtn = true;
+      } else {
+        this.isActiveSubmitBtn = false;
+      }
+    },
+    instakilogramSubmit: function instakilogramSubmit() {
+      if (this.submitAddress === "example@ilite.co.jp" && this.submitPass === "mypassword123") {
+        this.$emit('parentToInstakilogramTimeLine');
+      } else {
+        this.loginError = true;
+      }
+    }
   }
 });
 
@@ -2943,7 +2966,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../LessonHeaderComponent.vue */ "./resources/js/components/LessonHeaderComponent.vue");
 /* harmony import */ var _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../LessonFooterComponent.vue */ "./resources/js/components/LessonFooterComponent.vue");
 /* harmony import */ var _InstakilogramLogin_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InstakilogramLogin.vue */ "./resources/js/components/lesson2/InstakilogramLogin.vue");
-/* harmony import */ var _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Lesson2Procedure1.vue */ "./resources/js/components/lesson2/Lesson2Procedure1.vue");
+/* harmony import */ var _InstakilogramTimeLine_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InstakilogramTimeLine.vue */ "./resources/js/components/lesson2/InstakilogramTimeLine.vue");
+/* harmony import */ var _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Lesson2Procedure1.vue */ "./resources/js/components/lesson2/Lesson2Procedure1.vue");
+/* harmony import */ var _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Lesson2Procedure2.vue */ "./resources/js/components/lesson2/Lesson2Procedure2.vue");
 //
 //
 //
@@ -2965,6 +2990,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -2974,7 +3007,9 @@ __webpack_require__.r(__webpack_exports__);
     LessonHeader: _LessonHeaderComponent_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     LessonFotter: _LessonFooterComponent_vue__WEBPACK_IMPORTED_MODULE_1__.default,
     InstakilogramLogin: _InstakilogramLogin_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    Procedure1: _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    InstakilogramTimeLine: _InstakilogramTimeLine_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    Procedure1: _Lesson2Procedure1_vue__WEBPACK_IMPORTED_MODULE_4__.default,
+    Procedure2: _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_5__.default
   },
   data: function data() {
     return {
@@ -2982,6 +3017,105 @@ __webpack_require__.r(__webpack_exports__);
       currentView: "InstakilogramLogin",
       currentProcedure: 'Procedure1'
     };
+  },
+  methods: {
+    toInstakilogramTimeLine: function toInstakilogramTimeLine() {
+      this.currentView = 'InstakilogramTimeLine';
+      this.currentProcedure = 'Procedure2';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      address: "example@ilite.co.jp",
+      pass: "mypassword123",
+      style1: "display: none;",
+      style2: "display: none;"
+    };
+  },
+  methods: {
+    onCopy: function onCopy(target) {
+      switch (target.text) {
+        case 'example@ilite.co.jp':
+          this.style1 = "display: block;";
+          setTimeout(function () {
+            this.style1 = "display: none;";
+          }.bind(this), 2000);
+          break;
+
+        case 'mypassword123':
+          this.style2 = "display: block;";
+          setTimeout(function () {
+            this.style2 = "display: none;";
+          }.bind(this), 2000);
+          break;
+
+        default:
+          break;
+      }
+    },
+    onError: function onError(target) {
+      switch (target.text) {
+        case 'example@ilite.co.jp':
+          this.style1 = "display: block;";
+          setTimeout(function () {
+            this.style1 = "display: none;";
+          }.bind(this), 2000);
+          break;
+
+        case 'mypassword123':
+          this.style2 = "display: block;";
+          setTimeout(function () {
+            this.style2 = "display: none;";
+          }.bind(this), 2000);
+          break;
+
+        default:
+          break;
+      }
+    }
   }
 });
 
@@ -3222,6 +3356,10 @@ Vue.component('lesson2-tutorial-component', __webpack_require__(/*! ./components
 Vue.component('lesson2-component', __webpack_require__(/*! ./components/lesson2/Lesson2Component.vue */ "./resources/js/components/lesson2/Lesson2Component.vue").default); // Service
 
 Vue.component('user-delete-component', __webpack_require__(/*! ./components/UserDeleteComponent.vue */ "./resources/js/components/UserDeleteComponent.vue").default);
+
+var VueClipboard = __webpack_require__(/*! vue-clipboard2 */ "./node_modules/vue-clipboard2/vue-clipboard.js");
+
+Vue.use(VueClipboard);
 var app = new Vue({
   el: '#main'
 });
@@ -7711,6 +7849,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 })));
 //# sourceMappingURL=bootstrap.js.map
 
+
+/***/ }),
+
+/***/ "./node_modules/clipboard/dist/clipboard.min.js":
+/*!******************************************************!*\
+  !*** ./node_modules/clipboard/dist/clipboard.min.js ***!
+  \******************************************************/
+/***/ (function(module) {
+
+/*!
+ * clipboard.js v2.0.8
+ * https://clipboardjs.com/
+ *
+ * Licensed MIT © Zeno Rocha
+ */
+!function(t,e){ true?module.exports=e():0}(this,function(){return n={134:function(t,e,n){"use strict";n.d(e,{default:function(){return r}});var e=n(279),i=n.n(e),e=n(370),a=n.n(e),e=n(817),o=n.n(e);function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function u(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}var l=function(){function e(t){!function(t){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this),this.resolveOptions(t),this.initSelection()}var t,n,r;return t=e,(n=[{key:"resolveOptions",value:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{};this.action=t.action,this.container=t.container,this.emitter=t.emitter,this.target=t.target,this.text=t.text,this.trigger=t.trigger,this.selectedText=""}},{key:"initSelection",value:function(){this.text?this.selectFake():this.target&&this.selectTarget()}},{key:"createFakeElement",value:function(){var t="rtl"===document.documentElement.getAttribute("dir");this.fakeElem=document.createElement("textarea"),this.fakeElem.style.fontSize="12pt",this.fakeElem.style.border="0",this.fakeElem.style.padding="0",this.fakeElem.style.margin="0",this.fakeElem.style.position="absolute",this.fakeElem.style[t?"right":"left"]="-9999px";t=window.pageYOffset||document.documentElement.scrollTop;return this.fakeElem.style.top="".concat(t,"px"),this.fakeElem.setAttribute("readonly",""),this.fakeElem.value=this.text,this.fakeElem}},{key:"selectFake",value:function(){var t=this,e=this.createFakeElement();this.fakeHandlerCallback=function(){return t.removeFake()},this.fakeHandler=this.container.addEventListener("click",this.fakeHandlerCallback)||!0,this.container.appendChild(e),this.selectedText=o()(e),this.copyText(),this.removeFake()}},{key:"removeFake",value:function(){this.fakeHandler&&(this.container.removeEventListener("click",this.fakeHandlerCallback),this.fakeHandler=null,this.fakeHandlerCallback=null),this.fakeElem&&(this.container.removeChild(this.fakeElem),this.fakeElem=null)}},{key:"selectTarget",value:function(){this.selectedText=o()(this.target),this.copyText()}},{key:"copyText",value:function(){var e;try{e=document.execCommand(this.action)}catch(t){e=!1}this.handleResult(e)}},{key:"handleResult",value:function(t){this.emitter.emit(t?"success":"error",{action:this.action,text:this.selectedText,trigger:this.trigger,clearSelection:this.clearSelection.bind(this)})}},{key:"clearSelection",value:function(){this.trigger&&this.trigger.focus(),document.activeElement.blur(),window.getSelection().removeAllRanges()}},{key:"destroy",value:function(){this.removeFake()}},{key:"action",set:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"copy";if(this._action=t,"copy"!==this._action&&"cut"!==this._action)throw new Error('Invalid "action" value, use either "copy" or "cut"')},get:function(){return this._action}},{key:"target",set:function(t){if(void 0!==t){if(!t||"object"!==c(t)||1!==t.nodeType)throw new Error('Invalid "target" value, use a valid Element');if("copy"===this.action&&t.hasAttribute("disabled"))throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');if("cut"===this.action&&(t.hasAttribute("readonly")||t.hasAttribute("disabled")))throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes');this._target=t}},get:function(){return this._target}}])&&u(t.prototype,n),r&&u(t,r),e}();function s(t){return(s="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function f(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}function h(t,e){return(h=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function d(n){var r=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(t){return!1}}();return function(){var t,e=p(n);return t=r?(t=p(this).constructor,Reflect.construct(e,arguments,t)):e.apply(this,arguments),e=this,!(t=t)||"object"!==s(t)&&"function"!=typeof t?function(t){if(void 0!==t)return t;throw new ReferenceError("this hasn't been initialised - super() hasn't been called")}(e):t}}function p(t){return(p=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function y(t,e){t="data-clipboard-".concat(t);if(e.hasAttribute(t))return e.getAttribute(t)}var r=function(){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&h(t,e)}(o,i());var t,e,n,r=d(o);function o(t,e){var n;return function(t){if(!(t instanceof o))throw new TypeError("Cannot call a class as a function")}(this),(n=r.call(this)).resolveOptions(e),n.listenClick(t),n}return t=o,n=[{key:"isSupported",value:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:["copy","cut"],t="string"==typeof t?[t]:t,e=!!document.queryCommandSupported;return t.forEach(function(t){e=e&&!!document.queryCommandSupported(t)}),e}}],(e=[{key:"resolveOptions",value:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{};this.action="function"==typeof t.action?t.action:this.defaultAction,this.target="function"==typeof t.target?t.target:this.defaultTarget,this.text="function"==typeof t.text?t.text:this.defaultText,this.container="object"===s(t.container)?t.container:document.body}},{key:"listenClick",value:function(t){var e=this;this.listener=a()(t,"click",function(t){return e.onClick(t)})}},{key:"onClick",value:function(t){t=t.delegateTarget||t.currentTarget;this.clipboardAction&&(this.clipboardAction=null),this.clipboardAction=new l({action:this.action(t),target:this.target(t),text:this.text(t),container:this.container,trigger:t,emitter:this})}},{key:"defaultAction",value:function(t){return y("action",t)}},{key:"defaultTarget",value:function(t){t=y("target",t);if(t)return document.querySelector(t)}},{key:"defaultText",value:function(t){return y("text",t)}},{key:"destroy",value:function(){this.listener.destroy(),this.clipboardAction&&(this.clipboardAction.destroy(),this.clipboardAction=null)}}])&&f(t.prototype,e),n&&f(t,n),o}()},828:function(t){var e;"undefined"==typeof Element||Element.prototype.matches||((e=Element.prototype).matches=e.matchesSelector||e.mozMatchesSelector||e.msMatchesSelector||e.oMatchesSelector||e.webkitMatchesSelector),t.exports=function(t,e){for(;t&&9!==t.nodeType;){if("function"==typeof t.matches&&t.matches(e))return t;t=t.parentNode}}},438:function(t,e,n){var a=n(828);function i(t,e,n,r,o){var i=function(e,n,t,r){return function(t){t.delegateTarget=a(t.target,n),t.delegateTarget&&r.call(e,t)}}.apply(this,arguments);return t.addEventListener(n,i,o),{destroy:function(){t.removeEventListener(n,i,o)}}}t.exports=function(t,e,n,r,o){return"function"==typeof t.addEventListener?i.apply(null,arguments):"function"==typeof n?i.bind(null,document).apply(null,arguments):("string"==typeof t&&(t=document.querySelectorAll(t)),Array.prototype.map.call(t,function(t){return i(t,e,n,r,o)}))}},879:function(t,n){n.node=function(t){return void 0!==t&&t instanceof HTMLElement&&1===t.nodeType},n.nodeList=function(t){var e=Object.prototype.toString.call(t);return void 0!==t&&("[object NodeList]"===e||"[object HTMLCollection]"===e)&&"length"in t&&(0===t.length||n.node(t[0]))},n.string=function(t){return"string"==typeof t||t instanceof String},n.fn=function(t){return"[object Function]"===Object.prototype.toString.call(t)}},370:function(t,e,n){var l=n(879),s=n(438);t.exports=function(t,e,n){if(!t&&!e&&!n)throw new Error("Missing required arguments");if(!l.string(e))throw new TypeError("Second argument must be a String");if(!l.fn(n))throw new TypeError("Third argument must be a Function");if(l.node(t))return c=e,u=n,(a=t).addEventListener(c,u),{destroy:function(){a.removeEventListener(c,u)}};if(l.nodeList(t))return r=t,o=e,i=n,Array.prototype.forEach.call(r,function(t){t.addEventListener(o,i)}),{destroy:function(){Array.prototype.forEach.call(r,function(t){t.removeEventListener(o,i)})}};if(l.string(t))return t=t,e=e,n=n,s(document.body,t,e,n);throw new TypeError("First argument must be a String, HTMLElement, HTMLCollection, or NodeList");var r,o,i,a,c,u}},817:function(t){t.exports=function(t){var e,n="SELECT"===t.nodeName?(t.focus(),t.value):"INPUT"===t.nodeName||"TEXTAREA"===t.nodeName?((e=t.hasAttribute("readonly"))||t.setAttribute("readonly",""),t.select(),t.setSelectionRange(0,t.value.length),e||t.removeAttribute("readonly"),t.value):(t.hasAttribute("contenteditable")&&t.focus(),n=window.getSelection(),(e=document.createRange()).selectNodeContents(t),n.removeAllRanges(),n.addRange(e),n.toString());return n}},279:function(t){function e(){}e.prototype={on:function(t,e,n){var r=this.e||(this.e={});return(r[t]||(r[t]=[])).push({fn:e,ctx:n}),this},once:function(t,e,n){var r=this;function o(){r.off(t,o),e.apply(n,arguments)}return o._=e,this.on(t,o,n)},emit:function(t){for(var e=[].slice.call(arguments,1),n=((this.e||(this.e={}))[t]||[]).slice(),r=0,o=n.length;r<o;r++)n[r].fn.apply(n[r].ctx,e);return this},off:function(t,e){var n=this.e||(this.e={}),r=n[t],o=[];if(r&&e)for(var i=0,a=r.length;i<a;i++)r[i].fn!==e&&r[i].fn._!==e&&o.push(r[i]);return o.length?n[t]=o:delete n[t],this}},t.exports=e,t.exports.TinyEmitter=e}},o={},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,{a:e}),e},r.d=function(t,e){for(var n in e)r.o(e,n)&&!r.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r(134).default;function r(t){if(o[t])return o[t].exports;var e=o[t]={exports:{}};return n[t](e,e.exports,r),e.exports}var n,o});
 
 /***/ }),
 
@@ -60238,6 +60392,99 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/vue-clipboard2/vue-clipboard.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vue-clipboard2/vue-clipboard.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var Clipboard = __webpack_require__(/*! clipboard/dist/clipboard.min.js */ "./node_modules/clipboard/dist/clipboard.min.js") // FIXME: workaround for browserify
+
+var VueClipboardConfig = {
+  autoSetContainer: false,
+  appendToBody: true // This fixes IE, see #50
+}
+
+var VueClipboard = {
+  install: function (Vue) {
+    Vue.prototype.$clipboardConfig = VueClipboardConfig
+    Vue.prototype.$copyText = function (text, container) {
+      return new Promise(function (resolve, reject) {
+        var fakeElement = document.createElement('button')
+        var clipboard = new Clipboard(fakeElement, {
+          text: function () { return text },
+          action: function () { return 'copy' },
+          container: typeof container === 'object' ? container : document.body
+        })
+        clipboard.on('success', function (e) {
+          clipboard.destroy()
+          resolve(e)
+        })
+        clipboard.on('error', function (e) {
+          clipboard.destroy()
+          reject(e)
+        })
+        if (VueClipboardConfig.appendToBody) document.body.appendChild(fakeElement)
+        fakeElement.click()
+        if (VueClipboardConfig.appendToBody) document.body.removeChild(fakeElement)
+      })
+    }
+
+    Vue.directive('clipboard', {
+      bind: function (el, binding, vnode) {
+        if (binding.arg === 'success') {
+          el._vClipboard_success = binding.value
+        } else if (binding.arg === 'error') {
+          el._vClipboard_error = binding.value
+        } else {
+          var clipboard = new Clipboard(el, {
+            text: function () { return binding.value },
+            action: function () { return binding.arg === 'cut' ? 'cut' : 'copy' },
+            container: VueClipboardConfig.autoSetContainer ? el : undefined
+          })
+          clipboard.on('success', function (e) {
+            var callback = el._vClipboard_success
+            callback && callback(e)
+          })
+          clipboard.on('error', function (e) {
+            var callback = el._vClipboard_error
+            callback && callback(e)
+          })
+          el._vClipboard = clipboard
+        }
+      },
+      update: function (el, binding) {
+        if (binding.arg === 'success') {
+          el._vClipboard_success = binding.value
+        } else if (binding.arg === 'error') {
+          el._vClipboard_error = binding.value
+        } else {
+          el._vClipboard.text = function () { return binding.value }
+          el._vClipboard.action = function () { return binding.arg === 'cut' ? 'cut' : 'copy' }
+        }
+      },
+      unbind: function (el, binding) {
+        if (binding.arg === 'success') {
+          delete el._vClipboard_success
+        } else if (binding.arg === 'error') {
+          delete el._vClipboard_error
+        } else {
+          el._vClipboard.destroy()
+          delete el._vClipboard
+        }
+      }
+    })
+  },
+  config: VueClipboardConfig
+}
+
+if (true) {
+  module.exports = VueClipboard
+} else {}
+
+
+/***/ }),
+
 /***/ "./resources/js/components/IndicatorComponent.vue":
 /*!********************************************************!*\
   !*** ./resources/js/components/IndicatorComponent.vue ***!
@@ -61162,6 +61409,43 @@ component.options.__file = "resources/js/components/lesson2/InstakilogramLogin.v
 
 /***/ }),
 
+/***/ "./resources/js/components/lesson2/InstakilogramTimeLine.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/lesson2/InstakilogramTimeLine.vue ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InstakilogramTimeLine_vue_vue_type_template_id_73f99e64___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InstakilogramTimeLine.vue?vue&type=template&id=73f99e64& */ "./resources/js/components/lesson2/InstakilogramTimeLine.vue?vue&type=template&id=73f99e64&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _InstakilogramTimeLine_vue_vue_type_template_id_73f99e64___WEBPACK_IMPORTED_MODULE_0__.render,
+  _InstakilogramTimeLine_vue_vue_type_template_id_73f99e64___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/lesson2/InstakilogramTimeLine.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/lesson2/Lesson2Component.vue":
 /*!**************************************************************!*\
   !*** ./resources/js/components/lesson2/Lesson2Component.vue ***!
@@ -61213,15 +61497,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Lesson2Procedure1_vue_vue_type_template_id_fef2f1b0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Lesson2Procedure1.vue?vue&type=template&id=fef2f1b0& */ "./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=template&id=fef2f1b0&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Lesson2Procedure1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Lesson2Procedure1.vue?vue&type=script&lang=js& */ "./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Lesson2Procedure1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _Lesson2Procedure1_vue_vue_type_template_id_fef2f1b0___WEBPACK_IMPORTED_MODULE_0__.render,
   _Lesson2Procedure1_vue_vue_type_template_id_fef2f1b0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -61234,6 +61520,43 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/lesson2/Lesson2Procedure1.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/lesson2/Lesson2Procedure2.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/lesson2/Lesson2Procedure2.vue ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae& */ "./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/lesson2/Lesson2Procedure2.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -61624,6 +61947,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Component_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2Component.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Component.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Component_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2Procedure1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -62083,6 +62422,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/lesson2/InstakilogramTimeLine.vue?vue&type=template&id=73f99e64&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/lesson2/InstakilogramTimeLine.vue?vue&type=template&id=73f99e64& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstakilogramTimeLine_vue_vue_type_template_id_73f99e64___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstakilogramTimeLine_vue_vue_type_template_id_73f99e64___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstakilogramTimeLine_vue_vue_type_template_id_73f99e64___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./InstakilogramTimeLine.vue?vue&type=template&id=73f99e64& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/InstakilogramTimeLine.vue?vue&type=template&id=73f99e64&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/lesson2/Lesson2Component.vue?vue&type=template&id=237589fa&":
 /*!*********************************************************************************************!*\
   !*** ./resources/js/components/lesson2/Lesson2Component.vue?vue&type=template&id=237589fa& ***!
@@ -62113,6 +62469,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure1_vue_vue_type_template_id_fef2f1b0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure1_vue_vue_type_template_id_fef2f1b0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2Procedure1.vue?vue&type=template&id=fef2f1b0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure1.vue?vue&type=template&id=fef2f1b0&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lesson2Procedure2_vue_vue_type_template_id_fed6c2ae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae&");
 
 
 /***/ }),
@@ -64111,7 +64484,106 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "instakilogram-login-input" }, [
+          _c("div", { staticClass: "instakilogram-login-input-container" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.submitAddress,
+                  expression: "submitAddress"
+                }
+              ],
+              attrs: {
+                type: "text",
+                placeholder: "電話番号、ユーザーネーム、メールアドレス",
+                required: ""
+              },
+              domProps: { value: _vm.submitAddress },
+              on: {
+                input: [
+                  function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.submitAddress = $event.target.value
+                  },
+                  function($event) {
+                    return _vm.activeSubmitBtn()
+                  }
+                ]
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.submitPass,
+                  expression: "submitPass"
+                }
+              ],
+              attrs: {
+                type: "password",
+                placeholder: "パスワード",
+                required: ""
+              },
+              domProps: { value: _vm.submitPass },
+              on: {
+                input: [
+                  function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.submitPass = $event.target.value
+                  },
+                  function($event) {
+                    return _vm.activeSubmitBtn()
+                  }
+                ]
+              }
+            }),
+            _vm._v(" "),
+            _vm.isActiveSubmitBtn
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "instakilogram-login-input-submit-active",
+                    attrs: { type: "button", role: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.instakilogramSubmit()
+                      }
+                    }
+                  },
+                  [_vm._v("ログイン")]
+                )
+              : _c(
+                  "button",
+                  {
+                    staticClass: "instakilogram-login-input-submit-notactive",
+                    attrs: { type: "button", role: "button" }
+                  },
+                  [_vm._v("ログイン")]
+                ),
+            _vm._v(" "),
+            _c("div", { staticClass: "instakilogram-login-input-error" }, [
+              _vm.loginError
+                ? _c("span", [
+                    _vm._v(
+                      "入力されたユーザーネームはアカウントと一致しません。ユーザーネームをご確認の上、もう一度実行してください。"
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(1)
+        ])
       ])
     ]
   )
@@ -64121,40 +64593,52 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "instakilogram-login-input" }, [
-      _c("div", { staticClass: "instakilogram-login-input-container" }, [
-        _c("div", { staticClass: "instakilogram-logo" }, [
-          _c("img", {
-            attrs: { src: "/images/instakilogram-logo.png", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: {
-            type: "text",
-            placeholder: "電話番号、ユーザーネーム、メールアドレス",
-            required: ""
-          }
-        }),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "password", placeholder: "パスワード", required: "" }
-        }),
-        _vm._v(" "),
-        _c("button", { attrs: { type: "button", role: "button" } }, [
-          _vm._v("ログイン")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "instakilogram-login-input-sub" }, [
-        _c("span", [_vm._v("アカウントをお持ちでないですか？")]),
-        _c("span", [
-          _c("a", { attrs: { href: "javascript:void(0)" } }, [
-            _vm._v("登録する")
-          ])
-        ])
+    return _c("div", { staticClass: "instakilogram-logo" }, [
+      _c("img", { attrs: { src: "/images/instakilogram-logo.png", alt: "" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "instakilogram-login-input-sub" }, [
+      _c("span", [_vm._v("アカウントをお持ちでないですか？")]),
+      _c("span", [
+        _c("a", { attrs: { href: "javascript:void(0)" } }, [_vm._v("登録する")])
       ])
     ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/InstakilogramTimeLine.vue?vue&type=template&id=73f99e64&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/InstakilogramTimeLine.vue?vue&type=template&id=73f99e64& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("TimeLine")])])
   }
 ]
 render._withStripped = true
@@ -64200,7 +64684,12 @@ var render = function() {
         _c(
           "div",
           { staticClass: "display-container" },
-          [_c(_vm.currentView, { tag: "component" })],
+          [
+            _c(_vm.currentView, {
+              tag: "component",
+              on: { parentToInstakilogramTimeLine: _vm.toInstakilogramTimeLine }
+            })
+          ],
           1
         )
       ]),
@@ -64246,6 +64735,161 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "procedure2 procedure animate__animated animate__fadeInUp",
+      attrs: { id: "procedure2" }
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("p", { staticClass: "procedure-main-text" }, [
+        _vm._v(
+          "Lesson1で学習したフィッシングによって、以下のメールアドレスとパスワードを手に入れました。"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "procedure-main-data" }, [
+        _vm._v("メールアドレス: example@ilite.co.jp\n      "),
+        _c(
+          "span",
+          {
+            staticClass:
+              "copied copied-address animate__animated animate__fadeInUp animate__faster",
+            style: _vm.style1
+          },
+          [_vm._v("Copied!")]
+        ),
+        _vm._v(" "),
+        _c("button", [
+          _c("img", {
+            directives: [
+              {
+                name: "clipboard",
+                rawName: "v-clipboard:copy",
+                value: _vm.address,
+                expression: "address",
+                arg: "copy"
+              },
+              {
+                name: "clipboard",
+                rawName: "v-clipboard:success",
+                value: _vm.onCopy,
+                expression: "onCopy",
+                arg: "success"
+              },
+              {
+                name: "clipboard",
+                rawName: "v-clipboard:error",
+                value: _vm.onError,
+                expression: "onError",
+                arg: "error"
+              }
+            ],
+            attrs: { src: "/images/clipboard.svg" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "procedure-main-data" }, [
+        _vm._v("パスワード: mypassword123\n      "),
+        _c(
+          "span",
+          {
+            staticClass:
+              "copied animate__animated animate__fadeInUp animate__faster",
+            style: _vm.style2
+          },
+          [_vm._v("Copied!")]
+        ),
+        _vm._v(" "),
+        _c("button", [
+          _c("img", {
+            directives: [
+              {
+                name: "clipboard",
+                rawName: "v-clipboard:copy",
+                value: _vm.pass,
+                expression: "pass",
+                arg: "copy"
+              },
+              {
+                name: "clipboard",
+                rawName: "v-clipboard:success",
+                value: _vm.onCopy,
+                expression: "onCopy",
+                arg: "success"
+              },
+              {
+                name: "clipboard",
+                rawName: "v-clipboard:error",
+                value: _vm.onError,
+                expression: "onError",
+                arg: "error"
+              }
+            ],
+            attrs: { src: "/images/clipboard.svg" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("p", { staticClass: "procedure-main-text" }, [
+        _vm._v("これを入力してInstakilogramにログインを試みましょう。")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "procedure-caution" }, [
+        _vm._v(
+          "※このログインページはInstagram.comが提供しているものではありません。"
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "procedure-title" }, [
+      _c("b", [_vm._v("今回は、犯人になり切ってみましょう。")]),
+      _c("br")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "procedure-sub-info" }, [
+      _c("img", { attrs: { src: "/images/clipboard.svg" } }),
+      _vm._v("を押すとコピーできます。")
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/lesson2/Lesson2Procedure2.vue?vue&type=template&id=fed6c2ae& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
   return _vm._m(0)
 }
 var staticRenderFns = [
@@ -64253,44 +64897,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "procedure2 procedure animate__animated animate__fadeInUp",
-        attrs: { id: "procedure2" }
-      },
-      [
-        _c("span", { staticClass: "procedure-title" }, [
-          _c("b", [_vm._v("今回は、犯人になり切ってみましょう。")]),
-          _c("br")
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "procedure-main-text" }, [
-          _vm._v(
-            "Lesson1で学習したフィッシングによって、以下のメールアドレスとパスワードを手に入れました。"
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "procedure-main-data" }, [
-          _c("br"),
-          _vm._v("メールアドレス: example@ilite.co.jp"),
-          _c("br"),
-          _vm._v("パスワード: mypassword123"),
-          _c("br"),
-          _c("br")
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "procedure-main-text" }, [
-          _vm._v("これを入力してInstakilogramにログインを試みましょう。")
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "procedure-caution" }, [
-          _vm._v(
-            "※このログインページはInstagram.comが提供しているものではありません。"
-          )
-        ])
-      ]
-    )
+    return _c("div", [_c("h1", [_vm._v("手順2")])])
   }
 ]
 render._withStripped = true

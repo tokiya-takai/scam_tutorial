@@ -27,9 +27,13 @@
       <div class="instakilogram-login-input">
         <div class="instakilogram-login-input-container">
           <div class="instakilogram-logo"><img src="/images/instakilogram-logo.png" alt=""></div>
-          <input type="text" placeholder="電話番号、ユーザーネーム、メールアドレス" required>
-          <input type="password" placeholder="パスワード" required>
-          <button type="button" role="button">ログイン</button>
+          <input type="text" placeholder="電話番号、ユーザーネーム、メールアドレス" required v-model="submitAddress" @input="activeSubmitBtn()">
+          <input type="password" placeholder="パスワード" required v-model="submitPass" @input="activeSubmitBtn()">
+          <button v-if="isActiveSubmitBtn" class="instakilogram-login-input-submit-active" type="button" role="button" @click="instakilogramSubmit()">ログイン</button>
+          <button v-else class="instakilogram-login-input-submit-notactive" type="button" role="button">ログイン</button>
+          <div class="instakilogram-login-input-error">
+            <span v-if="loginError">入力されたユーザーネームはアカウントと一致しません。ユーザーネームをご確認の上、もう一度実行してください。</span>
+          </div>
         </div>
         <div class="instakilogram-login-input-sub">
           <span>アカウントをお持ちでないですか？</span><span><a href="javascript:void(0)">登録する</a></span>
@@ -54,6 +58,10 @@ export default {
       isActiveOpacity3: false,
       displayStatus: 1,
       opacity: 1,
+      submitAddress: "",
+      submitPass: "",
+      isActiveSubmitBtn: false,
+      loginError: false,
     }
   },
   mounted() {
@@ -65,7 +73,6 @@ export default {
           this.isActiveFadeOut1 = true;
           this.isActiveFadeIn2 = true;
           this.displayStatus = 2;
-          this.$refs.img1.classList.add('top');
           break;
         case 2:
           this.isActiveFadeOut1 = false;
@@ -87,7 +94,23 @@ export default {
           break;
       }
     }.bind(this), 6000);
-    }
+  },
+  methods: {
+    activeSubmitBtn() {
+      if((this.submitAddress != "") && (this.submitPass != "")){
+        this.isActiveSubmitBtn = true;
+      } else {
+        this.isActiveSubmitBtn = false;
+      }
+    },
+    instakilogramSubmit() {
+      if((this.submitAddress === "example@ilite.co.jp") && (this.submitPass === "mypassword123")){
+        this.$emit('parentToInstakilogramTimeLine');
+      } else {
+        this.loginError = true;
+      }
+    },
+  }
 }
 </script>
 

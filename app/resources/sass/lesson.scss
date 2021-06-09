@@ -287,6 +287,19 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
+.procedure-sub-info {
+  font-size: 0.4rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  line-height: 20px;
+  text-align: center;
+  img {
+    // クリップボード案内
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
 // 実際に操作するエリア
 .display-container {
   height: calc(100% - 20px);

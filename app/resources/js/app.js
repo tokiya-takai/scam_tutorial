@@ -1,5 +1,6 @@
 require('./bootstrap');
 
+
 window.Vue = require('vue').default;
 
 Vue.component('lesson-alert-component', require('./components/LessonAlertComponent.vue').default);
@@ -12,6 +13,10 @@ Vue.component('lesson2-component', require('./components/lesson2/Lesson2Componen
 
 // Service
 Vue.component('user-delete-component', require('./components/UserDeleteComponent.vue').default);
+
+
+const VueClipboard = require('vue-clipboard2');
+Vue.use(VueClipboard);
 
 const app = new Vue({
     el: '#main',
