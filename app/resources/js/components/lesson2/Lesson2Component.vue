@@ -10,6 +10,8 @@
 
           <component :is="currentProcedure"
             @parentToVerificationLogin="toVerificationLogin"
+            @parentToPasswordlistSolution="toPasswordlistSolution"
+            @parentToCongratulations="toCongratulations"
           ></component>
 
         </div>
@@ -20,6 +22,8 @@
           @parentToInstakilogramTimeLine="toInstakilogramTimeLine"
           @parentToVerificationPage="toVerificationPage"
           :verificationFlag="verificationFlag"
+          :lessonStatus="lessonStatus"
+          :lessonNumber="lessonNumber"
         ></component>
 
       </div>
@@ -36,9 +40,15 @@ import Indicator from '../IndicatorComponent.vue'
 import InstakilogramLogin from './InstakilogramLogin.vue'
 import InstakilogramTimeLine from './InstakilogramTimeLine.vue'
 import VerificationPage from './VerificationPage.vue'
+import PasswordlistSolution from './PasswordlistSolution.vue'
 // 手順
 import Procedure1 from './Lesson2Procedure1.vue'
 import Procedure2 from './Lesson2Procedure2.vue'
+import Procedure3 from './Lesson2Procedure3.vue'
+import Procedure4 from './Lesson2Procedure4.vue'
+import Procedure5 from './Lesson2Procedure5.vue'
+// Congratulations
+import Congratulations from '../CongratulationsComponent.vue'
 
 export default {
   components: {
@@ -48,8 +58,13 @@ export default {
     InstakilogramLogin,
     InstakilogramTimeLine,
     VerificationPage,
+    PasswordlistSolution,
     Procedure1,
-    Procedure2
+    Procedure2,
+    Procedure3,
+    Procedure4,
+    Procedure5,
+    Congratulations
   },
   data() {
     return {
@@ -57,6 +72,8 @@ export default {
       currentView: "InstakilogramLogin",
       currentProcedure: 'Procedure1',
       verificationFlag: false,
+      lessonStatus: true,
+      lessonNumber: "Lesson2",
     }
   },
   methods: {
@@ -71,12 +88,24 @@ export default {
     // タイムライン表示後、二段階認証バージョンへ
     toVerificationLogin() {
       this.verificationFlag = true;
-      this.currentView = "InstakilogramLogin"
+      this.currentView = "InstakilogramLogin";
+      this.currentProcedure = "Procedure3";
     },
     // 二段階認証ページへ
     toVerificationPage() {
       this.currentView = "VerificationPage";
-    }
+      this.currentProcedure = "Procedure4";
+    },
+    // 解決ページへ
+    toPasswordlistSolution() {
+      this.currentView = "PasswordlistSolution";
+      this.currentProcedure = "Procedure5"
+    },
+    // 終了ページへ
+    toCongratulations() {
+      this.currentProcedure = "";
+      this.currentView = "Congratulations";
+    },
   }
 }
 </script>

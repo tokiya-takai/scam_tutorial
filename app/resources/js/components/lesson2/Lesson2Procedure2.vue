@@ -5,7 +5,7 @@
     正式な情報でログインしたので、あなたはこのアカウントを好きなようにできてしまいます。<br>例えばパスワードを変えて、持ち主がログインできないようにしたり、
     投稿したり、電話番号を手に入れることもできてしまいます。</p>
     <p class="procedure-caution">※このページはInstagram.comが提供しているものではありません。</p>
-    <div class="to-login2">
+    <div class="nextButton">
       <button @click="childToTwoStepVerification()">次へ進む</button>
     </div>
   </div>
