@@ -48,6 +48,7 @@ class LandingControllerTest extends TestCase
         
         // ユーザーを作成
         $user = User::factory()->create();
+        // ログイン
         $response = Auth::login($user, false);
         // 認証されていることを確認
         $this->assertTrue(Auth::check());
