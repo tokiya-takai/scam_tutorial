@@ -17,10 +17,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('verified')->group(function() {
 });
-// アカウント削除
-Route::get('/userdelete/{id}', [UserDeleteController::class, 'index'])->name('userdelete.index');
-Route::post('/userdelete/{id}/delete', [UserDeleteController::class, 'delete'])->name('userdelete.delete');
 
+Route::middleware('auth')->group(function() {
+  // アカウント削除
+  Route::get('/userdelete/{id}', [UserDeleteController::class, 'index'])->name('userdelete.index');
+  Route::post('/userdelete/{id}/delete', [UserDeleteController::class, 'delete'])->name('userdelete.delete');
+});
 
 // Googleログイン用
 Route::get('login/google', [LoginController::class, 'redirectToGoogle']);
