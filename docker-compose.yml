@@ -19,5 +19,12 @@ services:
     volumes:
       - db-store:/var/lib/mysql
 
+  db-test:
+    build: ./infra/mysql-test
+    volumes:
+      - db-store:/db-test/var/lib/mysql
+    ports:
+      - 3000:3306
+
 volumes:
   db-store:
