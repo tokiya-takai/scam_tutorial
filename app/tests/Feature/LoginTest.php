@@ -18,7 +18,7 @@ class LoginTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function testLogin()
     {
         // ユーザーを作成
         $user = User::factory()->create([
