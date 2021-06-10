@@ -19,7 +19,7 @@ Route::middleware('verified')->group(function() {
 });
 // アカウント削除
 Route::get('/userdelete/{id}', [UserDeleteController::class, 'index'])->name('userdelete.index');
-Route::post('/userdelete/{id}/delete', [UserDeleteController::class, 'delete']);
+Route::post('/userdelete/{id}/delete', [UserDeleteController::class, 'delete'])->name('userdelete.delete');
 
 
 // Googleログイン用
