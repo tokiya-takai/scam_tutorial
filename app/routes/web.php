@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function() {
   
   Route::middleware('verified')->group(function() {
     Route::get('/dashboard', [LimitedLessonsController::class, 'dashboard']);
+    Route::get('/listoflessons', [LimitedLessonsController::class, 'listOfLessons']);
   });
 
   // アカウント削除

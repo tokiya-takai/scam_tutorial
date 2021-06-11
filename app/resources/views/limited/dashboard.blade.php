@@ -9,8 +9,7 @@
         <h1>ダッシュボード</h1>
         <p>データを見ることができます。</p>
       </div>
-  
-      @include('limited._lessons')
+
     </div>
 
     @include('layouts._footer')

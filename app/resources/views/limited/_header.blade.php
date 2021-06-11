@@ -7,7 +7,7 @@
   <nav class="limited-header-nav">
     <ul class="limited-header-nav-list">
       <li id="header-to-dashboard-btn"><a href="/dashboard">ダッシュボード</a></li>
-      <li><a href="#">レッスン一覧</a></li>
+      <li id="header-to-list-of-lessons-btn"><a href="/listoflessons">レッスン一覧</a></li>
     </ul>
   </nav>
   <nav class="limited-header-nav-auth">

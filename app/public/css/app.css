@@ -6296,3 +6296,17 @@ body {
   padding-bottom: 30px;
   font-size: 2rem;
 }
+.li-lessons {
+  width: 100vw;
+  min-height: 80vh;
+  background-color: #fafafa;
+  border-bottom: 1px solid #d1d1d1;
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.li-lessons-title h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+}
