@@ -6266,6 +6266,7 @@ body {
     margin-right: 10px;
   }
   .limited-header-nav-list li a {
+    display: inline-block;
     line-height: 60px;
   }
   .limited-header-nav-list .current-page {
