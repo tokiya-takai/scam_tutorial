@@ -11,6 +11,10 @@ Vue.component('lesson1-component', require('./components/lesson1/Lesson1Componen
 Vue.component('lesson2-tutorial-component', require('./components/lesson2/Lesson2TutorialComponent.vue').default);
 Vue.component('lesson2-component', require('./components/lesson2/Lesson2Component.vue').default);
 
+// Limited
+Vue.component('dashboard-component', require('./components/Limited/DashboardComponent.vue').default);
+Vue.component('list-of-lessons-component', require('./components/Limited/ListOfLessonsComponent.vue').default);
+
 // Service
 Vue.component('user-delete-component', require('./components/UserDeleteComponent.vue').default);
 

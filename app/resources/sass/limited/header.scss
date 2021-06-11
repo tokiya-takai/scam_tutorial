@@ -12,6 +12,7 @@
 {
   .limited-header {
     position: fixed;
+    z-index: 100;
     width: 100vw;
     height: 60px;
     background-color: white;

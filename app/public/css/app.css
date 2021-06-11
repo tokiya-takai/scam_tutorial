@@ -6211,6 +6211,7 @@ body {
 @media (min-width: 992px) {
   .limited-header {
     position: fixed;
+    z-index: 100;
     width: 100vw;
     height: 60px;
     background-color: white;
@@ -6296,6 +6297,7 @@ body {
   }
 }
 .dashboard {
+  position: relative;
   width: 100vw;
   min-height: 80vh;
   background-color: #fafafa;
