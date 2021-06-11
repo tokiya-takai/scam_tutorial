@@ -34,5 +34,6 @@
     <script src="{{ mix('js/lesson1.js') }}" defer></script>
     <script src="{{ mix('js/wave.js') }}" defer></script>
     <script src="{{ mix('js/smooth.js') }}"></script>
+    <script src="{{ mix('js/dashboard.js') }}"></script>
 </body>
 </html>

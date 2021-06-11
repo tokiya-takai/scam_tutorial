@@ -12,7 +12,7 @@
             <a class="nav-item nav-register" href="{{ route('register') }}">新規登録</a>
           @endif
       @else
-          <a class="nav-item nav-user" href="#">{{ Auth::user()->name }}</a>
+          <a class="nav-item nav-user" href="/dashboard">{{ Auth::user()->name }}</a>
           <a class="nav-item nav-logout" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">ログアウト

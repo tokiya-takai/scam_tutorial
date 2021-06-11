@@ -6207,3 +6207,92 @@ body {
 .passwordlist-solution-image1 p {
   line-height: 2em;
 }
+
+@media (min-width: 992px) {
+  .limited-header {
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    font-size: 0.75rem;
+    padding-right: 30px;
+    box-shadow: 0 0 5px 1px #d1d1d1;
+  }
+  .limited-header-logo {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: white;
+    transition: background-color 0.5s;
+  }
+  .limited-header-logo:hover {
+    background-color: #f95959;
+    transition: background-color 0.5s;
+  }
+  .limited-header-logo:hover .limited-header-logo-container {
+    background-image: url("/images/small-logo-hover.png");
+  }
+  .limited-header-logo-container {
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/small-logo.png");
+    background-size: contain;
+  }
+  .limited-header-nav {
+    width: calc(50% - 60px);
+    height: 100%;
+  }
+  .limited-header-nav-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .limited-header-nav-list li {
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .limited-header-nav-list li a {
+    line-height: 60px;
+  }
+  .limited-header-nav-list .current-page {
+    border-bottom: 3px solid #5cd858;
+  }
+  .limited-header-nav-auth {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  .limited-header-nav-auth .nav-item {
+    line-height: 30px;
+    padding: 0 15px;
+  }
+  .limited-header-nav-auth .nav-login {
+    margin: 0 8px;
+    cursor: pointer;
+  }
+  .limited-header-nav-auth .nav-register, .limited-header-nav-auth .nav-logout {
+    background-color: #f95959;
+    color: white;
+    border-radius: 3px;
+  }
+}
+.dashboard {
+  width: 100vw;
+  min-height: 80vh;
+  background-color: #fafafa;
+  border-bottom: 1px solid #d1d1d1;
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.dashboard-title h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+}

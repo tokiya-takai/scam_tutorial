@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="landing-intro-to-limited">
-        <a href="#">
+        <a href="/dashboard">
           <div class="landing-intro-to-limited-inner">
             <div class="landing-intro-to-limited-container">
               <div class="landing-intro-to-limited-image">
