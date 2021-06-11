@@ -1,7 +1,8 @@
 <div class="limited-header">
   <a href="/">
     <div class="limited-header-logo">
-      <div class="limited-header-logo-container"></div>
+      <div class="limited-header-logo-container-under"></div>
+      <div class="limited-header-logo-container-over"></div>
     </div>
   </a>
   <nav class="limited-header-nav">

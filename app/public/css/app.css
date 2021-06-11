@@ -6225,19 +6225,31 @@ body {
     padding: 5px;
     background-color: white;
     transition: background-color 0.5s;
+    position: relative;
   }
   .limited-header-logo:hover {
     background-color: #f95959;
     transition: background-color 0.5s;
   }
-  .limited-header-logo:hover .limited-header-logo-container {
-    background-image: url("/images/small-logo-hover.png");
+  .limited-header-logo:hover .limited-header-logo-container-over {
+    opacity: 0;
+    transition: opacity 0.5s;
   }
-  .limited-header-logo-container {
-    width: 100%;
-    height: 100%;
+  .limited-header-logo-container-under {
+    width: 50px;
+    height: 50px;
+    background-image: url("/images/small-logo-hover.png");
+    background-size: contain;
+    position: absolute;
+  }
+  .limited-header-logo-container-over {
+    width: 50px;
+    height: 50px;
     background-image: url("/images/small-logo.png");
     background-size: contain;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.5s;
   }
   .limited-header-nav {
     width: calc(50% - 60px);
