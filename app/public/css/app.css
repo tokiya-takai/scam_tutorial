@@ -4551,12 +4551,63 @@ body {
   }
   #landing-intro .landing-intro-initial-1 .phishing span, #landing-intro .landing-intro-initial-1 .password-list span, #landing-intro .landing-intro-initial-2 .phishing span, #landing-intro .landing-intro-initial-2 .password-list span {
     display: block;
-    text-align: left;
     text-align: center;
     font-size: 1.2rem;
   }
   #landing-intro .landing-intro-initial-1 .phishing h4, #landing-intro .landing-intro-initial-1 .password-list h4, #landing-intro .landing-intro-initial-2 .phishing h4, #landing-intro .landing-intro-initial-2 .password-list h4 {
     font-size: 2rem;
+  }
+  #landing-intro .landing-intro-to-limited {
+    grid-column: 1/-1;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.5s;
+  }
+  #landing-intro .landing-intro-to-limited-inner {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+  }
+  #landing-intro .landing-intro-to-limited-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fb8a8a;
+    transition: border 0.5s;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #landing-intro .landing-intro-to-limited-image {
+    max-height: 184px;
+    height: 100%;
+  }
+  #landing-intro .landing-intro-to-limited-image img {
+    height: 100%;
+  }
+  #landing-intro .landing-intro-to-limited-content h4 {
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #landing-intro .landing-intro-to-limited-content span {
+    font-size: 1rem;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+  }
+  #landing-intro .landing-intro-to-limited:hover {
+    background-color: #fb8a8a;
+    transition: background-color 0.5s;
+  }
+  #landing-intro .landing-intro-to-limited:hover .landing-intro-to-limited-container {
+    border: 1px solid white;
+    transition: border 0.5s;
   }
 }
 #landing-message .landing-message {
