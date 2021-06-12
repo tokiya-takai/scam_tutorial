@@ -16,6 +16,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/wave.js', 'public/js')
     .js('resources/js/smooth.js', 'public/js')
     .js('resources/js/user.js', 'public/js')
-    .js('resources/js/dashboard.js', 'public/js')
+    .js('resources/js/limited.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');

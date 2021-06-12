@@ -1,4 +1,8 @@
 @import "~animate.css/animate";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
 $theme_color1: #f95959;
 $theme_color2: #fb8a8a;
@@ -50,5 +54,6 @@ body {
 
 // limited
 @import "./limited/header.scss";
+@import "./limited/common.scss";
 @import "./limited/dashboard-lessons.scss";
 @import "./limited/list-of-lessons.scss";

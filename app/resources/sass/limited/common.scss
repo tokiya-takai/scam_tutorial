@@ -1,0 +1,55 @@
+// メニューボタンを押した時のアニメーション
+.active-rightX {
+  transition-duration: .6s;
+}
+
+@media (max-width: 554px)
+{
+  .limited-inner {
+    position: absolute;
+    display: flex;
+  
+    // メニュー
+    .limited-menu {
+      // 通常は非表示
+      display: none;
+      // width: 0px;
+      background-color: #333;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 555px) and (max-width: 991px)
+{
+  .limited-inner {
+    position: absolute;
+    display: flex;
+  
+    // メニュー
+    .limited-menu {
+      // 通常は非表示
+      display: none;
+      // width: 0px;
+      background-color: #333;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 992px)
+{
+  .limited-inner {
+    position: absolute;
+    display: flex;
+  
+    // メニュー
+    .limited-menu {
+      // 通常は非表示
+      display: none;
+      // width: 0px;
+      background-color: #333;
+      overflow: hidden;
+    }
+  }
+}

@@ -21,4 +21,9 @@
       @csrf
     </form>
   </nav>
+  <div id="header-navicon" class="limited-header-menu-btn">
+    <div class="limited-header-menu-container">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
 </div>
