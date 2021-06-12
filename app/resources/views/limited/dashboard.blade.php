@@ -11,7 +11,11 @@
             @include('layouts._footer')
         </div>
         <div id="limited-menu" class="limited-menu">
-            <h1 style="color: white">test</h1>
+            <ul class="limited-menu-list">
+                <li class="limited-menu-list-user">{{ Auth::user()->name }}</li>
+                <li class="limited-menu-list-others"><a href="/dashboard">ダッシュボード</a></li>
+                <li class="limited-menu-list-others"><a href="/listoflessons">レッスン一覧</a></li>
+            </ul>
         </div>
     </div>
     

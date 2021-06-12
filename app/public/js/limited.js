@@ -79,13 +79,15 @@ window.addEventListener('load', function () {
 
 
   function recalculation() {
-    // モバイル
+    // widthはpx付きなので、数値に変換
+    width = parseInt(width); // モバイル
+
     if (width <= 554) {
-      activeRight = parseInt(width) * 0.7; // タブレット
+      activeRight = width * 0.7; // タブレット
     } else if (555 <= width && width <= 991) {
-      activeRight = parseInt(width) * 0.6; // PC ただし、PCはメニューを表示しない
+      activeRight = width * 0.6; // PC ただし、PCはメニューを表示しない
     } else {
-      activeRight = parseInt(width) * 0.5;
+      activeRight = width * 0.5;
     }
   } // 横幅を計算
 
@@ -117,7 +119,8 @@ window.addEventListener('load', function () {
   }); // ウインドウをクリックしたらメニューを閉じる
 
   window.addEventListener('click', function (e) {
-    if (!e.target.closest('.active-right') && headerNavicon.classList.contains('active-right')) {
+    // メニューボタン、開いたメニュー内以外をクリックしたら閉じる
+    if (!e.target.closest('.active-right') && !e.target.closest('.limited-menu') && headerNavicon.classList.contains('active-right')) {
       closeMenu();
     }
   });
