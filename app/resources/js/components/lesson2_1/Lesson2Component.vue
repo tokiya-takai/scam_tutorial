@@ -29,6 +29,9 @@
       </div>
     </div>
     <LessonFotter :slideLink="'/lesson2'"></LessonFotter>
+    <form action="/lesson2/congratulations" method="post" id="lesson2-form">
+      <input type="hidden" name="_token" v-bind:value="csrf">
+    </form>
   </div>
 </template>
 
@@ -47,8 +50,6 @@ import Procedure2 from './Lesson2Procedure2.vue'
 import Procedure3 from './Lesson2Procedure3.vue'
 import Procedure4 from './Lesson2Procedure4.vue'
 import Procedure5 from './Lesson2Procedure5.vue'
-// Congratulations
-import Congratulations from '../CongratulationsComponent.vue'
 
 export default {
   components: {
@@ -64,7 +65,6 @@ export default {
     Procedure3,
     Procedure4,
     Procedure5,
-    Congratulations
   },
   data() {
     return {
@@ -75,6 +75,12 @@ export default {
       lessonStatus: true,
       lessonNumber: "Lesson2",
     }
+  },
+  props: {
+    csrf: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     // ログイン後、インジケータを表示してタイムラインへ
@@ -103,8 +109,8 @@ export default {
     },
     // 終了ページへ
     toCongratulations() {
-      this.currentProcedure = "";
-      this.currentView = "Congratulations";
+      let form = document.getElementById('lesson2-form');
+      form.submit();
     },
   }
 }

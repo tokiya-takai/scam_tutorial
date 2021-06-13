@@ -44,6 +44,7 @@ Route::post('/lesson1/congratulations', [Lesson1Controller::class, 'congratulati
 // Lesson2
 Route::get('/lesson2', [Lesson2Controller::class, 'index'])->name('lesson2');
 Route::get('lesson2/exercise', [Lesson2Controller::class, 'show']);
+Route::post('/lesson2/congratulations', [Lesson2Controller::class, 'congratulations']);
 
 // Support
 Route::get('/privacypolicy', [SupportsController::class, 'privacyPolicy'])->name('privacyPolicy');

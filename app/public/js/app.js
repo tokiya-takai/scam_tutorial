@@ -3074,7 +3074,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Lesson2Procedure3_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Lesson2Procedure3.vue */ "./resources/js/components/lesson2_1/Lesson2Procedure3.vue");
 /* harmony import */ var _Lesson2Procedure4_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Lesson2Procedure4.vue */ "./resources/js/components/lesson2_1/Lesson2Procedure4.vue");
 /* harmony import */ var _Lesson2Procedure5_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Lesson2Procedure5.vue */ "./resources/js/components/lesson2_1/Lesson2Procedure5.vue");
-/* harmony import */ var _CongratulationsComponent_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../CongratulationsComponent.vue */ "./resources/js/components/CongratulationsComponent.vue");
+//
+//
+//
 //
 //
 //
@@ -3122,8 +3124,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Congratulations
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3138,8 +3138,7 @@ __webpack_require__.r(__webpack_exports__);
     Procedure2: _Lesson2Procedure2_vue__WEBPACK_IMPORTED_MODULE_8__.default,
     Procedure3: _Lesson2Procedure3_vue__WEBPACK_IMPORTED_MODULE_9__.default,
     Procedure4: _Lesson2Procedure4_vue__WEBPACK_IMPORTED_MODULE_10__.default,
-    Procedure5: _Lesson2Procedure5_vue__WEBPACK_IMPORTED_MODULE_11__.default,
-    Congratulations: _CongratulationsComponent_vue__WEBPACK_IMPORTED_MODULE_12__.default
+    Procedure5: _Lesson2Procedure5_vue__WEBPACK_IMPORTED_MODULE_11__.default
   },
   data: function data() {
     return {
@@ -3150,6 +3149,12 @@ __webpack_require__.r(__webpack_exports__);
       lessonStatus: true,
       lessonNumber: "Lesson2"
     };
+  },
+  props: {
+    csrf: {
+      type: String,
+      required: true
+    }
   },
   methods: {
     // ログイン後、インジケータを表示してタイムラインへ
@@ -3178,8 +3183,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     // 終了ページへ
     toCongratulations: function toCongratulations() {
-      this.currentProcedure = "";
-      this.currentView = "Congratulations";
+      var form = document.getElementById('lesson2-form');
+      form.submit();
     }
   }
 });
@@ -65859,7 +65864,24 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("LessonFotter", { attrs: { slideLink: "/lesson2" } })
+      _c("LessonFotter", { attrs: { slideLink: "/lesson2" } }),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: {
+            action: "/lesson2/congratulations",
+            method: "post",
+            id: "lesson2-form"
+          }
+        },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrf }
+          })
+        ]
+      )
     ],
     1
   )
