@@ -20,25 +20,37 @@ class LessonsTableSeeder extends Seeder
         DB::table('lessons')->truncate();
         \Schema::enableForeignKeyConstraints(); // 外部キー制約を有効化
 
+        // Lesson 1-1
         $param = [
             'number' => 1,
             'sub_number' => 1,
             'name' => 'フィッシング詐欺',
-            'percentage' => 34
+            'percentage' => 100
         ];
         Lesson::insert($param);
+        // Lesson 2-1
         $param = [
-            'number' => 1,
-            'sub_number' => 2,
+            'number' => 2,
+            'sub_number' => 1,
+            'name' => 'パスワードリスト攻撃',
+            'percentage' => 100
+        ];
+        Lesson::insert($param);
+
+        // Lesson 3-1
+        $param = [
+            'number' => 3,
+            'sub_number' => 1,
             'name' => 'ファーミング',
-            'percentage' => 33
+            'percentage' => 50
         ];
         Lesson::insert($param);
+        // Lesson 3-2
         $param = [
-            'number' => 1,
-            'sub_number' => 3,
+            'number' => 3,
+            'sub_number' => 2,
             'name' => 'スピアフィッシング',
-            'percentage' => 33
+            'percentage' => 50
         ];
         Lesson::insert($param);
     }

@@ -12630,25 +12630,39 @@ body {
   background-color: #fafafa;
   border-bottom: 1px solid #d1d1d1;
   padding-top: 60px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.li-lessons-title {
+  padding: 15px;
+  margin-bottom: 10px;
 }
 .li-lessons-title h1 {
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 2rem;
 }
-.li-lessons-area1 {
+.li-lessons-content {
+  width: 100%;
+}
+.li-lessons-area {
   width: 100%;
 }
 
 @media (max-width: 554px) {
-  .li-lessons-area1 {
+  .li-lessons-content {
+    padding: 15px;
+  }
+  .li-lessons-content h3 {
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
+  .li-lessons-content .li-lessons-area {
     display: flex;
     flex-flow: column;
     align-items: center;
   }
-  .li-lessons-area1 .li-lesson-group {
+  .li-lessons-content .li-lessons-area .li-lesson-group {
     width: 200px;
     height: 230px;
     padding-bottom: 15px;
@@ -12663,20 +12677,45 @@ body {
     align-items: center;
     border-radius: 8px;
   }
-  .li-lessons-area1 .li-lesson-group img {
+  .li-lessons-content .li-lessons-area .li-lesson-group img {
     width: 150px;
   }
-  .li-lessons-area1 .lesson1 {
+  .li-lessons-content .li-lessons-area .lesson1 {
     background-color: #ffcbcb;
     transition: background-color 0.3s ease-in-out;
   }
-  .li-lessons-area1 .lesson1:hover {
+  .li-lessons-content .li-lessons-area .lesson1:hover {
     background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson2 {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson2:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson3 {
+    background-color: #a1fab7;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson3:hover {
+    background-color: #d2f8db;
     transition: background-color 0.3s ease-in-out;
   }
 }
 @media (min-width: 555px) {
-  .li-lessons-area1 .li-lesson-group {
+  .li-lessons-content {
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+  }
+  .li-lessons-content h3 {
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
+  .li-lessons-content .li-lessons-area .li-lesson-group {
     float: left;
     width: 200px;
     height: 230px;
@@ -12692,15 +12731,31 @@ body {
     align-items: center;
     border-radius: 8px;
   }
-  .li-lessons-area1 .li-lesson-group img {
+  .li-lessons-content .li-lessons-area .li-lesson-group img {
     width: 150px;
   }
-  .li-lessons-area1 .lesson1 {
+  .li-lessons-content .li-lessons-area .lesson1 {
     background-color: #ffcbcb;
     transition: background-color 0.3s ease-in-out;
   }
-  .li-lessons-area1 .lesson1:hover {
+  .li-lessons-content .li-lessons-area .lesson1:hover {
     background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson2 {
+    background-color: #d1d4ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson2:hover {
+    background-color: #e6e7ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson3 {
+    background-color: #a1fab7;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-content .li-lessons-area .lesson3:hover {
+    background-color: #d2f8db;
     transition: background-color 0.3s ease-in-out;
   }
 }

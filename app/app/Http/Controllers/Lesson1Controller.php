@@ -13,7 +13,8 @@ class Lesson1Controller extends Controller
         return view('lesson1-1.index');
     }
 
-    public function show(){
+    public function show()
+    {
         return view('lesson1-1.show');
     }
 }

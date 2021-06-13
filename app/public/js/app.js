@@ -2048,6 +2048,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -63850,41 +63864,65 @@ var staticRenderFns = [
           _c("p", [_vm._v("公開中の全てのレッスンを見ることができます。")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "li-lessons-area1" }, [
-          _c("div", { staticClass: "li-lesson-group lesson1" }, [
-            _c("div", [
-              _c("img", {
-                attrs: { src: "/images/phishing.png", alt: "phishing" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lesson1-1")]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("フィッシング詐欺")])
+        _c("div", { staticClass: "li-lessons-content" }, [
+          _c("h3", [_vm._v("Lesson1")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "li-lessons-area" }, [
+            _c("div", { staticClass: "li-lesson-group lesson1" }, [
+              _c("div", [
+                _c("img", {
+                  attrs: { src: "/images/phishing.png", alt: "phishing" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("span", [_vm._v("Lesson1-1")]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("フィッシング詐欺")])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "li-lesson-group lesson1" }, [
-            _c("div", [
-              _c("img", {
-                attrs: { src: "/images/pharming.png", alt: "phishing" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lesson1-2")]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("ファーミング")])
+          _c("h3", [_vm._v("Lesson2")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "li-lessons-area" }, [
+            _c("div", { staticClass: "li-lesson-group lesson2" }, [
+              _c("div", [
+                _c("img", {
+                  attrs: { src: "/images/passwordlist.png", alt: "phishing" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("span", [_vm._v("Lesson2-1")]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("パスワードリスト攻撃")])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "li-lesson-group lesson1" }, [
-            _c("div", [
-              _c("img", {
-                attrs: { src: "/images/spear.png", alt: "phishing" }
-              })
+          _c("h3", [_vm._v("Lesson3")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "li-lessons-area" }, [
+            _c("div", { staticClass: "li-lesson-group lesson3" }, [
+              _c("div", [
+                _c("img", {
+                  attrs: { src: "/images/pharming.png", alt: "phishing" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("span", [_vm._v("Lesson3-1")]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("ファーミング")])
             ]),
             _vm._v(" "),
-            _c("span", [_vm._v("Lesson1-3")]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("スピアフィッシング")])
+            _c("div", { staticClass: "li-lesson-group lesson3" }, [
+              _c("div", [
+                _c("img", {
+                  attrs: { src: "/images/spear.png", alt: "phishing" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("span", [_vm._v("Lesson3-2")]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("スピアフィッシング")])
+            ])
           ])
         ])
       ]

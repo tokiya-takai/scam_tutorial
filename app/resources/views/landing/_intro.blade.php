@@ -13,14 +13,14 @@
       <div class="landing-intro-initial-1">
         <a class="phishing" href="/lesson1">
           <img src="/images/phishing.png" alt="Phishing">
-          <span>Lesson 1-1</span>
+          <span>Lesson 1</span>
           <h4>フィッシング詐欺</h4>
         </a>
       </div>
       <div class="landing-intro-initial-2">
         <a class="password-list" href="/lesson2">
           <img src="/images/passwordlist.png" alt="Phishing">
-          <span>Lesson 2-1</span>
+          <span>Lesson 2</span>
           <h4>パスワードリスト攻撃</h4>
         </a>
       </div>

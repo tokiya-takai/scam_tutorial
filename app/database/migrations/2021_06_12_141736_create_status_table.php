@@ -28,6 +28,8 @@ class CreateStatusTable extends Migration
             ->references('id')
             ->on('lessons')
             ->onDelete('cascade');
+
+            $table->unique(['user_id', 'lesson_id']);
         });
     }
 

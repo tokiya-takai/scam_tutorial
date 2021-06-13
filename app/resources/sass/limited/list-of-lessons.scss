@@ -5,50 +5,78 @@
   background-color: #fafafa;
   border-bottom: 1px solid $border;
   padding-top: 60px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
   &-title {
+    padding: 15px;
+    margin-bottom: 10px;
     h1 {
       padding-top: 30px;
       padding-bottom: 30px;
       font-size: 2rem;
     }
   }
-  &-area1 {
+  &-content {
+    width: 100%;
+  }
+  &-area {
     width: 100%;
   }
 }
 
 @media (max-width: 554px)
 {
-  .li-lessons-area1 {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    .li-lesson-group {
-      width: 200px;
-      height: 230px;
-      padding-bottom: 15px;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-top: 30px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+  .li-lessons-content {
+    padding: 15px;
+    h3 {
+      font-size: 2rem;
+      line-height: 1.5em;
+    }
+    .li-lessons-area {
       display: flex;
       flex-flow: column;
-      justify-content: center;
       align-items: center;
-      border-radius: 8px;
-      img {
-        width: 150px;
+      .li-lesson-group {
+        width: 200px;
+        height: 230px;
+        padding-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        img {
+          width: 150px;
+        }
       }
-    }
-    .lesson1 {
-      background-color: $lesson1_color;
-      transition: background-color .3s ease-in-out;
-      &:hover {
-        background-color: $lesson1_color_hover;
+      .lesson1 {
+        background-color: $lesson1_color;
         transition: background-color .3s ease-in-out;
+        &:hover {
+          background-color: $lesson1_color_hover;
+          transition: background-color .3s ease-in-out;
+        }
+      }
+      .lesson2 {
+        background-color: $lesson2_color;
+        transition: background-color .3s ease-in-out;
+        &:hover {
+          background-color: $lesson2_color_hover;
+          transition: background-color .3s ease-in-out;
+        }
+      }
+      .lesson3 {
+        background-color: $lesson3_color;
+        transition: background-color .3s ease-in-out;
+        &:hover {
+          background-color: $lesson3_color_hover;
+          transition: background-color .3s ease-in-out;
+        }
       }
     }
   }
@@ -56,32 +84,57 @@
 
 @media (min-width: 555px)
 {
-  .li-lessons-area1 {
-    .li-lesson-group {
-      float: left;
-      width: 200px;
-      height: 230px;
-      padding-bottom: 15px;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-top: 30px;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      img {
-        width: 150px;
-      }
+  .li-lessons-content {
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+    h3 {
+      font-size: 2rem;
+      line-height: 1.5em;
     }
-    .lesson1 {
-      background-color: $lesson1_color;
-      transition: background-color .3s ease-in-out;
-      &:hover {
-        background-color: $lesson1_color_hover;
+    .li-lessons-area {
+      .li-lesson-group {
+        float: left;
+        width: 200px;
+        height: 230px;
+        padding-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        img {
+          width: 150px;
+        }
+      }
+      .lesson1 {
+        background-color: $lesson1_color;
         transition: background-color .3s ease-in-out;
+        &:hover {
+          background-color: $lesson1_color_hover;
+          transition: background-color .3s ease-in-out;
+        }
+      }
+      .lesson2 {
+        background-color: $lesson2_color;
+        transition: background-color .3s ease-in-out;
+        &:hover {
+          background-color: $lesson2_color_hover;
+          transition: background-color .3s ease-in-out;
+        }
+      }
+      .lesson3 {
+        background-color: $lesson3_color;
+        transition: background-color .3s ease-in-out;
+        &:hover {
+          background-color: $lesson3_color_hover;
+          transition: background-color .3s ease-in-out;
+        }
       }
     }
   }
