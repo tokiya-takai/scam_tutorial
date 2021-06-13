@@ -12626,6 +12626,7 @@ body {
 .li-lessons {
   width: 100vw;
   min-height: 80vh;
+  height: 100%;
   background-color: #fafafa;
   border-bottom: 1px solid #d1d1d1;
   padding-top: 60px;
@@ -12636,4 +12637,70 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 2rem;
+}
+.li-lessons-area1 {
+  width: 100%;
+}
+
+@media (max-width: 554px) {
+  .li-lessons-area1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .li-lessons-area1 .li-lesson-group {
+    width: 200px;
+    height: 230px;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  .li-lessons-area1 .li-lesson-group img {
+    width: 150px;
+  }
+  .li-lessons-area1 .lesson1 {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-area1 .lesson1:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+@media (min-width: 555px) {
+  .li-lessons-area1 .li-lesson-group {
+    float: left;
+    width: 200px;
+    height: 230px;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  .li-lessons-area1 .li-lesson-group img {
+    width: 150px;
+  }
+  .li-lessons-area1 .lesson1 {
+    background-color: #ffcbcb;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-area1 .lesson1:hover {
+    background-color: #ffeaea;
+    transition: background-color 0.3s ease-in-out;
+  }
 }

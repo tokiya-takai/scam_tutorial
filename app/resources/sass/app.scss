@@ -10,7 +10,10 @@ $theme_color_hover: #da3737;
 $border: rgb(209, 209, 209);
 $link_color: rgb(46, 46, 206);
 $error: rgb(252, 55, 55);
-
+$lesson1_color: #ffcbcb;
+$lesson1_color_hover: rgb(255, 234, 234);;
+$lesson2_color: #d1d4ff;
+$lesson2_color_hover: rgb(230, 231, 255);
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif, "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic";
@@ -55,5 +58,5 @@ body {
 // limited
 @import "./limited/header.scss";
 @import "./limited/common.scss";
-@import "./limited/dashboard-lessons.scss";
+@import "./limited/dashboard.scss";
 @import "./limited/list-of-lessons.scss";
