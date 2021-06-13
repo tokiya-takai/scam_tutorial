@@ -1866,6 +1866,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1873,15 +1876,15 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   props: {
-    lessonStatus: Boolean,
-    lessonNumber: String
+    lesson: Object,
+    message: String
   },
   mounted: function mounted() {
     setTimeout(this.updateIndicator, 300);
   },
   methods: {
     updateIndicator: function updateIndicator() {
-      this.width = 100;
+      this.width = this.lesson.percentage;
     }
   }
 });
@@ -2331,7 +2334,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _404NotFoundComponent_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./404NotFoundComponent.vue */ "./resources/js/components/lesson1_1/404NotFoundComponent.vue");
 /* harmony import */ var _IndicatorComponent_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../IndicatorComponent.vue */ "./resources/js/components/IndicatorComponent.vue");
 /* harmony import */ var _Lesson1SolutionComponent_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./Lesson1SolutionComponent.vue */ "./resources/js/components/lesson1_1/Lesson1SolutionComponent.vue");
-/* harmony import */ var _CongratulationsComponent_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../CongratulationsComponent.vue */ "./resources/js/components/CongratulationsComponent.vue");
+//
+//
+//
 //
 //
 //
@@ -2385,8 +2390,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Congratulations
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2404,8 +2407,7 @@ __webpack_require__.r(__webpack_exports__);
     Procedure4: _Lesson1Procedure4Component_vue__WEBPACK_IMPORTED_MODULE_5__.default,
     Procedure5: _Lesson1Procedure5Component_vue__WEBPACK_IMPORTED_MODULE_6__.default,
     Procedure6: _Lesson1Procedure6Component_vue__WEBPACK_IMPORTED_MODULE_7__.default,
-    Indicator: _IndicatorComponent_vue__WEBPACK_IMPORTED_MODULE_13__.default,
-    Congratulations: _CongratulationsComponent_vue__WEBPACK_IMPORTED_MODULE_15__.default
+    Indicator: _IndicatorComponent_vue__WEBPACK_IMPORTED_MODULE_13__.default
   },
   data: function data() {
     return {
@@ -2421,6 +2423,12 @@ __webpack_require__.r(__webpack_exports__);
       // Congratulationsでlesson2以降は処理を追加する予定
       lessonStatus: true
     };
+  },
+  props: {
+    csrf: {
+      type: String,
+      required: true
+    }
   },
   methods: {
     // メール本文へ
@@ -2470,8 +2478,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     // 終了ページへ
     toCongratulations: function toCongratulations() {
-      this.currentProcedure = "";
-      this.currentView = "Congratulations";
+      var form = document.getElementById('lesson1-form');
+      form.submit();
     },
     // メールor電話番号を子コンポーネントから吸い上げ
     Input1fromChild: function Input1fromChild(input1) {
@@ -3751,7 +3759,9 @@ Vue.component('lesson1-1-tutorial-component', __webpack_require__(/*! ./componen
 Vue.component('lesson1-1-component', __webpack_require__(/*! ./components/lesson1_1/Lesson1Component.vue */ "./resources/js/components/lesson1_1/Lesson1Component.vue").default); // Lesson2
 
 Vue.component('lesson2-1-tutorial-component', __webpack_require__(/*! ./components/lesson2_1/Lesson2TutorialComponent.vue */ "./resources/js/components/lesson2_1/Lesson2TutorialComponent.vue").default);
-Vue.component('lesson2-1-component', __webpack_require__(/*! ./components/lesson2_1/Lesson2Component.vue */ "./resources/js/components/lesson2_1/Lesson2Component.vue").default); // Limited
+Vue.component('lesson2-1-component', __webpack_require__(/*! ./components/lesson2_1/Lesson2Component.vue */ "./resources/js/components/lesson2_1/Lesson2Component.vue").default); // Lesson common
+
+Vue.component('congratulations-component', __webpack_require__(/*! ./components/CongratulationsComponent.vue */ "./resources/js/components/CongratulationsComponent.vue").default); // Limited
 
 Vue.component('dashboard-component', __webpack_require__(/*! ./components/Limited/DashboardComponent.vue */ "./resources/js/components/Limited/DashboardComponent.vue").default);
 Vue.component('list-of-lessons-component', __webpack_require__(/*! ./components/Limited/ListOfLessonsComponent.vue */ "./resources/js/components/Limited/ListOfLessonsComponent.vue").default); // Service
@@ -8310,7 +8320,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.congratulations-lesson1-indicator {\n  transition: width 1.5s;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.congratulations-content-indicator {\n  transition: width 1.5s;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -63500,15 +63510,17 @@ var render = function() {
     "div",
     { staticClass: "congratulations", attrs: { id: "congratulations" } },
     [
-      _vm.lessonStatus
-        ? _c("div", { staticClass: "congratulations-lesson1" }, [
+      _vm.lesson.number <= 2
+        ? _c("div", { staticClass: "congratulations-content" }, [
             _c("h1", [_vm._v("Congratulations!")]),
             _vm._v(" "),
-            _c("div", { staticClass: "congratulations-lesson1-body" }, [
+            _c("div", { staticClass: "congratulations-content-body" }, [
               _c("p", [
                 _vm._v(
-                  "お疲れ様でした！" +
-                    _vm._s(_vm.lessonNumber) +
+                  "お疲れ様でした！Lesson" +
+                    _vm._s(_vm.lesson.number) +
+                    "-" +
+                    _vm._s(_vm.lesson.sub_number) +
                     "をクリアしました！"
                 )
               ]),
@@ -63518,16 +63530,16 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "congratulations-lesson1-indicator-container" },
+              { staticClass: "congratulations-content-indicator-container" },
               [
                 _c(
                   "div",
                   {
-                    staticClass: "congratulations-lesson1-indicator-background"
+                    staticClass: "congratulations-content-indicator-background"
                   },
                   [
                     _c("div", {
-                      staticClass: "congratulations-lesson1-indicator",
+                      staticClass: "congratulations-content-indicator",
                       style: "width:" + _vm.width + "%;"
                     })
                   ]
@@ -63535,11 +63547,15 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "span",
-                  { staticClass: "congratulations-lesson1-all-lessons" },
+                  { staticClass: "congratulations-content-all-lessons" },
                   [_vm._v("1/1")]
                 )
               ]
-            )
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "congratulations-content-message" }, [
+              _c("p", [_vm._v(_vm._s(_vm.message))])
+            ])
           ])
         : _c("div", [_c("div", [_vm._v("Others")])])
     ]
@@ -63551,7 +63567,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("a", { attrs: { href: "/relay" } }, [
-      _c("button", { staticClass: "congratulations-lesson1-btn" }, [
+      _c("button", { staticClass: "congratulations-content-btn" }, [
         _vm._v("トップページに戻る")
       ])
     ])
@@ -64421,7 +64437,24 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("LessonFotter", { attrs: { slideLink: "/lesson1" } })
+      _c("LessonFotter", { attrs: { slideLink: "/lesson1" } }),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: {
+            action: "/lesson1/congratulations",
+            method: "post",
+            id: "lesson1-form"
+          }
+        },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrf }
+          })
+        ]
+      )
     ],
     1
   )

@@ -40,6 +40,7 @@ Route::get('/relay', [LandingController::class, 'relay']);
 // Lesson1
 Route::get('/lesson1',[Lesson1Controller::class, 'index'])->name('lesson1');
 Route::get('/lesson1/exercise',[Lesson1Controller::class, 'show']);
+Route::post('/lesson1/congratulations', [Lesson1Controller::class, 'congratulations']);
 // Lesson2
 Route::get('/lesson2', [Lesson2Controller::class, 'index'])->name('lesson2');
 Route::get('lesson2/exercise', [Lesson2Controller::class, 'show']);
