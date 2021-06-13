@@ -10,10 +10,10 @@ class Lesson1Controller extends Controller
     {
         header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
         header("Pragma: no-cache");
-        return view('lesson1.index');
+        return view('lesson1-1.index');
     }
 
     public function show(){
-        return view('lesson1.show');
+        return view('lesson1-1.show');
     }
 }
