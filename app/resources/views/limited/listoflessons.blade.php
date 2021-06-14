@@ -5,8 +5,7 @@
     <div id="limited-inner" class="limited-inner">
         <div class="limited-main">
             @include('limited._header')
-        
-            <list-of-lessons-component></list-of-lessons-component>
+            <list-of-lessons-component :my-lessons-status="{{ $myLessonsStatus }}"></list-of-lessons-component>
         
             @include('layouts._footer')
         </div>

@@ -1869,6 +1869,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1877,7 +1878,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     lesson: Object,
-    message: String
+    message: String,
+    isLoggedin: {
+      type: Boolean,
+      "default": false
+    }
   },
   mounted: function mounted() {
     setTimeout(this.updateIndicator, 300);
@@ -2065,7 +2070,95 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      lesson1: null,
+      lesson2: null,
+      lesson3: null,
+      width1: 0,
+      width2: 0,
+      width3: 0
+    };
+  },
+  props: {
+    myLessonsStatus: Array
+  },
+  mounted: function mounted() {
+    // 対応した各レッスンをクリアしていない場合、undefinedになるため、nullで初期化
+    var l1 = null;
+    var l2 = null;
+    var l3 = null;
+    this.myLessonsStatus.forEach(function (element) {
+      // number毎にオブジェクトを取り出す
+      switch (element.number) {
+        case 1:
+          l1 = element;
+          break;
+
+        case 2:
+          l2 = element;
+          break;
+
+        case 3:
+          l3 = element;
+          break;
+
+        default:
+          break;
+      }
+    });
+    this.lesson1 = l1;
+    this.lesson2 = l2;
+    this.lesson3 = l3;
+    setTimeout(this.setWidth, 500);
+  },
+  methods: {
+    // インジケータ用。遅延無しだとcssのtransitionが間に合わないので。
+    setWidth: function setWidth() {
+      if (this.lesson1 != null) {
+        this.width1 = this.lesson1.percentage;
+      }
+
+      if (this.lesson2 != null) {
+        this.width2 = this.lesson2.percentage;
+      }
+
+      if (this.lesson3 != null) {
+        this.width3 = this.lesson3.percentage;
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -63530,7 +63623,17 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _vm._m(0)
+              _vm._m(0),
+              _vm._v(" "),
+              _vm.isLoggedin
+                ? _c("a", { attrs: { href: "/listoflessons" } }, [
+                    _c(
+                      "button",
+                      { staticClass: "congratulations-content-btn" },
+                      [_vm._v("レッスン一覧へ")]
+                    )
+                  ])
+                : _vm._e()
             ]),
             _vm._v(" "),
             _c(
@@ -63868,86 +63971,161 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "li-lessons", attrs: { id: "li-lessons" } }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "li-lessons-content" }, [
+      _c("h3", [_vm._v("Lesson1")]),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "li-lessons-rate-group" }, [
+        _c("div", { staticClass: "li-lessons-rate-container" }, [
+          _c("div", { staticClass: "li-lessons-rate-background" }, [
+            _c("div", {
+              staticClass: "li-lessons-rate-indicator",
+              style: "width:" + _vm.width1 + "%;"
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.lesson1 != null
+          ? _c("span", { staticClass: "li-lessons-rate-percentage" }, [
+              _vm._v(_vm._s(_vm.lesson1.percentage) + "/100%")
+            ])
+          : _c("span", { staticClass: "li-lessons-rate-percentage" }, [
+              _vm._v("0/100%")
+            ])
+      ]),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Lesson2")]),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _c("div", { staticClass: "li-lessons-rate-group" }, [
+        _c("div", { staticClass: "li-lessons-rate-container" }, [
+          _c("div", { staticClass: "li-lessons-rate-background" }, [
+            _c("div", {
+              staticClass: "li-lessons-rate-indicator",
+              style: "width:" + _vm.width2 + "%;"
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.lesson2 != null
+          ? _c("span", { staticClass: "li-lessons-rate-percentage" }, [
+              _vm._v(_vm._s(_vm.lesson2.percentage) + "/100%")
+            ])
+          : _c("span", { staticClass: "li-lessons-rate-percentage" }, [
+              _vm._v("0/100%")
+            ])
+      ]),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Lesson3")]),
+      _vm._v(" "),
+      _vm._m(3),
+      _vm._v(" "),
+      _c("div", { staticClass: "li-lessons-rate-group" }, [
+        _c("div", { staticClass: "li-lessons-rate-container" }, [
+          _c("div", { staticClass: "li-lessons-rate-background" }, [
+            _c("div", {
+              staticClass: "li-lessons-rate-indicator",
+              style: "width:" + _vm.width3 + "%;"
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.lesson3 != null
+          ? _c("span", { staticClass: "li-lessons-rate-percentage" }, [
+              _vm._v(_vm._s(_vm.lesson3.percentage) + "/100%")
+            ])
+          : _c("span", { staticClass: "li-lessons-rate-percentage" }, [
+              _vm._v("0/100%")
+            ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "li-lessons", attrs: { id: "li-lessons" } },
-      [
-        _c("div", { staticClass: "li-lessons-title" }, [
-          _c("h1", [_vm._v("レッスン一覧")]),
-          _vm._v(" "),
-          _c("p", [_vm._v("公開中の全てのレッスンを見ることができます。")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "li-lessons-content" }, [
-          _c("h3", [_vm._v("Lesson1")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "li-lessons-area" }, [
-            _c("div", { staticClass: "li-lesson-group lesson1" }, [
-              _c("div", [
-                _c("img", {
-                  attrs: { src: "/images/phishing.png", alt: "phishing" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("span", [_vm._v("Lesson1-1")]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("フィッシング詐欺")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("Lesson2")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "li-lessons-area" }, [
-            _c("div", { staticClass: "li-lesson-group lesson2" }, [
-              _c("div", [
-                _c("img", {
-                  attrs: { src: "/images/passwordlist.png", alt: "phishing" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("span", [_vm._v("Lesson2-1")]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("パスワードリスト攻撃")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("Lesson3")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "li-lessons-area" }, [
-            _c("div", { staticClass: "li-lesson-group lesson3" }, [
-              _c("div", [
-                _c("img", {
-                  attrs: { src: "/images/pharming.png", alt: "phishing" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("span", [_vm._v("Lesson3-1")]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("ファーミング")])
+    return _c("div", { staticClass: "li-lessons-title" }, [
+      _c("h1", [_vm._v("レッスン一覧")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("公開中の全てのレッスンを見ることができます。")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "li-lessons-area" }, [
+      _c("div", { staticClass: "li-lesson-group lesson1" }, [
+        _c("a", { attrs: { href: "/lesson1" } }, [
+          _c("button", [
+            _c("div", [
+              _c("img", {
+                attrs: { src: "/images/phishing.png", alt: "phishing" }
+              })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "li-lesson-group lesson3" }, [
-              _c("div", [
-                _c("img", {
-                  attrs: { src: "/images/spear.png", alt: "phishing" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("span", [_vm._v("Lesson3-2")]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("スピアフィッシング")])
-            ])
+            _c("span", [_vm._v("Lesson1-1")]),
+            _vm._v(" "),
+            _c("h4", [_vm._v("フィッシング詐欺")])
           ])
         ])
-      ]
-    )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "li-lessons-area" }, [
+      _c("div", { staticClass: "li-lesson-group lesson2" }, [
+        _c("a", { attrs: { href: "/lesson2" } }, [
+          _c("button", [
+            _c("div", [
+              _c("img", {
+                attrs: { src: "/images/passwordlist.png", alt: "phishing" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("span", [_vm._v("Lesson2-1")]),
+            _vm._v(" "),
+            _c("h4", [_vm._v("パスワードリスト攻撃")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "li-lessons-area" }, [
+      _c("div", { staticClass: "li-lesson-group lesson3" }, [
+        _c("div", [
+          _c("img", { attrs: { src: "/images/pharming.png", alt: "phishing" } })
+        ]),
+        _vm._v(" "),
+        _c("span", [_vm._v("Lesson3-1")]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("ファーミング")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "li-lesson-group lesson3" }, [
+        _c("div", [
+          _c("img", { attrs: { src: "/images/spear.png", alt: "phishing" } })
+        ]),
+        _vm._v(" "),
+        _c("span", [_vm._v("Lesson3-2")]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("スピアフィッシング")])
+      ])
+    ])
   }
 ]
 render._withStripped = true

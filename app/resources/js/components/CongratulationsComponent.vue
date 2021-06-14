@@ -5,6 +5,7 @@
       <div class="congratulations-content-body">
         <p>お疲れ様でした！Lesson{{ lesson.number }}-{{ lesson.sub_number }}をクリアしました！</p>
         <a href="/relay"><button class="congratulations-content-btn">トップページに戻る</button></a>
+        <a v-if="isLoggedin" href="/listoflessons"><button class="congratulations-content-btn">レッスン一覧へ</button></a>
       </div>
       <div class="congratulations-content-indicator-container">
         <div class="congratulations-content-indicator-background">
@@ -32,6 +33,10 @@ export default {
   props: {
     lesson: Object,
     message: String,
+    isLoggedin: {
+      type: Boolean,
+      default: false,
+    }
   },
   mounted() {
     setTimeout(this.updateIndicator, 300);

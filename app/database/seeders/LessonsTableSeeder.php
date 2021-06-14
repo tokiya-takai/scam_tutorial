@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Lesson;
+use App\Models\Status;
 
 class LessonsTableSeeder extends Seeder
 {
