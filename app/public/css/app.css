@@ -12680,11 +12680,11 @@ body {
     margin-top: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
+    border-radius: 8px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
   }
   .li-lessons-area .li-lesson-group img {
     width: 150px;
@@ -12768,11 +12768,11 @@ body {
     margin-top: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
+    border-radius: 8px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
   }
   .li-lessons-area .li-lesson-group img {
     width: 150px;

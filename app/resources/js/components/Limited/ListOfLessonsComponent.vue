@@ -7,12 +7,11 @@
       <div class="li-lessons-content">
         <h3>Lesson1</h3>
         <div class="li-lessons-area">
-          <div class="li-lesson-group lesson1">
-            <a href="/lesson1"><button><div><img src="/images/phishing.png" alt="phishing"></div>
-              <span>Lesson1-1</span>
-              <h4>フィッシング詐欺</h4>
-            </button></a>
-          </div>
+          <a href="/lesson1"><button class="li-lesson-group lesson1">
+            <img src="/images/phishing.png" alt="phishing">
+            <span>Lesson1-1</span>
+            <h4>フィッシング詐欺</h4>
+          </button></a>
         </div>
         <div class="li-lessons-rate-group">
           <div class="li-lessons-rate-container">
@@ -25,12 +24,11 @@
         </div>
         <h3>Lesson2</h3>
         <div class="li-lessons-area">
-          <div class="li-lesson-group lesson2">
-            <a href="/lesson2"><button><div><img src="/images/passwordlist.png" alt="phishing"></div>
-              <span>Lesson2-1</span>
-              <h4>パスワードリスト攻撃</h4>
-            </button></a>
-          </div>
+          <a href="/lesson2"><button class="li-lesson-group lesson2">
+            <img src="/images/passwordlist.png" alt="password list attack">
+            <span>Lesson2-1</span>
+            <h4>パスワードリスト攻撃</h4>
+          </button></a>
         </div>
         <div class="li-lessons-rate-group">
           <div class="li-lessons-rate-container">
@@ -43,16 +41,17 @@
         </div>
         <h3>Lesson3</h3>
         <div class="li-lessons-area">
-          <div class="li-lesson-group lesson3">
-            <div><img src="/images/pharming.png" alt="phishing"></div>
+           <a href="/"><button class="li-lesson-group lesson3">
+            <img src="/images/pharming.png" alt="pharming">
             <span>Lesson3-1</span>
             <h4>ファーミング</h4>
-          </div>
-          <div class="li-lesson-group lesson3">
-            <div><img src="/images/spear.png" alt="phishing"></div>
+          </button></a>
+
+           <a href="/"><button class="li-lesson-group lesson3">
+            <img src="/images/spear.png" alt="spear">
             <span>Lesson3-2</span>
             <h4>スピアフィッシング</h4>
-          </div>
+          </button></a>
         </div>
         <div class="li-lessons-rate-group">
           <div class="li-lessons-rate-container">

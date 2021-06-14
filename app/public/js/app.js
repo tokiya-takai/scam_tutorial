@@ -2098,7 +2098,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -64062,19 +64061,15 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "li-lessons-area" }, [
-      _c("div", { staticClass: "li-lesson-group lesson1" }, [
-        _c("a", { attrs: { href: "/lesson1" } }, [
-          _c("button", [
-            _c("div", [
-              _c("img", {
-                attrs: { src: "/images/phishing.png", alt: "phishing" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lesson1-1")]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("フィッシング詐欺")])
-          ])
+      _c("a", { attrs: { href: "/lesson1" } }, [
+        _c("button", { staticClass: "li-lesson-group lesson1" }, [
+          _c("img", {
+            attrs: { src: "/images/phishing.png", alt: "phishing" }
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Lesson1-1")]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("フィッシング詐欺")])
         ])
       ])
     ])
@@ -64084,19 +64079,18 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "li-lessons-area" }, [
-      _c("div", { staticClass: "li-lesson-group lesson2" }, [
-        _c("a", { attrs: { href: "/lesson2" } }, [
-          _c("button", [
-            _c("div", [
-              _c("img", {
-                attrs: { src: "/images/passwordlist.png", alt: "phishing" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lesson2-1")]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("パスワードリスト攻撃")])
-          ])
+      _c("a", { attrs: { href: "/lesson2" } }, [
+        _c("button", { staticClass: "li-lesson-group lesson2" }, [
+          _c("img", {
+            attrs: {
+              src: "/images/passwordlist.png",
+              alt: "password list attack"
+            }
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Lesson2-1")]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("パスワードリスト攻撃")])
         ])
       ])
     ])
@@ -64106,24 +64100,26 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "li-lessons-area" }, [
-      _c("div", { staticClass: "li-lesson-group lesson3" }, [
-        _c("div", [
-          _c("img", { attrs: { src: "/images/pharming.png", alt: "phishing" } })
-        ]),
-        _vm._v(" "),
-        _c("span", [_vm._v("Lesson3-1")]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("ファーミング")])
+      _c("a", { attrs: { href: "/" } }, [
+        _c("button", { staticClass: "li-lesson-group lesson3" }, [
+          _c("img", {
+            attrs: { src: "/images/pharming.png", alt: "pharming" }
+          }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Lesson3-1")]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("ファーミング")])
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "li-lesson-group lesson3" }, [
-        _c("div", [
-          _c("img", { attrs: { src: "/images/spear.png", alt: "phishing" } })
-        ]),
-        _vm._v(" "),
-        _c("span", [_vm._v("Lesson3-2")]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("スピアフィッシング")])
+      _c("a", { attrs: { href: "/" } }, [
+        _c("button", { staticClass: "li-lesson-group lesson3" }, [
+          _c("img", { attrs: { src: "/images/spear.png", alt: "spear" } }),
+          _vm._v(" "),
+          _c("span", [_vm._v("Lesson3-2")]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("スピアフィッシング")])
+        ])
       ])
     ])
   }
