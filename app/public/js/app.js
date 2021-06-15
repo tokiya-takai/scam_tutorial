@@ -2149,9 +2149,6 @@ __webpack_require__.r(__webpack_exports__);
     var lesson1Percentage = 0;
     var lesson2Percentage = 0;
     var lesson3Percentage = 0;
-    var lesson1 = [];
-    var lesson2 = [];
-    var lesson3 = [];
     this.myLessonsStatus.forEach(function (element) {
       // *1 各レッスンのパーセンテージを集計
       // *2 各レッスンのサブナンバーを配列に追加
@@ -2159,27 +2156,32 @@ __webpack_require__.r(__webpack_exports__);
         case 1:
           lesson1Percentage += element.percentage; //*1
 
-          lesson1.push(element.sub_number); //*2
+          _this.lesson1.push(element.sub_number); //*2
+
 
           break;
 
         case 2:
-          lesson2Percentage += element.percentage;
-          lesson2.push(element.sub_number);
+          lesson2Percentage += element.percentage; //*1
+
+          _this.lesson2.push(element.sub_number); //*2
+
+
           break;
 
         case 3:
-          lesson3Percentage += element.percentage;
-          lesson3.push(element.sub_number);
+          lesson3Percentage += element.percentage; //*1
+
+          _this.lesson3.push(element.sub_number); //*2
+
+
           break;
 
         default:
           break;
       }
-    });
-    this.lesson1 = lesson1;
-    this.lesson2 = lesson2;
-    this.lesson3 = lesson3;
+    }); // CSS transitionが反映されるために待つ
+
     setTimeout(function () {
       _this.width1 = lesson1Percentage;
       _this.width2 = lesson2Percentage;

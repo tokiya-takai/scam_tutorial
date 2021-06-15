@@ -117,9 +117,6 @@ export default {
     let lesson1Percentage = 0;
     let lesson2Percentage = 0;
     let lesson3Percentage = 0;
-    let lesson1 = [];
-    let lesson2 = [];
-    let lesson3 = [];
 
     this.myLessonsStatus.forEach(element => {
       // *1 各レッスンのパーセンテージを集計
@@ -127,25 +124,22 @@ export default {
       switch (element.number) {
         case 1:
           lesson1Percentage += element.percentage; //*1
-          lesson1.push(element.sub_number); //*2
+          this.lesson1.push(element.sub_number); //*2
           break;
         case 2:
-          lesson2Percentage += element.percentage;
-          lesson2.push(element.sub_number);
+          lesson2Percentage += element.percentage; //*1
+          this.lesson2.push(element.sub_number); //*2
           break;
         case 3:
-          lesson3Percentage += element.percentage;
-          lesson3.push(element.sub_number);
+          lesson3Percentage += element.percentage; //*1
+          this.lesson3.push(element.sub_number); //*2
           break;
       
         default:
           break;
       }
     });
-
-    this.lesson1 = lesson1;
-    this.lesson2 = lesson2;
-    this.lesson3 = lesson3;
+    // CSS transitionが反映されるために待つ
     setTimeout(()=>{
       this.width1 = lesson1Percentage;
       this.width2 = lesson2Percentage;
