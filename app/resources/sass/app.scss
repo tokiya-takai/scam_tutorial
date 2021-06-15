@@ -1,4 +1,8 @@
 @import "~animate.css/animate";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
 $theme_color1: #f95959;
 $theme_color2: #fb8a8a;
@@ -6,7 +10,12 @@ $theme_color_hover: #da3737;
 $border: rgb(209, 209, 209);
 $link_color: rgb(46, 46, 206);
 $error: rgb(252, 55, 55);
-
+$lesson1_color: #ffcbcb;
+$lesson1_color_hover: rgb(255, 234, 234);;
+$lesson2_color: #d1d4ff;
+$lesson2_color_hover: rgb(230, 231, 255);
+$lesson3_color: rgb(161, 250, 183);
+$lesson3_color_hover: rgb(210, 248, 219);
 
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif, "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic";
@@ -39,11 +48,19 @@ body {
 @import "./footer.scss";
 @import "./support/policy.scss";
 
-// lesson
-@import "./lesson.scss";
+// lesson common
+@import "./lessons/lesson.scss";
+@import "./lessons/congratulations.scss";
+
 // lesson1
 @import "./lesson1/lesson1-tutorial.scss";
 @import "./lesson1/lesson1-exercise.scss";
 // lesson2
 @import "./lesson2/lesson2-tutorial.scss";
 @import "./lesson2/lesson2-exercise.scss";
+
+// limited
+@import "./limited/header.scss";
+@import "./limited/common.scss";
+@import "./limited/dashboard.scss";
+@import "./limited/list-of-lessons.scss";

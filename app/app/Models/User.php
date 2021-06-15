@@ -16,6 +16,11 @@ class User extends Authenticatable implements MustVerifyEmailContract
 {
     use HasFactory, Notifiable, MustVerifyEmail;
 
+    public function statuses()
+    {
+        return $this->hasMany('App\Models\Status');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

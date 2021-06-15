@@ -32,6 +32,9 @@
       </div>
     </div>
     <LessonFotter :slideLink="'/lesson1'"></LessonFotter>
+    <form action="/lesson1/congratulations" method="post" id="lesson1-form">
+      <input type="hidden" name="_token" v-bind:value="csrf">
+    </form>
   </div>
 </template>
 
@@ -53,8 +56,6 @@ import AmazonPassword from './AmazonPasswordComponent.vue'
 import NotFound from './404NotFoundComponent.vue'
 import Indicator from '../IndicatorComponent.vue'
 import Solution from './Lesson1SolutionComponent.vue'
-// Congratulations
-import Congratulations from '../CongratulationsComponent.vue'
 
 export default {
   components: {
@@ -73,7 +74,6 @@ export default {
     Procedure5,
     Procedure6,
     Indicator,
-    Congratulations,
   },
   data() {
     return {
@@ -91,6 +91,12 @@ export default {
       // Congratulationsでlesson2以降は処理を追加する予定
       lessonStatus: true,
     }
+  },
+  props: {
+    csrf: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     // メール本文へ
@@ -138,8 +144,8 @@ export default {
     },
     // 終了ページへ
     toCongratulations() {
-      this.currentProcedure = "";
-      this.currentView = "Congratulations";
+      let form = document.getElementById('lesson1-form');
+      form.submit();
     },
     // メールor電話番号を子コンポーネントから吸い上げ
     Input1fromChild(input1) {

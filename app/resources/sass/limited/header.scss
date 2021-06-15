@@ -1,0 +1,243 @@
+@media (max-width: 554px)
+{
+  .limited-header {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    box-shadow: 0 0 5px 1px $border;
+    &-logo {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      background-color: white;
+      transition: background-color .5s;
+      position: relative;
+      &:hover {
+        background-color: $theme_color1;
+        transition: background-color .5s;
+      }
+      &:hover .limited-header-logo-container-over {
+        opacity: 0;
+        transition: opacity .5s;
+      }
+      &-container-under {
+        width: 50px;
+        height:50px;
+        background-image: url('/images/small-logo-hover.png');
+        background-size: contain;
+        position: absolute;
+      }
+      &-container-over {
+        width: 50px;
+        height: 50px;
+        background-image: url('/images/small-logo.png');
+        background-size: contain;
+        position: absolute;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+    }
+    &-nav {
+      display: none;
+    }
+    &-nav-auth {
+      display: none;
+    }
+    &-menu {
+      &-btn {
+        width: 60px;
+        height: 60px;
+      }
+      &-container {
+        font-size: 2.5em;
+        cursor: pointer;
+        line-height: 60px;
+        color: #2b546a;
+        padding: 0 15px;
+        .fa {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          &::before {
+            content: "\f0c9";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 555px) and (max-width: 991px)
+{
+  .limited-header {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    box-shadow: 0 0 5px 1px $border;
+    &-logo {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      background-color: white;
+      transition: background-color .5s;
+      position: relative;
+      &:hover {
+        background-color: $theme_color1;
+        transition: background-color .5s;
+      }
+      &:hover .limited-header-logo-container-over {
+        opacity: 0;
+        transition: opacity .5s;
+      }
+      &-container-under {
+        width: 50px;
+        height:50px;
+        background-image: url('/images/small-logo-hover.png');
+        background-size: contain;
+        position: absolute;
+      }
+      &-container-over {
+        width: 50px;
+        height: 50px;
+        background-image: url('/images/small-logo.png');
+        background-size: contain;
+        position: absolute;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+    }
+    &-nav {
+      display: none;
+    }
+    &-nav-auth {
+      display: none;
+    }
+    &-menu {
+      &-btn {
+        width: 60px;
+        height: 60px;
+      }
+      &-container {
+        font-size: 2.5em;
+        cursor: pointer;
+        line-height: 60px;
+        color: #2b546a;
+        padding: 0 15px;
+        .fa {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          &::before {
+            content: "\f0c9";
+          }
+        }
+      }
+    }
+  }
+}
+  
+  @media (min-width: 992px)
+  {
+    .limited-header {
+      position: fixed;
+      z-index: 100;
+      width: 100vw;
+      height: 60px;
+      background-color: white;
+      display: flex;
+    font-size: 0.75rem;
+    padding-right: 30px;
+    box-shadow: 0 0 5px 1px $border;
+    &-logo {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      background-color: white;
+      transition: background-color .5s;
+      position: relative;
+      &:hover {
+        background-color: $theme_color1;
+        transition: background-color .5s;
+      }
+      &:hover .limited-header-logo-container-over {
+        opacity: 0;
+        transition: opacity .5s;
+      }
+      &-container-under {
+        width: 50px;
+        height:50px;
+        background-image: url('/images/small-logo-hover.png');
+        background-size: contain;
+        position: absolute;
+      }
+      &-container-over {
+        width: 50px;
+        height: 50px;
+        background-image: url('/images/small-logo.png');
+        background-size: contain;
+        position: absolute;
+        opacity: 1;
+        transition: opacity .5s;
+      }
+    }
+    &-nav {
+      width: calc(50% - 60px);
+      height: 100%;
+      &-list {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        li {
+          height: 100%;
+          margin-left: 10px;
+          margin-right: 10px;
+          a {
+            display: inline-block;
+            // Header height
+            line-height: 60px;
+          }
+        }
+        .current-page {
+          border-bottom: 3px solid rgb(92, 216, 88);
+        }
+      }
+    }
+    &-nav-auth {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      .nav-item {
+        line-height: 30px;
+        padding: 0 15px;
+      }
+      .nav-login {
+        margin: 0 8px;
+        cursor: pointer;
+      }
+      .nav-register, .nav-logout {
+        background-color: $theme_color1;
+        color: white;
+        border-radius: 3px;
+      }
+    }
+    &-menu-btn {
+      display: none;
+    }
+  }
+}
