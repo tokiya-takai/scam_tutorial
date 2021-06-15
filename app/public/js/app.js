@@ -2099,6 +2099,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -63972,6 +64001,49 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "li-lessons", attrs: { id: "li-lessons" } }, [
     _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "li-lessons-all-rate" }, [
+      _c("div", { staticClass: "li-lessons-all-rate-container" }, [
+        _c("div", { staticClass: "li-lessons-all-rate-group" }, [
+          _c("span", [_vm._v("Lesson1")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "li-lessons-all-rate-background" }, [
+            _c("div", {
+              staticClass: "li-lessons-all-rate-indicator",
+              style: "width:" + _vm.width1 + "%;"
+            })
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v(_vm._s(_vm.width1) + "/100%")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "li-lessons-all-rate-group" }, [
+          _c("span", [_vm._v("Lesson2")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "li-lessons-all-rate-background" }, [
+            _c("div", {
+              staticClass: "li-lessons-all-rate-indicator",
+              style: "width:" + _vm.width2 + "%;"
+            })
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v(_vm._s(_vm.width2) + "/100%")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "li-lessons-all-rate-group" }, [
+          _c("span", [_vm._v("Lesson3")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "li-lessons-all-rate-background" }, [
+            _c("div", {
+              staticClass: "li-lessons-all-rate-indicator",
+              style: "width:" + _vm.width3 + "%;"
+            })
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v(_vm._s(_vm.width3) + "/100%")])
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "li-lessons-content" }, [
       _c("h3", [_vm._v("Lesson1")]),

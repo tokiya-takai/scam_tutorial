@@ -4,6 +4,35 @@
         <h1>レッスン一覧</h1>
         <p>公開中の全てのレッスンを見ることができます。</p>
       </div>
+      <div class="li-lessons-all-rate">
+
+        <div class="li-lessons-all-rate-container">
+          <div class="li-lessons-all-rate-group">
+            <span>Lesson1</span>
+            <div class="li-lessons-all-rate-background">
+              <div class="li-lessons-all-rate-indicator" :style="'width:'+width1+'%;'"></div>
+            </div>
+            <span>{{ width1 }}/100%</span>
+          </div>
+
+          <div class="li-lessons-all-rate-group">
+            <span>Lesson2</span>
+            <div class="li-lessons-all-rate-background">
+              <div class="li-lessons-all-rate-indicator" :style="'width:'+width2+'%;'"></div>
+            </div>
+            <span>{{ width2 }}/100%</span>
+          </div>
+
+          <div class="li-lessons-all-rate-group">
+            <span>Lesson3</span>
+            <div class="li-lessons-all-rate-background">
+              <div class="li-lessons-all-rate-indicator" :style="'width:'+width3+'%;'"></div>
+            </div>
+            <span>{{ width3 }}/100%</span>
+          </div>
+        </div>
+
+      </div>
       <div class="li-lessons-content">
         <h3>Lesson1</h3>
         <div class="li-lessons-area">
