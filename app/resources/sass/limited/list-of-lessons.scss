@@ -55,6 +55,19 @@
         img {
           width: 150px;
         }
+        &-cleared {
+          display: inline-block;
+          width: 100px;
+          height: 30px;
+          margin-top: 8px;
+          line-height: 26px;
+          text-align: center;
+          border: 2px solid $error;
+          border-radius: 5px;
+          color: $error;
+          background-color: white;
+          font-weight: bold;
+        }
       }
       .lesson1 {
         background-color: $lesson1_color;
@@ -150,6 +163,19 @@
         align-items: center;
         img {
           width: 150px;
+        }
+        &-cleared {
+          display: inline-block;
+          width: 100px;
+          height: 30px;
+          margin-top: 8px;
+          line-height: 26px;
+          text-align: center;
+          border: 2px solid $error;
+          border-radius: 5px;
+          color: $error;
+          background-color: white;
+          font-weight: bold;
         }
       }
       .lesson1 {

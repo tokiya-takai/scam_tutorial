@@ -11,6 +11,7 @@
             <img src="/images/phishing.png" alt="phishing">
             <span>Lesson1-1</span>
             <h4>フィッシング詐欺</h4>
+            <span v-if="lesson1.indexOf(1) >= 0" class="li-lesson-group-cleared">クリア済</span>
           </button></a>
         </div>
         <div class="li-lessons-rate-group">
@@ -19,8 +20,7 @@
               <div class="li-lessons-rate-indicator" :style="'width:'+width1+'%;'"></div>
             </div>
           </div>
-          <span v-if="lesson1 != null " class="li-lessons-rate-percentage">{{ lesson1.percentage }}/100%</span>
-          <span v-else class="li-lessons-rate-percentage">0/100%</span>
+          <span class="li-lessons-rate-percentage">{{ width1 }}/100%</span>
         </div>
         <h3>Lesson2</h3>
         <div class="li-lessons-area">
@@ -28,6 +28,7 @@
             <img src="/images/passwordlist.png" alt="password list attack">
             <span>Lesson2-1</span>
             <h4>パスワードリスト攻撃</h4>
+            <span v-if="lesson2.indexOf(1) >= 0" class="li-lesson-group-cleared">クリア済</span>
           </button></a>
         </div>
         <div class="li-lessons-rate-group">
@@ -36,8 +37,7 @@
               <div class="li-lessons-rate-indicator" :style="'width:'+width2+'%;'"></div>
             </div>
           </div>
-          <span v-if="lesson2 != null " class="li-lessons-rate-percentage">{{ lesson2.percentage }}/100%</span>
-          <span v-else class="li-lessons-rate-percentage">0/100%</span>
+          <span class="li-lessons-rate-percentage">{{ width2 }}/100%</span>
         </div>
         <h3>Lesson3</h3>
         <div class="li-lessons-area">
@@ -45,12 +45,14 @@
             <img src="/images/pharming.png" alt="pharming">
             <span>Lesson3-1</span>
             <h4>ファーミング</h4>
+            <span v-if="lesson3.indexOf(1) >= 0" class="li-lesson-group-cleared">クリア済</span>
           </button></a>
 
            <a href="/"><button class="li-lesson-group lesson3">
             <img src="/images/spear.png" alt="spear">
             <span>Lesson3-2</span>
             <h4>スピアフィッシング</h4>
+            <span v-if="lesson3.indexOf(2) >= 0" class="li-lesson-group-cleared">クリア済</span>
           </button></a>
         </div>
         <div class="li-lessons-rate-group">
@@ -59,8 +61,7 @@
               <div class="li-lessons-rate-indicator" :style="'width:'+width3+'%;'"></div>
             </div>
           </div>
-          <span v-if="lesson3 != null " class="li-lessons-rate-percentage">{{ lesson3.percentage }}/100%</span>
-          <span v-else class="li-lessons-rate-percentage">0/100%</span>
+          <span class="li-lessons-rate-percentage">{{ width3 }}/100%</span>
         </div>
       </div>
     </div>
@@ -71,9 +72,9 @@
 export default {
   data() {
     return {
-      lesson1: null,
-      lesson2: null,
-      lesson3: null,
+      lesson1: [],
+      lesson2: [],
+      lesson3: [],
       width1: 0,
       width2: 0,
       width3: 0
@@ -83,44 +84,44 @@ export default {
     myLessonsStatus: Array,
   },
   mounted() {
-    // 対応した各レッスンをクリアしていない場合、undefinedになるため、nullで初期化
-    let l1 = null;
-    let l2 = null;
-    let l3 = null;
+    // 各レッスンの合計パーセンテージを格納する変数
+    let lesson1Percentage = 0;
+    let lesson2Percentage = 0;
+    let lesson3Percentage = 0;
+    let lesson1 = [];
+    let lesson2 = [];
+    let lesson3 = [];
+
     this.myLessonsStatus.forEach(element => {
-      // number毎にオブジェクトを取り出す
+      // *1 各レッスンのパーセンテージを集計
+      // *2 各レッスンのサブナンバーを配列に追加
       switch (element.number) {
         case 1:
-          l1 = element;
+          lesson1Percentage += element.percentage; //*1
+          lesson1.push(element.sub_number); //*2
           break;
         case 2:
-          l2 = element;
+          lesson2Percentage += element.percentage;
+          lesson2.push(element.sub_number);
           break;
         case 3:
-          l3 = element;
+          lesson3Percentage += element.percentage;
+          lesson3.push(element.sub_number);
           break;
+      
         default:
           break;
       }
     });
-    this.lesson1 = l1;
-    this.lesson2 = l2;
-    this.lesson3 = l3;
-    setTimeout(this.setWidth, 500);
-  },
-  methods: {
-    // インジケータ用。遅延無しだとcssのtransitionが間に合わないので。
-    setWidth() {
-      if(this.lesson1 != null) {
-        this.width1 = this.lesson1.percentage;
-      }
-      if(this.lesson2 != null) {
-        this.width2 = this.lesson2.percentage;
-      }
-      if(this.lesson3 != null) {
-        this.width3 = this.lesson3.percentage;
-      }
-    }
+
+    this.lesson1 = lesson1;
+    this.lesson2 = lesson2;
+    this.lesson3 = lesson3;
+    setTimeout(()=>{
+      this.width1 = lesson1Percentage;
+      this.width2 = lesson2Percentage;
+      this.width3 = lesson3Percentage;
+    }, 500);
   },
 }
 </script>

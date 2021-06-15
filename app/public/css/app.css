@@ -12689,6 +12689,19 @@ body {
   .li-lessons-area .li-lesson-group img {
     width: 150px;
   }
+  .li-lessons-area .li-lesson-group-cleared {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin-top: 8px;
+    line-height: 26px;
+    text-align: center;
+    border: 2px solid #fc3737;
+    border-radius: 5px;
+    color: #fc3737;
+    background-color: white;
+    font-weight: bold;
+  }
   .li-lessons-area .lesson1 {
     background-color: #ffcbcb;
     transition: background-color 0.3s ease-in-out;
@@ -12776,6 +12789,19 @@ body {
   }
   .li-lessons-area .li-lesson-group img {
     width: 150px;
+  }
+  .li-lessons-area .li-lesson-group-cleared {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin-top: 8px;
+    line-height: 26px;
+    text-align: center;
+    border: 2px solid #fc3737;
+    border-radius: 5px;
+    color: #fc3737;
+    background-color: white;
+    font-weight: bold;
   }
   .li-lessons-area .lesson1 {
     background-color: #ffcbcb;
