@@ -10,6 +10,9 @@ Vue.component('lesson1-1-component', require('./components/lesson1_1/Lesson1Comp
 // Lesson2
 Vue.component('lesson2-1-tutorial-component', require('./components/lesson2_1/Lesson2TutorialComponent.vue').default);
 Vue.component('lesson2-1-component', require('./components/lesson2_1/Lesson2Component.vue').default);
+// Lesson3
+Vue.component('lesson3-1-tutorial-component', require('./components/lesson3_1/Lesson3TutorialComponent.vue').default);
+
 
 // Lesson common
 Vue.component('congratulations-component', require('./components/CongratulationsComponent.vue').default);

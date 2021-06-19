@@ -70,7 +70,7 @@
         </div>
         <h3>Lesson3</h3>
         <div class="li-lessons-area">
-           <a href="/"><button class="li-lesson-group lesson3">
+           <a href="/limited/lesson3/1"><button class="li-lesson-group lesson3">
             <img src="/images/pharming.png" alt="pharming">
             <span>Lesson3-1</span>
             <h4>ファーミング</h4>

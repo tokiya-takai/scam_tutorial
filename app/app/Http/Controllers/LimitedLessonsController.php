@@ -21,17 +21,7 @@ class LimitedLessonsController extends Controller
                             ->leftJoin('lessons', 'statuses.lesson_id', '=', 'lessons.id')
                             ->where('user_id', Auth::user()->id)
                             ->get();
-                            // var_dump($myLessonsStatus);
-        // dd($myLessonsStatus->toSql(), $myLessonsStatus->getBindings());
-
-        // user_id毎のnumber毎にクリアしているレッスンデータを取得
-        // 一つでも該当クリアしている場合
-        // $myLessonsStatus = DB::table('statuses')
-        //                     ->select('user_id','number',DB::raw('sum(percentage) as percentage'))
-        //                     ->where('user_id', Auth::user()->id)
-        //                     ->leftJoin('lessons', 'statuses.lesson_id', '=', 'lessons.id')
-        //                     ->groupBy('user_id','number')
-        //                     ->get();
+ 
         // 一つもクリアしていない場合は空となり、v-bind出来ないので、各レッスンのデータを格納してテンプレートに渡す
         if($myLessonsStatus->isEmpty()) {
             $myLessonsStatus = collect([
@@ -42,5 +32,18 @@ class LimitedLessonsController extends Controller
             ]);
         }
         return view('limited.listoflessons',['myLessonsStatus'=>$myLessonsStatus]);
+    }
+
+    // レッスン3-1
+    public function lesson3_1() {
+        $this->noCache();
+        return view('lesson3-1.index');
+    }
+
+    // ブラウザバックでモバイルからレッスンを受けられないように、アラートのキャッシュを削除
+    private function noCache(): void
+    {
+        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+        header("Pragma: no-cache");
     }
 }

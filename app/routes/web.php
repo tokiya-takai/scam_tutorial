@@ -20,8 +20,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware('auth')->group(function() {
   
   Route::middleware('verified')->group(function() {
+    // ダッシュボード
     Route::get('/dashboard', [LimitedLessonsController::class, 'dashboard']);
+    // レッスン一覧
     Route::get('/listoflessons', [LimitedLessonsController::class, 'listOfLessons']);
+
+    // レッスン3
+    Route::get('/limited/lesson3/1', [LimitedLessonsController::class, 'lesson3_1'])->name('lesson3_1');
   });
 
   // アカウント削除

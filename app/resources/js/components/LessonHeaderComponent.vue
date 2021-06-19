@@ -1,7 +1,7 @@
 <template>
   <div class="lesson-header">
     <a href="/"><img src="/images/small-logo.png" class="lesson-header-logo lesson-header-logo-animated animate__animated"></a>
-    <h2>{{ lesson }}</h2>
+    <h2>{{ lesson }}</h2><div id="limited-mark"></div>
   </div>
 </template>
 

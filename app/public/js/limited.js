@@ -13,6 +13,13 @@ window.addEventListener('load', function () {
 
   if (path === '/listoflessons') {
     document.getElementById('header-to-list-of-lessons-btn').classList.add('current-page');
+  } // 会員限定レッスンの場合、limited markを表示する
+
+
+  if (path.indexOf('/limited') === 0) {
+    var limitedMark = document.getElementById('limited-mark');
+    limitedMark.style.display = 'flex';
+    limitedMark.classList.add('limited-mark');
   } // メニューボタンをクリックした時に、スライドしてメニューバーを表示させる
 
 

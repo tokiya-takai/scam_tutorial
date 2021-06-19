@@ -1,7 +1,7 @@
 <template>
-  <div class="lesson2-tutorial">
+  <div class="lesson3-tutorial">
     <LessonHeader :lesson="lesson"></LessonHeader>
-    <div class="lesson2-tutorial-container">
+    <div class="lesson3-tutorial-container">
       <component :is="currentView"
         :isActiveNext="isActiveNext"
         :isActiveBack="isActiveBack"
@@ -14,7 +14,7 @@
               <p class="balloon1-content">▶をクリックして、<br>次のスライドを見ることができます。</p>
             </div>
           </div>
-          <div v-if="currentView == 'Lesson2_1'" class="slide-btn-end"><img src="/images/back.png"></div>
+          <div v-if="currentView == 'Lesson3_1'" class="slide-btn-end"><img src="/images/back.png"></div>
           <button v-else class="slide-btn" @click="setAnimateBack()"><img src="/images/back.png"></button>
           <div v-if="currentView == 'LessonEnd'" class="slide-btn-end"><img src="/images/next.png"></div>
           <button v-else class="slide-btn" @click="setAnimateNext()"><img src="/images/next.png"></button>
@@ -30,22 +30,23 @@
 
 <script>
 import LessonHeader from '../LessonHeaderComponent.vue'
-import Lesson2_1 from './Lesson2_1.vue'
-import Lesson2_2 from './Lesson2_2.vue'
+// スライド
+import lesson3_1 from './lesson3_1.vue'
+import lesson3_2 from './lesson3_2.vue'
 import LessonEnd from '../LessonEnd.vue'
 
 export default {
   components: {
     LessonHeader,
-    Lesson2_1,
-    Lesson2_2,
+    lesson3_1,
+    lesson3_2,
     LessonEnd
   },
   data() {
     return {
-      exerciseURL: "/lesson2/exercise",
-      lesson: "Lesson2 パスワードリスト攻撃",
-      currentView: "Lesson2_1",
+      exerciseURL: "/lesson3/exercise",
+      lesson: "Lesson3 ファーミング",
+      currentView: "lesson3_1",
 
       // 1->2ページへのクラス付与
       isActiveNext: false,
@@ -60,7 +61,7 @@ export default {
   methods: {
     setAnimateNext() {
       switch (this.currentView) {
-        case 'Lesson2_1':
+        case 'lesson3_1':
           this.isActiveNext = true;
           this.isActiveBack = true;
           this.isNotInitial = true;
@@ -85,11 +86,11 @@ export default {
     },
     next() {
       switch (this.currentView) {
-        case 'Lesson2_1':
-          this.currentView = 'Lesson2_2';
+        case 'lesson3_1':
+          this.currentView = 'lesson3_2';
           this.width = 50;
           break;
-        case 'Lesson2_2':
+        case 'lesson3_2':
           this.currentView = "LessonEnd";
           this.width = 100;
         default:
@@ -99,11 +100,11 @@ export default {
     back() {
       switch (this.currentView) {
         case 'LessonEnd':
-          this.currentView = "Lesson2_2";
+          this.currentView = "lesson3_2";
           this.width = 50;
           break;
-        case 'Lesson2_2':
-          this.currentView = 'Lesson2_1';
+        case 'lesson3_2':
+          this.currentView = 'lesson3_1';
           this.width = 0;
           break;
         default:
