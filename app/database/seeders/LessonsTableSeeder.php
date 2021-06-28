@@ -42,15 +42,16 @@ class LessonsTableSeeder extends Seeder
         $param = [
             'number' => 3,
             'sub_number' => 1,
-            'name' => 'ファーミング',
+            'name' => '標的型メール',
             'percentage' => 50
         ];
         Lesson::insert($param);
+
         // Lesson 3-2
         $param = [
             'number' => 3,
             'sub_number' => 2,
-            'name' => 'スピアフィッシング',
+            'name' => '水飲み場攻撃',
             'percentage' => 50
         ];
         Lesson::insert($param);

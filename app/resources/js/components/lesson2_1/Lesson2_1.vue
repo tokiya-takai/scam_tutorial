@@ -9,8 +9,8 @@
       <span>パスワードリスト攻撃とは、何らかの原因で漏洩したIDやパスワードを使って別のサービスにログインする不正アクセスのことです。<br>
       正規のアカウント情報であるため、攻撃を受けたサービス側では不正アクセスかどうかを判断するのが難しい攻撃です。
       </span>
-      <div class="phishing-hero-container">
-        <img class="phishing-hero" src="/images/passwordlist-hero.jpg">
+      <div class="tutorial-img-container">
+        <img class="tutorial-img" src="/images/passwordlist-hero.jpg">
       </div>
     </div>
   </div>

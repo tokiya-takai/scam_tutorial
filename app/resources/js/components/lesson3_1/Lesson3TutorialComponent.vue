@@ -14,7 +14,7 @@
               <p class="balloon1-content">▶をクリックして、<br>次のスライドを見ることができます。</p>
             </div>
           </div>
-          <div v-if="currentView == 'Lesson3_1'" class="slide-btn-end"><img src="/images/back.png"></div>
+          <div v-if="currentView == 'lesson3_1'" class="slide-btn-end"><img src="/images/back.png"></div>
           <button v-else class="slide-btn" @click="setAnimateBack()"><img src="/images/back.png"></button>
           <div v-if="currentView == 'LessonEnd'" class="slide-btn-end"><img src="/images/next.png"></div>
           <button v-else class="slide-btn" @click="setAnimateNext()"><img src="/images/next.png"></button>
@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       exerciseURL: "/lesson3/exercise",
-      lesson: "Lesson3 ファーミング",
+      lesson: "Lesson3-1 標的型メール",
       currentView: "lesson3_1",
 
       // 1->2ページへのクラス付与
@@ -65,7 +65,7 @@ export default {
           this.isActiveNext = true;
           this.isActiveBack = true;
           this.isNotInitial = true;
-          break;      
+          break;
         default:
           this.isActiveIntermediate = true;
           break;

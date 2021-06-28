@@ -136,6 +136,9 @@
           transition: background-color .3s ease-in-out;
         }
       }
+      .comming-soon {
+        background-color: #ddd;
+      }
     }
     &-rate {
       &-group {
@@ -285,6 +288,9 @@
           background-color: $lesson3_color_hover;
           transition: background-color .3s ease-in-out;
         }
+      }
+      .comming-soon {
+        background-color: #ddd;
       }
     }
     &-rate {

@@ -124,6 +124,20 @@
   opacity: 0.8;
 }
 
+// スライドイメージ
+.tutorial-img-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .tutorial-img {
+    height: 70%;
+    margin: 0 auto;
+  }
+}
+
 // スライド進捗インジケータ
 .lesson-tutorial-indicator {
   &-container {

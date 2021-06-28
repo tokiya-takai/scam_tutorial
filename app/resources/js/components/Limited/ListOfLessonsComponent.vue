@@ -71,17 +71,15 @@
         <h3>Lesson3</h3>
         <div class="li-lessons-area">
            <a href="/limited/lesson3/1"><button class="li-lesson-group lesson3">
-            <img src="/images/pharming.png" alt="pharming">
+            <img src="/images/target-mail.png" alt="target mail">
             <span>Lesson3-1</span>
-            <h4>ファーミング</h4>
+            <h4>標的型メール</h4>
             <span v-if="lesson3.indexOf(1) >= 0" class="li-lesson-group-cleared">クリア済</span>
           </button></a>
 
-           <a href="/"><button class="li-lesson-group lesson3">
-            <img src="/images/spear.png" alt="spear">
+           <a href="/"><button class="li-lesson-group comming-soon">
             <span>Lesson3-2</span>
-            <h4>スピアフィッシング</h4>
-            <span v-if="lesson3.indexOf(2) >= 0" class="li-lesson-group-cleared">クリア済</span>
+            <h4>comming soon</h4>
           </button></a>
         </div>
         <div class="li-lessons-rate-group">

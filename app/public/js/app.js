@@ -2126,8 +2126,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3932,7 +3930,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       exerciseURL: "/lesson3/exercise",
-      lesson: "Lesson3 ファーミング",
+      lesson: "Lesson3-1 標的型メール",
       currentView: "lesson3_1",
       // 1->2ページへのクラス付与
       isActiveNext: false,
@@ -4036,6 +4034,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     isActiveNext: Boolean
@@ -4055,6 +4056,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -64559,12 +64564,12 @@ var render = function() {
         _c("a", { attrs: { href: "/limited/lesson3/1" } }, [
           _c("button", { staticClass: "li-lesson-group lesson3" }, [
             _c("img", {
-              attrs: { src: "/images/pharming.png", alt: "pharming" }
+              attrs: { src: "/images/target-mail.png", alt: "target mail" }
             }),
             _vm._v(" "),
             _c("span", [_vm._v("Lesson3-1")]),
             _vm._v(" "),
-            _c("h4", [_vm._v("ファーミング")]),
+            _c("h4", [_vm._v("標的型メール")]),
             _vm._v(" "),
             _vm.lesson3.indexOf(1) >= 0
               ? _c("span", { staticClass: "li-lesson-group-cleared" }, [
@@ -64574,21 +64579,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "/" } }, [
-          _c("button", { staticClass: "li-lesson-group lesson3" }, [
-            _c("img", { attrs: { src: "/images/spear.png", alt: "spear" } }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Lesson3-2")]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("スピアフィッシング")]),
-            _vm._v(" "),
-            _vm.lesson3.indexOf(2) >= 0
-              ? _c("span", { staticClass: "li-lesson-group-cleared" }, [
-                  _vm._v("クリア済")
-                ])
-              : _vm._e()
-          ])
-        ])
+        _vm._m(1)
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "li-lessons-rate-group" }, [
@@ -64617,6 +64608,18 @@ var staticRenderFns = [
       _c("h1", [_vm._v("レッスン一覧")]),
       _vm._v(" "),
       _c("p", [_vm._v("公開中の全てのレッスンを見ることができます。")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/" } }, [
+      _c("button", { staticClass: "li-lesson-group comming-soon" }, [
+        _c("span", [_vm._v("Lesson3-2")]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("comming soon")])
+      ])
     ])
   }
 ]
@@ -65827,9 +65830,9 @@ var staticRenderFns = [
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "phishing-hero-container" }, [
+      _c("div", { staticClass: "tutorial-img-container" }, [
         _c("img", {
-          staticClass: "phishing-hero",
+          staticClass: "tutorial-img",
           attrs: { src: "/images/phishing-hero.png" }
         })
       ])
@@ -67310,9 +67313,9 @@ var staticRenderFns = [
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "phishing-hero-container" }, [
+      _c("div", { staticClass: "tutorial-img-container" }, [
         _c("img", {
-          staticClass: "phishing-hero",
+          staticClass: "tutorial-img",
           attrs: { src: "/images/passwordlist-hero.jpg" }
         })
       ])
@@ -67612,7 +67615,7 @@ var render = function() {
               [_vm._m(0)]
             ),
             _vm._v(" "),
-            _vm.currentView == "Lesson3_1"
+            _vm.currentView == "lesson3_1"
               ? _c("div", { staticClass: "slide-btn-end" }, [
                   _c("img", { attrs: { src: "/images/back.png" } })
                 ])
@@ -67709,7 +67712,7 @@ var render = function() {
     },
     [
       _c("h1", { staticClass: "lesson3-tutorial-title" }, [
-        _vm._v("ファーミング")
+        _vm._v("標的型メール")
       ]),
       _vm._v(" "),
       _vm._m(0)
@@ -67722,8 +67725,21 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "lesson3-tutorial-content" }, [
-      _c("div", { staticClass: "phishing-hero-container" }, [
-        _c("img", { staticClass: "phishing-hero", attrs: { src: "" } })
+      _c("span", [
+        _vm._v(
+          "標的型メールとは、機密情報を窃取することなどを目的に、特定の個人や企業を狙って行う攻撃のことです。"
+        ),
+        _c("br"),
+        _vm._v(
+          "\n    攻撃者は、何らかの理由で攻撃目標を定め、事前に情報収集をします。そのため、不特定多数を狙ったフィッシング攻撃と違い、\n    信憑性のあるメールが届くため、非常に騙されやすい攻撃です。"
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "tutorial-img-container" }, [
+        _c("img", {
+          staticClass: "tutorial-img",
+          attrs: { src: "/images/targeted-mail.jpg" }
+        })
       ])
     ])
   }
@@ -67763,7 +67779,7 @@ var render = function() {
     },
     [
       _c("h1", { staticClass: "lesson3-tutorial-title" }, [
-        _vm._v("ファーミングの手口")
+        _vm._v("標的型メールの手口")
       ]),
       _vm._v(" "),
       _vm._m(0)
@@ -67775,7 +67791,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "lesson3-tutorial-content" }, [_c("span")])
+    return _c("div", { staticClass: "lesson3-tutorial-content" }, [
+      _c("span", [
+        _vm._v(
+          "標的を決めた攻撃者は、ターゲットの情報を収集します。そして、ターゲットの企業と関連性の高い、\n    実在する取引先などを装ってメールを送ってきたり、添付ファイルに業務に関係のありそうな名前を付けたりと、標的型メールと判断するのが難しくなっています。\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "tutorial-img-container" }, [
+        _c("img", {
+          staticClass: "tutorial-img",
+          attrs: { src: "/images/targeted-mail-2.png" }
+        })
+      ])
+    ])
   }
 ]
 render._withStripped = true

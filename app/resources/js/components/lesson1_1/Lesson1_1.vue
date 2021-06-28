@@ -9,8 +9,8 @@
       <span>フィッシング詐欺とは、ユーザーIDやパスワード、クレジットカード情報や住所等の情報を不正に取得する詐欺のことです。<br>
         緊急メールを模したメールを送ったり、本物そっくりに作った偽サイトでログインさせたりすることで、情報を抜き取られます。
       </span>
-      <div class="phishing-hero-container">
-        <img class="phishing-hero" src="/images/phishing-hero.png">
+      <div class="tutorial-img-container">
+        <img class="tutorial-img" src="/images/phishing-hero.png">
       </div>
     </div>
   </div>

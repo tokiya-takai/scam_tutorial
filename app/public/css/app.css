@@ -11294,6 +11294,19 @@ body {
   opacity: 0.8;
 }
 
+.tutorial-img-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tutorial-img-container .tutorial-img {
+  height: 70%;
+  margin: 0 auto;
+}
+
 .lesson-tutorial-indicator-container {
   height: 15px;
   background-color: #464646;
@@ -11565,18 +11578,6 @@ body {
   padding: 0 3%;
   font-size: 1.2rem;
   line-height: 1.8em;
-}
-#lesson1 .lesson1-tutorial-content .phishing-hero-container {
-  width: 100%;
-  height: 100%;
-  padding: 0 3%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#lesson1 .lesson1-tutorial-content .phishing-hero-container .phishing-hero {
-  height: 70%;
-  margin: 0 auto;
 }
 #lesson1 .lesson1-tutorial-content .list-phishing-technique {
   padding: 5% 3%;
@@ -12824,6 +12825,9 @@ body {
     background-color: #d2f8db;
     transition: background-color 0.3s ease-in-out;
   }
+  .li-lessons-area .comming-soon {
+    background-color: #ddd;
+  }
   .li-lessons-rate-group {
     width: 100%;
     display: flex;
@@ -12965,6 +12969,9 @@ body {
   .li-lessons-area .lesson3:hover {
     background-color: #d2f8db;
     transition: background-color 0.3s ease-in-out;
+  }
+  .li-lessons-area .comming-soon {
+    background-color: #ddd;
   }
   .li-lessons-rate-group {
     width: 100%;
