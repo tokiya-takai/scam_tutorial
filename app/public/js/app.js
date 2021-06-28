@@ -3929,7 +3929,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      exerciseURL: "/lesson3/exercise",
+      exerciseURL: "/lesson3/1/exercise",
       lesson: "Lesson3-1 標的型メール",
       currentView: "lesson3_1",
       // 1->2ページへのクラス付与

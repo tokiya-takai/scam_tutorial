@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      exerciseURL: "/lesson3/exercise",
+      exerciseURL: "/lesson3/1/exercise",
       lesson: "Lesson3-1 標的型メール",
       currentView: "lesson3_1",
 

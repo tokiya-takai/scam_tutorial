@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function() {
 
     // レッスン3
     Route::get('/limited/lesson3/1', [LimitedLessonsController::class, 'lesson3_1'])->name('lesson3_1');
+    Route::get('/lesson3/1/exercise',[LimitedLessonsController::class, 'show3_1']);
   });
 
   // アカウント削除

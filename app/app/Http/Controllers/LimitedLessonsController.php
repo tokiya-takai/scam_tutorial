@@ -39,6 +39,9 @@ class LimitedLessonsController extends Controller
         $this->noCache();
         return view('lesson3-1.index');
     }
+    public function show3_1() {
+        return view('lesson3-1.show');
+    }
 
     // ブラウザバックでモバイルからレッスンを受けられないように、アラートのキャッシュを削除
     private function noCache(): void
